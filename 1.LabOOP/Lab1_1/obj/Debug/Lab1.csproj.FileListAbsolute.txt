@@ -1,0 +1,14 @@
+C:\C#\1.LabOOP\Lab1\bin\Debug\Lab1.exe.config
+C:\C#\1.LabOOP\Lab1\bin\Debug\Lab1.exe
+C:\C#\1.LabOOP\Lab1\bin\Debug\Lab1.pdb
+C:\C#\1.LabOOP\Lab1\obj\Debug\Lab1.csproj.AssemblyReference.cache
+C:\C#\1.LabOOP\Lab1\obj\Debug\Lab1.csproj.CoreCompileInputs.cache
+C:\C#\1.LabOOP\Lab1\obj\Debug\Lab1.exe
+C:\C#\1.LabOOP\Lab1\obj\Debug\Lab1.pdb
+C:\C#\1.LabOOP\Lab1_1\bin\Debug\Lab1.exe.config
+C:\C#\1.LabOOP\Lab1_1\bin\Debug\Lab1.exe
+C:\C#\1.LabOOP\Lab1_1\bin\Debug\Lab1.pdb
+C:\C#\1.LabOOP\Lab1_1\obj\Debug\Lab1.csproj.AssemblyReference.cache
+C:\C#\1.LabOOP\Lab1_1\obj\Debug\Lab1.csproj.CoreCompileInputs.cache
+C:\C#\1.LabOOP\Lab1_1\obj\Debug\Lab1.exe
+C:\C#\1.LabOOP\Lab1_1\obj\Debug\Lab1.pdb
