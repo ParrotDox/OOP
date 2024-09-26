@@ -17,22 +17,12 @@ namespace Lab1_2
             //Ввод и проверка на тип double переменных X1,Y1
             do
             {
-                try
-                {
-                    Console.WriteLine("Enter X1 (double): ");
-                    X1IsDouble = Double.TryParse(Console.ReadLine(), out X1);
-                    Console.WriteLine("Enter Y1 (double): ");
-                    Y1IsDouble = Double.TryParse(Console.ReadLine(), out Y1);
-                    if (!X1IsDouble || !Y1IsDouble) throw new FormatException($"Types do not match\nX1: {X1IsDouble}\nY1: {Y1IsDouble}\n");
-                }
-                catch (FormatException e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-                catch
-                {
-                    Console.WriteLine("Unknown error!");
-                }
+                Console.WriteLine("Enter X1 (double): ");
+                X1IsDouble = Double.TryParse(Console.ReadLine(), out X1);
+                Console.WriteLine("Enter Y1 (double): ");
+                Y1IsDouble = Double.TryParse(Console.ReadLine(), out Y1);
+                if (!X1IsDouble || !Y1IsDouble) Console.WriteLine($"Types do not match\nX1: {X1IsDouble}\nY1: {Y1IsDouble}\n");
+
             }
             while (!X1IsDouble || !Y1IsDouble);
 

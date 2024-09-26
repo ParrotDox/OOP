@@ -19,22 +19,11 @@ namespace Lab1_1
             //Ввод и проверка на целочисленность переменных n,m
             do
             {
-                try 
-                {
-                    Console.WriteLine("Enter n (int):");
-                    nIsInt = int.TryParse(Console.ReadLine(), out n);
-                    Console.WriteLine("Enter m (int):");
-                    mIsInt = int.TryParse(Console.ReadLine(), out m);
-                    if (!nIsInt || !mIsInt) throw new FormatException($"Types do not match\n n:{nIsInt} \n m:{mIsInt}\n");
-                }
-                catch(FormatException e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-                catch 
-                {
-                    Console.WriteLine("Unknown error!");
-                }
+                Console.WriteLine("Enter n (int):");
+                nIsInt = int.TryParse(Console.ReadLine(), out n);
+                Console.WriteLine("Enter m (int):");
+                mIsInt = int.TryParse(Console.ReadLine(), out m);
+                if (!nIsInt || !mIsInt) Console.WriteLine($"Types do not match\n n:{nIsInt} \n m:{mIsInt}\n");
             }
             while (!nIsInt || !mIsInt);
 
@@ -53,24 +42,14 @@ namespace Lab1_1
             //Ввод и проверка на тип double переменных x
             do
             {
-                try
-                {
-                    Console.WriteLine("Enter x (double): ");
-                    xIsDouble = double.TryParse(Console.ReadLine(), out x);
-                    if (!xIsDouble) throw new FormatException($"Type do not match\n x: {xIsDouble}\n");
-                }
-                catch (FormatException e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-                catch
-                {
-                    Console.WriteLine("Unknown error!");
-                }
+                Console.WriteLine("Enter x (double): ");
+                xIsDouble = double.TryParse(Console.ReadLine(), out x);
+                if (!xIsDouble) Console.WriteLine($"Type do not match\n x: {xIsDouble}\n");
             }
             while (!xIsDouble);
 
-            Console.WriteLine($"4)cos(arctg(x)): {Math.Cos(Math.Atan(x))}");
+            Console.WriteLine($"4)cos(arctg(x)): {(double)Math.Cos(Math.Atan(x))}");
+
         }
     }
 }
