@@ -27,16 +27,42 @@ namespace Lab1_2
             while (!X1IsDouble || !Y1IsDouble);
 
             //Проверка на включение точки в обл.значений
+            ///comment
             bool isContained = false;
             if((X1 >= 0.0 && X1 <= 5.0 && Y1 <= -X1 + 5 && Y1 >= 0) || (X1 >= 0 && X1 <= 5 && Y1 <= 0 && Y1 >= -7)) 
             {
+                Console.WriteLine($"X1 >= 0.0: {X1 >= 0.0}");
+                Console.WriteLine($"X1 <= 5.0: {X1 <= 5.0}");
+                Console.WriteLine($"Y1 <= -X1 + 5: {Y1 <= -X1 + 5}");
+                Console.WriteLine($"Y1 >= 0: {Y1 >= 0}");
+                Console.WriteLine("-------------------------------");
+                Console.WriteLine($"X1 >= 0: {X1 >= 0}");
+                Console.WriteLine($"X1 <= 5: {X1 <= 5}");
+                Console.WriteLine($"Y1 <= 0: {Y1 <= 0}");
+                Console.WriteLine($"Y1 >= -7: {Y1 >= -7}");
                 isContained = true;
+            }
+            else 
+            {
+                Console.WriteLine($"X1 >= 0.0: {X1 >= 0.0}");
+                Console.WriteLine($"X1 <= 5.0: {X1 <= 5.0}");
+                Console.WriteLine($"Y1 <= -X1 + 5: {Y1 <= -X1 + 5}");
+                Console.WriteLine($"Y1 >= 0: {Y1 >= 0}");
+                Console.WriteLine("-------------------------------");
+                Console.WriteLine($"X1 >= 0: {X1 >= 0}");
+                Console.WriteLine($"X1 <= 5: {X1 <= 5}");
+                Console.WriteLine($"Y1 <= 0: {Y1 <= 0}");
+                Console.WriteLine($"Y1 >= -7: {Y1 >= -7}");
+            }
+
+            if(isContained == true) 
+            {
                 Console.WriteLine($"Point with coordinates X1: {X1} Y1: {Y1} is in area");
                 Console.WriteLine(isContained);
             }
-            else
+            else 
             {
-                Console.WriteLine($"Point with coordinates X1: {X1} Y1: {Y1} is NOT in area");
+                Console.WriteLine($"Point with coordinates X1: {X1} Y1: {Y1} is not in area");
                 Console.WriteLine(isContained);
             }
         }

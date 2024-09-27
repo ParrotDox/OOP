@@ -36,7 +36,6 @@ namespace Lab1_1
             Console.WriteLine($"3)++m >n: {++m >n}");
             Console.WriteLine($"Values (n) : (m) are {n} : {m}");
 
-
             double x = 0.0;
             var xIsDouble = false;
             //Ввод и проверка на тип double переменных x

@@ -5,3 +5,10 @@ B:\C#\C#\OOP\1.LabOOP\Lab1_3\obj\Debug\Lab1_3.csproj.AssemblyReference.cache
 B:\C#\C#\OOP\1.LabOOP\Lab1_3\obj\Debug\Lab1_3.csproj.CoreCompileInputs.cache
 B:\C#\C#\OOP\1.LabOOP\Lab1_3\obj\Debug\Lab1_3.exe
 B:\C#\C#\OOP\1.LabOOP\Lab1_3\obj\Debug\Lab1_3.pdb
+C:\C#\OOP\1.LabOOP\Lab1_3\bin\Debug\Lab1_3.exe.config
+C:\C#\OOP\1.LabOOP\Lab1_3\bin\Debug\Lab1_3.exe
+C:\C#\OOP\1.LabOOP\Lab1_3\bin\Debug\Lab1_3.pdb
+C:\C#\OOP\1.LabOOP\Lab1_3\obj\Debug\Lab1_3.csproj.AssemblyReference.cache
+C:\C#\OOP\1.LabOOP\Lab1_3\obj\Debug\Lab1_3.csproj.CoreCompileInputs.cache
+C:\C#\OOP\1.LabOOP\Lab1_3\obj\Debug\Lab1_3.exe
+C:\C#\OOP\1.LabOOP\Lab1_3\obj\Debug\Lab1_3.pdb
