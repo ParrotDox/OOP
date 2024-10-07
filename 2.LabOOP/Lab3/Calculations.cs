@@ -10,68 +10,52 @@ namespace Calculations
     {
         public static void Execute() 
         {
-            double? x = Inputx();
-            if (x is null)
+            //Метод перебирает значения x и вызывает вспомогательные методы для получения результатов
+            for(double x = 0.1; x <= 0.81; x += 0.07) 
             {
-                Console.WriteLine("Exiting...");
-                return;
-            }
-            else 
-            {
-                double sumN = 0, sumE = 0;
-                uint n = 50;
-                double eps = 0.0001;
-                double yPrev = 0, yCur = 0;
-                double y = 1 / 2 - Math.PI / 4 * Math.Abs(Math.Sin((double)x));
-                for(int i = 1; i <= n; ++i) 
-                {
-                    CalculateFuncValues((double)x, i, eps, ref sumN, ref sumE, ref yPrev, ref yCur);
-                    PrintResults((double)x,i, sumN, sumE, y);
-                }
-                return;
-            }
+                double y = 0.5 - (Math.PI / 4 * Math.Abs(Math.Sin(x)));
+                double sEps = CalcTaylorSinEps(x,0.0001);
+                double sN = CalcTaylorSinN(x,50);
+                PrintResults(x, sEps, sN, y);
+            }    
         }
-        private static double? Inputx() 
+        public static double CalcTaylorSinEps(double x, double eps) 
         {
-            bool isInputNull = false;
-            double? x = null;
-            bool isxDouble = false;
-            do 
+            //Вычисление значения ряда Тейлора для заданной точности
+            double resultPrev = Math.Cos(2 * 1 * x) / (4 * Power(1, 2) - 1);
+            double result = resultPrev + Math.Cos(2 * 2 * x) / (4 * Power(2, 2) - 1);
+            for(int i = 3; Math.Abs(result - resultPrev) > eps; ++i) 
             {
-                isxDouble = false;
-                Console.WriteLine($"Input x (0.1 <= x <= 0.8) or left empty space to exit");
-                string input = Console.ReadLine();
-                if (input == "")
-                    isInputNull = true;
-                else
-                    if (isxDouble = double.TryParse(input, out double parsedValue))
-                        x = parsedValue;
+                double term = Math.Cos(2 * i * x) / (4 * Power(i, 2) - 1);
+                resultPrev = result;
+                result += term;
             }
-            while ((isInputNull == isxDouble) || (x < 0.1 || x > 0.8));
-            return x;
-        }
-        private static void CalculateFuncValues(double x, int n, double eps, ref double sumN, ref double sumE, ref double yPrev, ref double yCur) 
-        {
-            yPrev = yCur;
-            yCur = CalculateTerm(n, x);
-            if (Math.Abs(yCur - yPrev) < eps)
-            {
-                sumE += yCur;
-                sumN += yCur;
-            }
-            else
-                sumN += yCur;
-            return;
-        }
-        private static double CalculateTerm(int n, double x) 
-        {
-            double result = Math.Cos(2 * n * x) / (4 * Math.Pow(n,2) - 1);
             return result;
         }
-        private static void PrintResults(double x, int n, double sumN, double sumE, double y) 
+        public static double CalcTaylorSinN(double x, int n)
         {
-            Console.WriteLine("--------------------------------------------------------------------------------------------");
-            Console.WriteLine($"{n}) X = {x} SN = {sumN} SE = {sumE} Y = {y}");
+            //Вычисление значения ряда Тейлора для n элементов
+            double result = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                double term = Math.Cos(2 * i * x) / (4 * Power(i, 2) - 1);
+                result += term;
+            }
+            return result;
+        }
+        public static double Power(double n, int p) 
+        {
+            //Степень через рекурсию
+            if (p == 0)
+                return 1;
+            else
+                return n * Power(n, p-1);
+        }
+        public static void PrintResults(double x, double sEps, double sN, double y) 
+        {
+            //Вывод результатов в консоль
+            Console.WriteLine($"X = {x} SE = {sEps} SN = {sN} Y = {y}");
+            return;
         }
     }
 }

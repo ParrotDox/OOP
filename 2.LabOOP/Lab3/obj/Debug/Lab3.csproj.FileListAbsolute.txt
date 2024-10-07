@@ -5,3 +5,10 @@ C:\C#\OOP\2.LabOOP\Lab3\obj\Debug\Lab3.csproj.AssemblyReference.cache
 C:\C#\OOP\2.LabOOP\Lab3\obj\Debug\Lab3.csproj.CoreCompileInputs.cache
 C:\C#\OOP\2.LabOOP\Lab3\obj\Debug\Lab3.exe
 C:\C#\OOP\2.LabOOP\Lab3\obj\Debug\Lab3.pdb
+B:\GIT\C#-OOP-Discrete\OOP\2.LabOOP\Lab3\bin\Debug\Lab3.exe.config
+B:\GIT\C#-OOP-Discrete\OOP\2.LabOOP\Lab3\bin\Debug\Lab3.exe
+B:\GIT\C#-OOP-Discrete\OOP\2.LabOOP\Lab3\bin\Debug\Lab3.pdb
+B:\GIT\C#-OOP-Discrete\OOP\2.LabOOP\Lab3\obj\Debug\Lab3.csproj.AssemblyReference.cache
+B:\GIT\C#-OOP-Discrete\OOP\2.LabOOP\Lab3\obj\Debug\Lab3.csproj.CoreCompileInputs.cache
+B:\GIT\C#-OOP-Discrete\OOP\2.LabOOP\Lab3\obj\Debug\Lab3.exe
+B:\GIT\C#-OOP-Discrete\OOP\2.LabOOP\Lab3\obj\Debug\Lab3.pdb

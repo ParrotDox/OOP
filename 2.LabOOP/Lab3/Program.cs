@@ -11,6 +11,7 @@ namespace Lab3
     {
         static void Main(string[] args)
         {
+            //Вызов метода статического класса пространства имен Calculations
             Execute();
         }
     }
