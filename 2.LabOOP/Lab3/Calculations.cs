@@ -54,7 +54,7 @@ namespace Calculations
         public static void PrintResults(double x, double sEps, double sN, double y) 
         {
             //Вывод результатов в консоль
-            Console.WriteLine($"X = {x} SE = {sEps} SN = {sN} Y = {y}");
+            Console.WriteLine($"X = {x} SE = {Math.Round(sEps, 4)} SN = {Math.Round(sN, 4)} Y = {Math.Round(y, 4)}");
             return;
         }
     }
