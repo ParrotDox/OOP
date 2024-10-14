@@ -1,7 +1,0 @@
-C:\GIT\OOP\3.LabOOP\5LAB\bin\Debug\5LAB.exe.config
-C:\GIT\OOP\3.LabOOP\5LAB\bin\Debug\5LAB.exe
-C:\GIT\OOP\3.LabOOP\5LAB\bin\Debug\5LAB.pdb
-C:\GIT\OOP\3.LabOOP\5LAB\obj\Debug\5LAB.csproj.AssemblyReference.cache
-C:\GIT\OOP\3.LabOOP\5LAB\obj\Debug\5LAB.csproj.CoreCompileInputs.cache
-C:\GIT\OOP\3.LabOOP\5LAB\obj\Debug\5LAB.exe
-C:\GIT\OOP\3.LabOOP\5LAB\obj\Debug\5LAB.pdb
