@@ -20,11 +20,12 @@ namespace Lab5
                 Console.WriteLine
                     ("Menu:\n" +
                     "print - output all arrays\n" +
-                    "create_onedim_arr - create one dimensional array\n" +
-                    "create_twodim_arr - create two dimensional array\n" +
-                    "add_k_elements - add k elements to chosen array\n" +
-                    "delete_all_zerocolumns - del columns with zero\n" +
-                    "add_certain_row - add chosen row to certain array\n" +
+                    "1 - create one dimensional array\n" +
+                    "2 - create two dimensional array\n" +
+                    "2t - create torn array\n" +
+                    "k - add k elements to chosen array\n" +
+                    "-col0 - del columns with zero\n" +
+                    "+row - add chosen row to certain array\n" +
                     "quit - close the application");
                 Console.WriteLine("Option:");
                 request = Console.ReadLine().ToLower();
@@ -33,19 +34,22 @@ namespace Lab5
                     case "print":
                         ArrayManager.Print();
                         break;
-                    case "create_onedim_arr":
+                    case "1":
                         ArrayManager.CreateOneDimArr();
                         break;
-                    case "create_twodim_arr":
+                    case "2":
                         ArrayManager.CreateTwoDimArr();
                         break;
-                    case "add_k_elements":
+                    case "2t":
+                        ArrayManager.CreateTornArr();
+                        break;
+                    case "k":
                         ArrayManager.AddElements();
                         break;
-                    case "delete_all_zerocolumns":
+                    case "-col0":
                         ArrayManager.DeleteAllZeroColumns();
                         break;
-                    case "add_certain_row":
+                    case "+row":
                         ArrayManager.AddCertainRow();
                         break;
                     case "quit":
@@ -64,6 +68,7 @@ namespace Lab5
             //Ссылки на первые объекты в списках массивов
             static private OneDimensionalArray oneDimLnk;
             static private TwoDimensionalArray twoDimLnk;
+            static private TornArray tornLnk;
             //Границы генератора случайных чисел
             static private int lowestVal = -10;
             static private int highestVal = 10;
@@ -100,6 +105,21 @@ namespace Lab5
                     }
                     curTwoDimLnk.Print();
                 }
+                Console.WriteLine("Torn Arrays:");
+                if (tornLnk is null)
+                {
+                    Console.WriteLine("Empty");
+                }
+                else
+                {
+                    TornArray curTornLnk = tornLnk;
+                    while (curTornLnk.lnkToNext != null)
+                    {
+                        curTornLnk.Print();
+                        curTornLnk = (TornArray)curTornLnk.lnkToNext;
+                    }
+                    curTornLnk.Print();
+                }
             }
             public static int[] CreateOneDimArr()
             {
@@ -132,6 +152,24 @@ namespace Lab5
                     while (curLnk.lnkToNext != null)
                     {
                         curLnk = (TwoDimensionalArray)curLnk.lnkToNext;
+                    }
+                    curLnk.lnkToNext = buffer;
+                }
+                return buffer.vault;
+            }
+            public static int[][] CreateTornArr()
+            {
+                TornArray buffer = new TornArray();
+                if (tornLnk is null)
+                {
+                    tornLnk = buffer;
+                }
+                else
+                {
+                    TornArray curLnk = tornLnk;
+                    while (curLnk.lnkToNext != null)
+                    {
+                        curLnk = (TornArray)curLnk.lnkToNext;
                     }
                     curLnk.lnkToNext = buffer;
                 }
@@ -229,13 +267,16 @@ namespace Lab5
                             }
                         }
 
+                        //На основе массива разницы формируем новый массив без ячеек с нулями
                         int[,] newArr = new int[lenOuter, lenInner];
                         for(int iNewOut = 0; iNewOut < lenOuter; ++iNewOut) 
                         {
                             for(int iDif = 0; iDif < dif.GetLength(0); ++iDif) 
                             {
+                                //Если 1 - переписываем соответствующую ячейку
                                 if (dif[iDif] == true) 
                                 {
+                                    //Зачеркиваем 1 нулем, чтобы не допустить повторение ячейки
                                     dif[iDif] = false; 
                                     for(int k = 0; k < lenInner; ++k) 
                                     {
@@ -250,9 +291,9 @@ namespace Lab5
                     }
                 }
             }
-            public static int[,] AddCertainRow()
+            public static int[][] AddCertainRow()
             {
-                if (twoDimLnk is null)
+                if (tornLnk is null)
                 {
                     Console.WriteLine("No arrays have found");
                     return null;
@@ -261,8 +302,8 @@ namespace Lab5
                 {
                     Print();
                     //request - номер узла с изменяемым списком
-                    int request = InputInt("Choose two dimensional array:");
-                    TwoDimensionalArray curLnk = (TwoDimensionalArray)IterateThroughArrObj(request, twoDimLnk);
+                    int request = InputInt("Choose torn array:");
+                    TornArray curLnk = (TornArray)IterateThroughArrObj(request, tornLnk);
                     if (curLnk == null)
                     {
                         return null;
@@ -278,23 +319,20 @@ namespace Lab5
                         }
                         else
                         {
-                            int[,] newArr = new int[curLnk.vault.GetLength(0) + 1, curLnk.vault.GetLength(1)];
-                            for(int iOut = 0; iOut < newArr.GetLength(0); ++iOut) 
+                            //Дублирование всех элементов из старого массива в новый + [копированная ячейка]
+                            int[][] newArr = new int[curLnk.vault.GetLength(0) + 1][];
+                            for(int i = 0; i < curLnk.vault.GetLength(0); ++i) 
                             {
-                                if(iOut == curLnk.vault.GetLength(0)) 
+                                newArr[i] = new int[curLnk.vault[i].Length];
+                                for(int j = 0; j < curLnk.vault[i].Length; ++j) 
                                 {
-                                    for(int iIn = 0; iIn < curLnk.vault.GetLength(1); ++iIn) 
-                                    {
-                                        newArr[iOut, iIn] = curLnk.vault[request,iIn];
-                                    }
+                                    newArr[i][j] = curLnk.vault[i][j];
                                 }
-                                else 
-                                {
-                                    for (int iIn = 0; iIn < curLnk.vault.GetLength(1); ++iIn)
-                                    {
-                                        newArr[iOut, iIn] = curLnk.vault[iOut, iIn];
-                                    }
-                                }
+                            }
+                            newArr[newArr.GetLength(0) - 1] = new int[curLnk.vault[request].Length];
+                            for(int i = 0; i < curLnk.vault[request].Length; ++i) 
+                            {
+                                newArr[newArr.GetLength(0) - 1][i] = curLnk.vault[request][i];
                             }
                             curLnk.vault = newArr;
                             return newArr;
@@ -404,6 +442,42 @@ namespace Lab5
                         for (int j = 0; j < vault.GetLength(1); ++j)
                         {
                             Console.Write($"{vault[i, j]} ");
+                        }
+                        Console.Write("]");
+                    }
+                    Console.Write("\n");
+                }
+            }
+            private class TornArray : ArrayObj
+            {
+                //Поля
+                public int[][] vault;
+                //Конструкторы
+                public TornArray() : base()
+                {
+                    int lenOuter = InputInt("Outer Length:");
+                    int[][] temp = new int[lenOuter][];
+                    Random rnd = new Random();
+                    for (int i = 0; i < lenOuter; i++)
+                    {
+                        temp[i] = new int[rnd.Next(1, 5)];
+                        for (int j = 0; j < temp[i].Length; ++j)
+                        {
+                            temp[i][j] = rnd.Next(lowestVal, highestVal);
+                        }
+                    }
+                    vault = temp;
+                }
+                //Методы
+                public override void Print()
+                {
+                    for (int i = 0; i < vault.GetLength(0); ++i)
+                    {
+
+                        Console.Write("[");
+                        for (int j = 0; j < vault[i].Length; ++j)
+                        {
+                            Console.Write($"{vault[i][j]} ");
                         }
                         Console.Write("]");
                     }

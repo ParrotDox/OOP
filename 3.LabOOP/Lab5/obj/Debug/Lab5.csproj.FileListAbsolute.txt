@@ -12,3 +12,10 @@ B:\GIT\C#-OOP-Discrete\OOP\3.LabOOP\Lab5\obj\Debug\Lab5.csproj.AssemblyReference
 B:\GIT\C#-OOP-Discrete\OOP\3.LabOOP\Lab5\obj\Debug\Lab5.csproj.CoreCompileInputs.cache
 B:\GIT\C#-OOP-Discrete\OOP\3.LabOOP\Lab5\obj\Debug\Lab5.exe
 B:\GIT\C#-OOP-Discrete\OOP\3.LabOOP\Lab5\obj\Debug\Lab5.pdb
+C:\GIT\OOP\3.LabOOP\Lab5\bin\Debug\Lab5.exe.config
+C:\GIT\OOP\3.LabOOP\Lab5\bin\Debug\Lab5.exe
+C:\GIT\OOP\3.LabOOP\Lab5\bin\Debug\Lab5.pdb
+C:\GIT\OOP\3.LabOOP\Lab5\obj\Debug\Lab5.csproj.AssemblyReference.cache
+C:\GIT\OOP\3.LabOOP\Lab5\obj\Debug\Lab5.csproj.CoreCompileInputs.cache
+C:\GIT\OOP\3.LabOOP\Lab5\obj\Debug\Lab5.exe
+C:\GIT\OOP\3.LabOOP\Lab5\obj\Debug\Lab5.pdb
