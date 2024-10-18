@@ -75,6 +75,7 @@ namespace Lab5
             //Методы
             public static void Print()
             {
+                uint ctr = 1;
                 Console.WriteLine("OneDim Arrays:");
                 if (oneDimLnk is null)
                 {
@@ -85,11 +86,15 @@ namespace Lab5
                     OneDimensionalArray curOneDimLnk = oneDimLnk;
                     while (curOneDimLnk.lnkToNext != null)
                     {
+                        Console.Write($"{ctr})");
                         curOneDimLnk.Print();
+                        ++ctr;
                         curOneDimLnk = (OneDimensionalArray)curOneDimLnk.lnkToNext;
                     }
+                    Console.Write($"{ctr})");
                     curOneDimLnk.Print();
                 }
+                ctr = 1;
                 Console.WriteLine("TwoDim Arrays:");
                 if (twoDimLnk is null)
                 {
@@ -100,11 +105,15 @@ namespace Lab5
                     TwoDimensionalArray curTwoDimLnk = twoDimLnk;
                     while (curTwoDimLnk.lnkToNext != null)
                     {
+                        Console.Write($"{ctr})");
                         curTwoDimLnk.Print();
+                        ++ctr;
                         curTwoDimLnk = (TwoDimensionalArray)curTwoDimLnk.lnkToNext;
                     }
+                    Console.Write($"{ctr})");
                     curTwoDimLnk.Print();
                 }
+                ctr = 1;
                 Console.WriteLine("Torn Arrays:");
                 if (tornLnk is null)
                 {
@@ -115,9 +124,12 @@ namespace Lab5
                     TornArray curTornLnk = tornLnk;
                     while (curTornLnk.lnkToNext != null)
                     {
+                        Console.Write($"{ctr})");
                         curTornLnk.Print();
+                        ++ctr;
                         curTornLnk = (TornArray)curTornLnk.lnkToNext;
                     }
+                    Console.Write($"{ctr})");
                     curTornLnk.Print();
                 }
             }
