@@ -393,7 +393,7 @@ namespace Lab5
                             Console.WriteLine("Error: Position is out of range");
                             Console.ResetColor();
                         }
-                    } while (insertPos < 0 || insertPos > rows + 2);
+                    } while (insertPos < 0 || insertPos > rows + 1);
 
                     int[][] newArr = new int[rows + 1][];
                     int newColLen = InputPositive("Columns:");
@@ -458,10 +458,10 @@ namespace Lab5
                                     else
                                     {
                                         cols = curLnk.vault[i - shift].Length;
-                                        newArr[i + shift] = new int[cols];
+                                        newArr[i] = new int[cols];
                                         for (int j = 0; j < cols; ++j)
                                         {
-                                            newArr[i + shift][j] = curLnk.vault[i - shift][j];
+                                            newArr[i][j] = curLnk.vault[i - shift][j];
                                         }
                                     }
 
