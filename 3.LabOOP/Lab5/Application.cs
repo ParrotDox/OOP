@@ -14,7 +14,6 @@ namespace Lab5
             string request = "None";
             do
             {
-                Console.ReadKey();
                 Console.Clear();
 
                 Console.WriteLine
@@ -72,6 +71,8 @@ namespace Lab5
                         Console.ResetColor();
                         break;
                 }
+                Console.WriteLine("Press any button to continue");
+                Console.ReadKey();
             } while (request != "quit");
             return;
         }
@@ -189,6 +190,7 @@ namespace Lab5
                     OneDimensionalArray curLnk = (OneDimensionalArray)IterateThroughArrObj(-1, (ArrayObj)oneDimLnk);
                     curLnk.lnkToNext = buffer;
                 }
+                Print("One");
                 return buffer.vault;
             }
             public static int[,] CreateTwoDimArr(string key)
@@ -203,6 +205,7 @@ namespace Lab5
                     TwoDimensionalArray curLnk = (TwoDimensionalArray)IterateThroughArrObj(-1, (ArrayObj)twoDimLnk);
                     curLnk.lnkToNext = buffer;
                 }
+                Print("Two");
                 return buffer.vault;
             }
             public static int[][] CreateTornArr(string key)
@@ -217,6 +220,7 @@ namespace Lab5
                     TornArray curLnk = (TornArray)IterateThroughArrObj(-1, (ArrayObj)tornLnk);
                     curLnk.lnkToNext = buffer;
                 }
+                Print("Torn");
                 return buffer.vault;
             }
             public static int[] AddElements() 
@@ -228,29 +232,25 @@ namespace Lab5
                 }
                 else 
                 {
-                    Print("One");
-                    int request = InputPositive("Choose oneDim.array:");
-                    OneDimensionalArray curLnk = (OneDimensionalArray)IterateThroughArrObj(request, (ArrayObj)oneDimLnk);
-                    //Проверка результата итерирования по узлам
-                    //Если request выходит за рамки узлов
-                    if (curLnk == null)
+                    OneDimensionalArray curLnk = null;
+                    do
                     {
-                        return null;
-                    }
+                        Print("One");
+                        int request = InputPositive("Choose oneDim.array:");
+                        curLnk = (OneDimensionalArray)IterateThroughArrObj(request, (ArrayObj)oneDimLnk);
+                    } while (curLnk == null);
                     //Если request попадает на узел
-                    else
+                    int K = InputPositive("How many elements to add:");
+                    int[] newArr = new int[curLnk.vault.Length + K * 2];
+                    bool flag = false;
+                    do
                     {
-                        int K = InputPositive("How many elements to add:");
-                        int[] newArr = new int[curLnk.vault.Length + K * 2];
-                        bool flag = false;
-                        do
+                        Console.WriteLine("Input random or manually?");
+                        Console.WriteLine("r - random | m - manually");
+                        string option = Console.ReadLine().ToLower();
+                        switch (option) 
                         {
-                            Console.WriteLine("Input random or manually?");
-                            Console.WriteLine("r - random | m - manually");
-                            string option = Console.ReadLine().ToLower();
-                            switch (option) 
-                            {
-                                case "r":
+                            case "r":
                                     Random rnd = new Random();
                                     for (int i = 0; i < newArr.Length; i++)
                                     {
@@ -269,7 +269,7 @@ namespace Lab5
                                     }
                                     flag = true;
                                     break;
-                                case "m":
+                            case "m":
                                     for (int i = 0; i < newArr.Length; i++)
                                     {
                                         if (i < K)
@@ -287,16 +287,16 @@ namespace Lab5
                                     }
                                     flag = true;
                                     break;
-                                default:
-                                    Console.ForegroundColor = ConsoleColor.Red;
-                                    Console.WriteLine("Error: Unknown Command");
-                                    Console.ResetColor();
-                                    break;
-                            }
-                        } while (!flag);
-                        curLnk.vault = newArr;
-                        return newArr;
-                    }
+                            default:
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("Error: Unknown Command");
+                                Console.ResetColor();
+                                break;
+                        }
+                    } while (!flag);
+                    curLnk.vault = newArr;
+                    Print("One");
+                    return newArr;
                 }
             }
             public static int[,] DeleteAllZeroColumns() 
@@ -308,20 +308,18 @@ namespace Lab5
                 }
                 else 
                 {
-                    Print("Two");
-                    int request = InputPositive("Choose twoDim.array:");
-                    //Итерирование до нужного узла
-                    TwoDimensionalArray curLnk = (TwoDimensionalArray)IterateThroughArrObj(request, (ArrayObj)twoDimLnk);
-                    //Если вместо узла, получили null - пользователь выбрал ошибочный номер, возвращаем null
-                    if (curLnk == null)
+                    TwoDimensionalArray curLnk = null;
+                    do
                     {
-                        return null;
-                    }
+                        Print("Two");
+                        int request = InputPositive("Choose twoDim.array:");
+                        curLnk = (TwoDimensionalArray)IterateThroughArrObj(request, (ArrayObj)twoDimLnk);
+                    } while (curLnk == null);
 
                     int rows = curLnk.vault.GetLength(0);
                     int cols = curLnk.vault.GetLength(1);
                     List<int> zeroCols = new List<int>();
-                    //Записываем номеры нулевых столбцов
+                    //Записываем номера нулевых столбцов
                     for(int i = 0; i < rows; ++i) 
                     {
                         for(int j = 0; j < cols; ++j) 
@@ -351,6 +349,7 @@ namespace Lab5
                             }
                         }
                         curLnk.vault = newMatrix;
+                        Print("Two");
                         return newMatrix;
                     }
                     //Если кол-во удаляемых столбиков == кол-ву столбцов изменяемой матрицы, то возвращаем пустую матрицу
@@ -358,6 +357,7 @@ namespace Lab5
                     {
                         int[,] newMatrix = new int[0,0];
                         curLnk.vault = newMatrix;
+                        Print("Two");
                         return newMatrix;
                     }
                 }
@@ -371,13 +371,14 @@ namespace Lab5
                 }
                 else 
                 {
-                    Print("Torn");
-                    int request = InputPositive("Choose torn array:");
                     //Итерирование до нужного узла
-                    TornArray curLnk = (TornArray)IterateThroughArrObj(request, (ArrayObj)tornLnk);
-                    //Если вместо узла, получили null - пользователь выбрал ошибочный номер, возвращаем null
-                    if (curLnk == null)
-                        return null;
+                    TornArray curLnk = null;
+                    do
+                    {
+                        Print("Torn");
+                        int request = InputPositive("Choose torn array:");
+                        curLnk = (TornArray)IterateThroughArrObj(request, (ArrayObj)tornLnk);
+                    } while (curLnk == null);
                     //Размерность(1) текущего массива
                     int rows = curLnk.vault.GetLength(0);
                     //Запрос позиции для вставки элемента в массив
@@ -385,7 +386,7 @@ namespace Lab5
                     //Вставка может быть от нуля до последней позиции + 1
                     do
                     {
-                        Console.WriteLine($"Choose position between 0 and {rows}");
+                        Console.WriteLine($"Choose gap position between 0 and {rows}");
                         insertPos = InputElem("Position to insert:");
                         if (insertPos < 0 || insertPos > rows)
                         {
@@ -393,7 +394,7 @@ namespace Lab5
                             Console.WriteLine("Error: Position is out of range");
                             Console.ResetColor();
                         }
-                    } while (insertPos < 0 || insertPos > rows + 1);
+                    } while (insertPos < 0 || insertPos > rows);
 
                     int[][] newArr = new int[rows + 1][];
                     int newColLen = InputPositive("Columns:");
@@ -476,6 +477,7 @@ namespace Lab5
                         }
                     } while (!flag);
                     curLnk.vault = newArr;
+                    Print("Torn");
                     return newArr;
                 }
             }
@@ -525,7 +527,7 @@ namespace Lab5
                         Console.ResetColor();
                     }
                         
-                    if (val < 1) 
+                    else if (val < 1 && isValueInt) 
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Error: Number is <= 0");
@@ -574,7 +576,7 @@ namespace Lab5
                 //Конструкторы
                 public OneDimensionalArray(string key) : base()
                 {
-                    int len = InputPositive("Length:");
+                    int len = InputPositive("Elements in oneDim.Array:");
                     int[] temp = new int[len];
                     switch (key)
                     {
@@ -619,8 +621,8 @@ namespace Lab5
                 //Конструкторы
                 public TwoDimensionalArray(string key) : base()
                 {
-                    int rows = InputPositive("Rows:");
-                    int cols = InputPositive("Columns:");
+                    int rows = InputPositive("Rows in twoDim.Array:");
+                    int cols = InputPositive("Columns in twoDim.Array:");
                     int[,] temp = new int[rows, cols];
                     switch (key)
                     {
@@ -638,10 +640,10 @@ namespace Lab5
                         case "User":
                             for (int i = 0; i < rows; i++)
                             {
-                                Console.WriteLine($"Row {i}:");
+                                Console.WriteLine($"--- ROW {i} --- :");
                                 for (int j = 0; j < cols; ++j)
                                 {
-                                    temp[i, j] = InputElem($"Index {j}:");
+                                    temp[i, j] = InputElem($"Column {j}:");
                                 }
                             }
                             vault = temp;
@@ -704,7 +706,7 @@ namespace Lab5
                 //Конструкторы
                 public TornArray(string key) : base()
                 {
-                    int rows = InputPositive("Rows:");
+                    int rows = InputPositive("Rows in Torn Array:");
                     int[][] temp = new int[rows][];
                     switch (key) 
                     {
@@ -725,11 +727,12 @@ namespace Lab5
                         case "User":
                             for (int i = 0; i < rows; i++)
                             {
-                                int cols = InputPositive("Cols:");
+                                Console.WriteLine($"--- ROW {i} --- :");
+                                int cols = InputPositive($"Columns in ROW {i}:");
                                 temp[i] = new int[cols];
                                 for (int j = 0; j < cols; ++j)
                                 {
-                                    temp[i][j] = InputElem($"Index {j}:");
+                                    temp[i][j] = InputElem($"Column {j}:");
                                 }
                             }
                             vault = temp;
