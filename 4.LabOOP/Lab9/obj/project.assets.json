@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "PointLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/PointLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PointLibrary.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "PointLibrary/1.0.0": {
+      "type": "project",
+      "path": "../PointLibrary/PointLibrary.csproj",
+      "msbuildProject": "../PointLibrary/PointLibrary.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "PointLibrary >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Егор\\.nuget\\packages\\": {}
@@ -32,7 +51,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\PointLibrary.csproj": {
+              "projectPath": "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\PointLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

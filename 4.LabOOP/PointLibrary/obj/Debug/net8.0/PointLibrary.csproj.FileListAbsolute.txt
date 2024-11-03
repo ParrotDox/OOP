@@ -1,0 +1,12 @@
+C:\GIT\OOP\4.LabOOP\PointLibrary\bin\Debug\net8.0\PointLibrary.deps.json
+C:\GIT\OOP\4.LabOOP\PointLibrary\bin\Debug\net8.0\PointLibrary.dll
+C:\GIT\OOP\4.LabOOP\PointLibrary\bin\Debug\net8.0\PointLibrary.pdb
+C:\GIT\OOP\4.LabOOP\PointLibrary\obj\Debug\net8.0\PointLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\GIT\OOP\4.LabOOP\PointLibrary\obj\Debug\net8.0\PointLibrary.AssemblyInfoInputs.cache
+C:\GIT\OOP\4.LabOOP\PointLibrary\obj\Debug\net8.0\PointLibrary.AssemblyInfo.cs
+C:\GIT\OOP\4.LabOOP\PointLibrary\obj\Debug\net8.0\PointLibrary.csproj.CoreCompileInputs.cache
+C:\GIT\OOP\4.LabOOP\PointLibrary\obj\Debug\net8.0\PointLibrary.sourcelink.json
+C:\GIT\OOP\4.LabOOP\PointLibrary\obj\Debug\net8.0\PointLibrary.dll
+C:\GIT\OOP\4.LabOOP\PointLibrary\obj\Debug\net8.0\refint\PointLibrary.dll
+C:\GIT\OOP\4.LabOOP\PointLibrary\obj\Debug\net8.0\PointLibrary.pdb
+C:\GIT\OOP\4.LabOOP\PointLibrary\obj\Debug\net8.0\ref\PointLibrary.dll

@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "Lab9/1.0.0": {
+        "dependencies": {
+          "PointLibrary": "1.0.0"
+        },
         "runtime": {
           "Lab9.dll": {}
+        }
+      },
+      "PointLibrary/1.0.0": {
+        "runtime": {
+          "PointLibrary.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Lab9/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PointLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

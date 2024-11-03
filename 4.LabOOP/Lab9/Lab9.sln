@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab9", "Lab9.csproj", "{877EA4FA-8614-43F5-B391-01A4E49C0885}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab9", "Lab9.csproj", "{877EA4FA-8614-43F5-B391-01A4E49C0885}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointLibrary", "..\PointLibrary\PointLibrary.csproj", "{FD8D6BAD-75EB-4439-BA11-676066A84967}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{877EA4FA-8614-43F5-B391-01A4E49C0885}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{877EA4FA-8614-43F5-B391-01A4E49C0885}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{877EA4FA-8614-43F5-B391-01A4E49C0885}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD8D6BAD-75EB-4439-BA11-676066A84967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD8D6BAD-75EB-4439-BA11-676066A84967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD8D6BAD-75EB-4439-BA11-676066A84967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD8D6BAD-75EB-4439-BA11-676066A84967}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

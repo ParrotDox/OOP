@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\GIT\\OOP\\4.LabOOP\\Lab9\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{877EA4FA-8614-43F5-B391-01A4E49C0885}|Lab9.csproj|c:\\git\\oop\\4.laboop\\lab9\\money.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{877EA4FA-8614-43F5-B391-01A4E49C0885}|Lab9.csproj|solutionrelative:money.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FD8D6BAD-75EB-4439-BA11-676066A84967}|..\\PointLibrary\\PointLibrary.csproj|c:\\git\\oop\\4.laboop\\pointlibrary\\ui_point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD8D6BAD-75EB-4439-BA11-676066A84967}|..\\PointLibrary\\PointLibrary.csproj|c:\\git\\oop\\4.laboop\\pointlibrary\\pointarray.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD8D6BAD-75EB-4439-BA11-676066A84967}|..\\PointLibrary\\PointLibrary.csproj|c:\\git\\oop\\4.laboop\\pointlibrary\\point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD8D6BAD-75EB-4439-BA11-676066A84967}|..\\PointLibrary\\PointLibrary.csproj|c:\\git\\oop\\4.laboop\\pointlibrary\\pointstatic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{877EA4FA-8614-43F5-B391-01A4E49C0885}|Lab9.csproj|c:\\git\\oop\\4.laboop\\lab9\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -18,32 +26,72 @@
       "DocumentGroups": [
         {
           "DockedWidth": 836,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Money.cs",
-              "DocumentMoniker": "C:\\GIT\\OOP\\4.LabOOP\\Lab9\\Money.cs",
-              "RelativeDocumentMoniker": "Money.cs",
-              "ToolTip": "C:\\GIT\\OOP\\4.LabOOP\\Lab9\\Money.cs",
-              "RelativeToolTip": "Money.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T16:59:06.35Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\GIT\\OOP\\4.LabOOP\\Lab9\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\GIT\\OOP\\4.LabOOP\\Lab9\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T16:48:43.178Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PointStatic.cs",
+              "DocumentMoniker": "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\PointStatic.cs",
+              "RelativeDocumentMoniker": "..\\PointLibrary\\PointStatic.cs",
+              "ToolTip": "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\PointStatic.cs",
+              "RelativeToolTip": "..\\PointLibrary\\PointStatic.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T19:39:02.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Point.cs",
+              "DocumentMoniker": "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\Point.cs",
+              "RelativeDocumentMoniker": "..\\PointLibrary\\Point.cs",
+              "ToolTip": "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\Point.cs",
+              "RelativeToolTip": "..\\PointLibrary\\Point.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAIwEEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T13:37:19.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PointArray.cs",
+              "DocumentMoniker": "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\PointArray.cs",
+              "RelativeDocumentMoniker": "..\\PointLibrary\\PointArray.cs",
+              "ToolTip": "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\PointArray.cs",
+              "RelativeToolTip": "..\\PointLibrary\\PointArray.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAHwAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T13:24:49.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UI_Point.cs",
+              "DocumentMoniker": "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\UI_Point.cs",
+              "RelativeDocumentMoniker": "..\\PointLibrary\\UI_Point.cs",
+              "ToolTip": "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\UI_Point.cs",
+              "RelativeToolTip": "..\\PointLibrary\\UI_Point.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAowBYAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T13:03:19.659Z",
               "EditorCaption": ""
             }
           ]
