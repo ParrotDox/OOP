@@ -23,17 +23,17 @@ namespace PointLibrary
         Exit = 13,
     }
     //[UI для демонстрации программы]
-    public class UI_Point
+    public class UI_Point<T>
     {
         //Переменные для вызова комманд
         private uint commandKey = 0;
         private uint commandAmount = 14;
         //Переменные для записи данных
-        Point pointOne;
-        Point pointTwo;
-        PointArray arrayManual;
-        PointArray arrayRandom;
-        PointArray arrayEmpty;
+        Point<T> pointOne;
+        Point<T> pointTwo;
+        PointArray<T> arrayManual;
+        PointArray<T> arrayRandom;
+        PointArray<T> arrayEmpty;
         public void Execute()
         {
             Start:
@@ -54,29 +54,81 @@ namespace PointLibrary
                         //Вывод всех переменных класса UI_Point
                         case (uint)Commands.Print:
                             {
-                                pointOne.Print();
-                                Console.Write('\n');
-                                pointTwo.Print();
-                                Console.Write('\n');
-                                arrayManual.Print();
-                                Console.Write('\n');
-                                arrayRandom.Print();
-                                Console.Write('\n');
-                                arrayEmpty.Print();
+                                bool isSmthPrinted = false;
+                                if(pointOne != null) 
+                                {
+                                    pointOne.Print();
+                                    Console.Write('\n');
+                                    isSmthPrinted = true;
+                                }
+                                else 
+                                {
+                                    Console.Write("Point one: not init.");
+                                    Console.Write('\n');
+                                }
+                                if(pointTwo != null) 
+                                {
+                                    pointTwo.Print();
+                                    Console.Write('\n');
+                                    isSmthPrinted = true;
+                                }
+                                else 
+                                {
+                                    Console.Write("Point two: not init.");
+                                    Console.Write('\n');
+                                }
+                                if(arrayManual != null) 
+                                {
+                                    arrayManual.Print();
+                                    Console.Write('\n');
+                                    isSmthPrinted = true;
+                                }
+                                else
+                                {
+                                    Console.Write("Manual array: not init.");
+                                    Console.Write('\n');
+                                }
+                                if(arrayRandom != null) 
+                                {
+                                    arrayRandom.Print();
+                                    Console.Write('\n');
+                                    isSmthPrinted = true;
+                                }
+                                else 
+                                {
+                                    Console.Write("Random array: not init.");
+                                    Console.Write('\n');
+                                }
+                                if(arrayEmpty != null) 
+                                {
+                                    arrayEmpty.Print();
+                                    isSmthPrinted = true;
+                                }
+                                else 
+                                {
+                                    Console.Write("Empty array: not init.");
+                                    Console.Write('\n');
+                                }
+                                if (!isSmthPrinted) 
+                                {
+                                    Console.Write("All Objects are empty!\n");
+                                }
                                 break;
                             }
                         case (uint)Commands.InitArrayM:
                             {
-                                uint len = InputUInt();
-                                arrayManual = new PointArray(len, true);
+                                Console.Write("Length:");
+                                dynamic len = InputInt();
+                                arrayManual = new PointArray<T>(len, true);
                                 //Наглядный вывод
                                 arrayManual.Print();
                                 break;
                             }
                         case (uint)Commands.InitArrayR:
                             {
-                                uint len = InputUInt();
-                                arrayRandom = new PointArray(len, false);
+                                Console.Write("Length:");
+                                dynamic len = InputUInt();
+                                arrayRandom = new PointArray<T>(len, false);
                                 //Наглядный вывод
                                 arrayRandom.Print();
                                 break;
@@ -84,7 +136,7 @@ namespace PointLibrary
                         case (uint)Commands.InitArrayE:
                             {
                                 //Для примера будет создаваться пустой массив
-                                arrayEmpty = new PointArray();
+                                arrayEmpty = new PointArray<T>();
                                 //Наглядный вывод
                                 arrayEmpty.Print();
                                 break;
@@ -92,24 +144,28 @@ namespace PointLibrary
                         case (uint)Commands.ShowStaticCtrs:
                             {
                                 Console.WriteLine("Points:");
-                                Console.WriteLine(PointStatic.pointCounter);
+                                Console.WriteLine(PointStatic<T>.pointCounter);
                                 Console.WriteLine("PointArrays:");
-                                Console.WriteLine(PointStatic.pointArrayCounter);
+                                Console.WriteLine(PointStatic<T>.pointArrayCounter);
                                 break;
                             }
                         case (uint)Commands.InitPointOne:
                             {
-                                double coordX = InputDouble();
-                                double coordY = InputDouble();
-                                pointOne = new Point(coordX, coordY);
+                                Console.Write("X:");
+                                dynamic coordX = InputDouble();
+                                Console.Write("Y:");
+                                dynamic coordY = InputDouble();
+                                pointOne = new Point<T>(coordX, coordY);
                                 pointOne.Print();
                                 break;
                             }
                         case (uint)Commands.InitPointTwo:
                             {
-                                double coordX = InputDouble();
-                                double coordY = InputDouble();
-                                pointTwo = new Point(coordX, coordY);
+                                Console.Write("X:");
+                                dynamic coordX = InputDouble();
+                                Console.Write("Y:");
+                                dynamic coordY = InputDouble();
+                                pointTwo = new Point<T>(coordX, coordY);
                                 pointTwo.Print();
                                 break;
                             }
@@ -148,15 +204,19 @@ namespace PointLibrary
                         case (uint)Commands.FindDistance:
                             {
                                 Console.WriteLine("[ POINT ONE INPUT ]");
-                                double coordX = InputDouble();
-                                double coordY = InputDouble();
-                                Point tempPoint1 = new Point(coordX, coordY);
+                                Console.Write("X:");
+                                dynamic coordX = InputDouble();
+                                Console.Write("Y:");
+                                dynamic coordY = InputDouble();
+                                Point<T> tempPoint1 = new Point<T>(coordX, coordY);
                                 tempPoint1.Print();
 
                                 Console.WriteLine("[ POINT TWO INPUT ]");
+                                Console.Write("X:");
                                 coordX = InputDouble();
+                                Console.Write("Y:");
                                 coordY = InputDouble();
-                                Point tempPoint2 = new Point(coordX, coordY);
+                                Point<T> tempPoint2 = new Point<T>(coordX, coordY);
                                 tempPoint2.Print();
 
                                 Console.WriteLine("[ (POINT CLASS) OVERRIDE+ /// (STATIC CLASS) FUNC ]");
@@ -164,22 +224,22 @@ namespace PointLibrary
                                 double result = tempPoint1 + tempPoint2;
                                 Console.WriteLine($"Distance between two points: {result}");
                                 Console.WriteLine("(STATIC CLASS)");
-                                result = PointStatic.FindDistance(tempPoint1, tempPoint2);
+                                result = PointStatic<T>.FindDistance(tempPoint1, tempPoint2);
                                 Console.WriteLine($"Distance between two points: {result}");
                                 break;
                             }
                         case (uint)Commands.AddIntValue:
                             {
                                 Console.WriteLine("[ POINT ONE INPUT ]");
-                                double coordX = InputDouble();
-                                double coordY = InputDouble();
-                                Point tempPoint1 = new Point(coordX, coordY);
+                                dynamic coordX = InputDouble();
+                                dynamic coordY = InputDouble();
+                                Point<T> tempPoint1 = new Point<T>(coordX, coordY);
                                 tempPoint1.Print();
                                 Console.WriteLine("[ INT VAL. INPUT ]");
                                 int x = InputInt();
                                 Console.WriteLine("[ (1) = POINT + INT /// (2) = INT + POINT ]");
                                 Console.WriteLine("(1)");
-                                Point result = tempPoint1 + x;
+                                Point<T> result = tempPoint1 + x;
                                 result.Print();
                                 Console.WriteLine("(2)");
                                 result = x + tempPoint1;
@@ -199,7 +259,7 @@ namespace PointLibrary
             catch(NullReferenceException e) 
             {
                 Console.WriteLine("NullReferenceError:");
-                Console.WriteLine("Initialize all points and arrays!");
+                Console.WriteLine("Initialize object before using it!");
                 Console.ReadKey();
                 goto Start;
             }
@@ -225,7 +285,7 @@ namespace PointLibrary
             } while (!isInt);
             return n;
         }
-        private uint InputUInt() 
+        private int InputUInt() 
         {
             bool isInt;
             int n;
@@ -242,7 +302,7 @@ namespace PointLibrary
                     throw new Exception("Input is < 0");
                 }
             } while (!isInt || n < 0);
-            return (uint)n;
+            return n;
         }
         private double InputDouble()
         {

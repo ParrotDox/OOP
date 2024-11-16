@@ -8,15 +8,20 @@
     ".NETCoreApp,Version=v8.0": {
       "Lab9/1.0.0": {
         "dependencies": {
-          "PointLibrary": "1.0.0"
+          "PointLibrary": "1.0.0",
+          "ReportGenerator": "5.4.1"
         },
         "runtime": {
           "Lab9.dll": {}
         }
       },
+      "ReportGenerator/5.4.1": {},
       "PointLibrary/1.0.0": {
         "runtime": {
-          "PointLibrary.dll": {}
+          "PointLibrary.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
@@ -26,6 +31,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "ReportGenerator/5.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-43jtNAWOxLuGz0v4GbbQVNVw+No6PtrFw40VhhEsiZS3wJ0JjawoN8ezIFy4OsARKhQyM8KLhDqQy12YU/kuPA==",
+      "path": "reportgenerator/5.4.1",
+      "hashPath": "reportgenerator.5.4.1.nupkg.sha512"
     },
     "PointLibrary/1.0.0": {
       "type": "project",

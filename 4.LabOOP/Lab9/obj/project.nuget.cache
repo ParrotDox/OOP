@@ -1,8 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "GKOi43dYUBhWdsQYyPlpC3sqODsZHk2GsOB49RyJB0leb8lEMKCRIla+aERPKf/cIOcbWowlxOITQ6IFy3+bZg==",
+  "dgSpecHash": "YaYRHUp/DCc=",
   "success": true,
   "projectFilePath": "C:\\GIT\\OOP\\4.LabOOP\\Lab9\\Lab9.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\Егор\\.nuget\\packages\\reportgenerator\\5.4.1\\reportgenerator.5.4.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Произошла ошибка при получении данных уязвимости пакета: Не удалось загрузить индекс службы для источника https://api.nuget.org/v3/index.json."
+    }
+  ]
 }

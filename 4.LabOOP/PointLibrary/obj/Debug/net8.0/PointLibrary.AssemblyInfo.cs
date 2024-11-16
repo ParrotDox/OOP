@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PointLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01e7d88ecc3eec414a6608a82c5f556586ed8465")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3eca56b6219b64dc5dcbe02654eaf3629f89a0fc")]
 [assembly: System.Reflection.AssemblyProductAttribute("PointLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PointLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

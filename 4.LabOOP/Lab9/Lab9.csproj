@@ -11,4 +11,8 @@
     <ProjectReference Include="..\PointLibrary\PointLibrary.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="ReportGenerator" Version="5.4.1" />
+  </ItemGroup>
+
 </Project>

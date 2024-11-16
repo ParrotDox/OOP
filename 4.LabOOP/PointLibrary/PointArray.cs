@@ -2,11 +2,11 @@
 namespace PointLibrary
 {
     //[КЛАСС КОЛЛЕКЦИЯ]
-    public class PointArray
+    public class PointArray<T>
     {
         //Делегат для события
-        public delegate void PointArrayEventHandler(PointArray sender, PointArrayEventArgs e);
-        public event PointArrayEventHandler notify = (PointArray sender, PointArrayEventArgs e) =>
+        public delegate void PointArrayEventHandler(PointArray<T> sender, PointArrayEventArgs e);
+        public event PointArrayEventHandler notify = (PointArray<T> sender, PointArrayEventArgs e) =>
         {
             Console.WriteLine(e.msg);
         };
@@ -25,80 +25,101 @@ namespace PointLibrary
             }
         }
         //Одномерный массив точек
-        private Point[] array;
-        private uint length;
+        public Point<double>[] array;
+        public uint length;
         //Границы рандома
         private static int min = -50;
-        private static int max = -50;
+        private static int max = 50;
         private static Random rnd = new Random();
         //Конструкторы Деструктор
         public PointArray()
         {
             notify(this, new PointArrayEventArgs($"Creating empty array", length));
             length = 0;
-            array = new Point[length];
-            ++PointStatic.pointArrayCounter;
+            array = new Point<double>[length];
+            ++PointStatic<T>.pointArrayCounter;
         }
 
-        public PointArray(uint length, bool isManual)
+        public PointArray(T len, bool isManual)
         {
-            notify(this, new PointArrayEventArgs($"Creating array [Len: {length}]", length));
-            this.length = length;
-            array = new Point[length];
-            ++PointStatic.pointArrayCounter;
-            if (length > 0)
+            notify(this, new PointArrayEventArgs($"Creating array [Len: {length}]", (uint)length));
+            array = CreateArray(len, isManual);
+            this.length = (uint)array.Length;
+            ++PointStatic<T>.pointArrayCounter;
+        }
+        //Создание массива и его возврат
+        public Point<double>[] CreateArray(T len, bool isManual) 
+        {
+            if (len is double || len is float || len is int)
             {
-                switch (isManual)
+                int length = Convert.ToInt32(len);
+                if (length >= 0 && Convert.ToDouble(len) >= 0 && (Convert.ToDouble(len) - length == 0))
                 {
-                    //Ручной ввод
-                    case true:
-                        {
-                            notify(this, new PointArrayEventArgs($"Manual fill:", this.length));
-                            double coordX, coordY;
-                            for (int i = 0; i < length; ++i)
+                    this.length = (uint)length;
+                    array = new Point<double>[length];
+                    switch (isManual)
+                    {
+                        //Ручной ввод
+                        case true:
                             {
-                                Console.WriteLine("X:");
-                                coordX = InputDouble(i);
-                                Console.WriteLine("Y:");
-                                coordY = InputDouble(i);
-                                array[i] = new Point(coordX, coordY);
+                                notify(this, new PointArrayEventArgs($"Manual fill:", this.length));
+                                dynamic coordX, coordY;
+                                for (int i = 0; i < length; ++i)
+                                {
+                                    Console.Write("X:");
+                                    coordX = InputDouble(i);
+                                    Console.Write("Y:");
+                                    coordY = InputDouble(i);
+                                    array[i] = new Point<double>(coordX, coordY);
+                                }
+                                ++PointStatic<T>.pointArrayCounter;
+                                return array;
                             }
-                            break;
-                        }
-                    //Случайный ввод
-                    case false:
-                        {
-                            double coordX, coordY;
-                            for (int i = 0; i < length; ++i)
+                        //Случайный ввод
+                        case false:
                             {
-                                notify(this, new PointArrayEventArgs($"Random fill:", this.length));
-                                coordX = rnd.NextDouble() * (max - min) + min;
-                                coordY = rnd.NextDouble() * (max - min) + min;
-                                array[i] = new Point(coordX,coordY);
+                                dynamic coordX, coordY;
+                                for (int i = 0; i < length; ++i)
+                                {
+                                    notify(this, new PointArrayEventArgs($"Random fill:", this.length));
+                                    coordX = rnd.NextDouble() * (max - min) + min;
+                                    coordY = rnd.NextDouble() * (max - min) + min;
+                                    array[i] = new Point<double>(coordX, coordY);
+                                }
+                                ++PointStatic<T>.pointArrayCounter;
+                                return array;
                             }
-                            break;
-                        }
+                    }
                 }
+                else
+                {
+                    throw new Exception("Length is under zero or value is not integer!");
+                }
+            }
+            else
+            {
+                throw new Exception("Wrong type of data!");
             }
         }
         ~PointArray()
         {
             notify(this, new PointArrayEventArgs($"Deleting array [Len: {length}]", length));
-            --PointStatic.pointArrayCounter;
+
+            --PointStatic<T>.pointArrayCounter;
         }
         //Индексатор
-        public Point this[int index]
+        public Point<double> this[int index]
         {
             get
             {
-                if (index > 0 && index < array.Length)
+                if (index >= 0 && index < array.Length)
                     return array[index];
                 else
                     throw new IndexOutOfRangeException("Index is out of range");
             }
             set
             {
-                if (index > 0 && index < array.Length)
+                if (index >= 0 && index < array.Length)
                     array[index] = value;
                 else
                     throw new ArgumentOutOfRangeException("Index is out of range");
