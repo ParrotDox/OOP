@@ -9,6 +9,6 @@ namespace ClassIerarchyLib
     public interface IComparer
     {
         //Реализация метода прописывается в отдельном классе от классовой-иерархии
-        public int Compare(object x, object y);
+        public int Compare(object? x, object? y);
     }
 }

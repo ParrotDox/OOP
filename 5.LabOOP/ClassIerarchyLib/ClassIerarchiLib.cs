@@ -1,19 +1,61 @@
 ﻿using System;
 using System.Security.AccessControl;
+using System.Security.Policy;
+using System.Xml.Linq;
 
 //[Классы профессий в компании]
 namespace ClassIerarchyLib
 {
+    //Класс Link предназначен для демонстрации поверхностного и глубокого копирования, он используется в Person классе!
+    public class Link : IInit
+    {
+        //Zondbi list
+        public List<string> rndWobboWabbo = new List<string> { "Wa wobbo wabba wabba wabby wobbo wabba wa", "Wobba wobby wabba-wabba wabby wo-wo wabba wa", "Bra..., a a a ins" };
+        public string notes = "";
+        public string data = "";
+        public Link() 
+        {
+            notes = "None";
+            data = "0";
+        }
+        public Link(string dataSample) 
+        {
+            data = dataSample;
+        }
+        public Link(string dataSample, string noteSample) : this(dataSample)
+        {
+            notes = noteSample;
+        }
+        public void Show() 
+        {
+            Console.WriteLine($"Notes: {notes}");
+            Console.WriteLine($"Data: {data}");
+        }
+        public void Init() 
+        {
+            Console.WriteLine("Your Notes:");
+            notes = Console.ReadLine();
+            Console.WriteLine("Your Data:");
+            data = Console.ReadLine();
+        }
+        public void RandomInit() 
+        {
+            Random rnd = new Random();
+            notes = rndWobboWabbo[rnd.Next(0, rndWobboWabbo.Count)];
+            data = rndWobboWabbo[rnd.Next(0, rndWobboWabbo.Count)];
+        }
+        
+    }
     //Древо наследования:
     /* Person --- Employee ---|-- Engineer
      *                        |-- Admin
      */
-    public class Person : IInit, IComparable
+    public class Person : IInit, IComparable<Person>, ICloneable
     {
         public static string[] rndNames = new string[] { "Jacky", "Johny", "Marigold", "Elizabeth", "Horo", "Danil", "Nikita", "Egor", "Sergey", "Vlad", "Andrew", "Maksim", "Oleg", "Anna", "Maddie" };
         public static string[] rndResidences = new string[] { "Visim", "Krohalevka", "Serebryanskiy_Proezd", "Tsum", "Yralskaya", "Sadoviy", "Ivanovskaya", "Takayama_Street", "Night_Street", "Waterfall_street" };
         protected string __name__;
-        protected string __Name__ 
+        public string __Name__ 
         {
             get
             {
@@ -29,7 +71,7 @@ namespace ClassIerarchyLib
             }
         }
         protected int __age__;
-        protected int __Age__ 
+        public int __Age__ 
         {
             get 
             {
@@ -60,24 +102,37 @@ namespace ClassIerarchyLib
                 __residence__ = value;
             }
         }
+        //Поле предназначено для демонстрации поверхностного и глубокого копирования
+        public Link? lnk;
 
         public Person() 
         {
             __name__ = "Undefined";
             __age__ = 16;
             __residence__ = "Undefined";
+            lnk = new Link("0", "None");
         }
         public Person(string name, int age, string residence) 
         {
             __name__ = name;
             __age__ = age;
             __residence__ = residence;
+            lnk = new Link(age.ToString(), name + " lives in " + residence);
         }
+        public Person(string name, int age, string residence, Link lnkSample)
+        {
+            __name__ = name;
+            __age__ = age;
+            __residence__ = residence;
+            lnk = lnkSample;
+        }
+        //Этот метод копирования проводит копирование только ЗНАЧИМЫХ полей, ссылочное поле не затронуто, создается по-умолчанию новый экзепляр Link через базовый конструктор
         public Person(Person copySample)
         {
             this.__name__ = copySample.__name__;
             this.__age__ = copySample.__age__;
             this.__residence__ = copySample.__residence__;
+            this.lnk = new Link();
         }
 
         public virtual void Show() 
@@ -86,6 +141,7 @@ namespace ClassIerarchyLib
             Console.WriteLine($"Age: {__age__}");
             Console.WriteLine($"Residence: {__residence__}");
         }
+        //Реализация Init из кастомного IInit
         public virtual void Init() 
         {
             bool nameFlag, ageFlag, residenceFlag;
@@ -129,6 +185,7 @@ namespace ClassIerarchyLib
                 goto inputMark;
             }
         }
+        //Реализация Init из кастомного IInit
         public virtual void RandomInit() 
         {
             Random rnd = new Random();
@@ -153,22 +210,26 @@ namespace ClassIerarchyLib
         }
         //Реализация метода CompareTo из IComparable
         //Сравнение идет по полю __age__
-        public int CompareTo(object obj) 
+        public int CompareTo(Person obj) 
         {
-            if (obj == null)
-                return 1;
-
-            if (!(obj is Person))
-                throw new ArgumentException("Объект должен быть типом Person");
-
-            Person temp = (Person)obj;
-            if (this.__age__ > temp.__age__)
-                return 1;
-            if (this.__age__ < temp.__age__)
-                return -1;
-            return 0;
+            //if (obj is null) return 1;
+            //if (this.__age__ > temp.__age__)
+            //    return 1;
+            //if (this.__age__ < temp.__age__)
+            //    return -1;
+            //return 0;
             //Другой вариант кода при сравнении простых полей типа int, string
-            //return this.__age__.CompareTo(temp.__age__) <-- Одно и то же
+            return this.__age__.CompareTo(obj.__age__);
+        }
+        //Реализация метода из ICloneable, глубокое копирование
+        public virtual object Clone() 
+        {
+            return new Person(this.__name__, this.__age__, this.__residence__, new Link(lnk.data, lnk.notes));
+        }
+        //Метод поверхностного копирования
+        public virtual object ShallowCopy() 
+        {
+            return this.MemberwiseClone();
         }
     }
     public class Employee : Person
@@ -318,7 +379,7 @@ namespace ClassIerarchyLib
     }
     public class Engineer : Employee
     {
-        public static string[] rndDepartments = new string[] { "Department_of_aqua_technologies", "Department_of_food_production", "Department_of_space_production" };
+        public static List<string> rndDepartments = new List<string> { "Department_of_aqua_technologies", "Department_of_food_production", "Department_of_space_production" };
         Random rnd = new Random();
         protected string __department__;
         public string __Department__ 
@@ -370,6 +431,7 @@ namespace ClassIerarchyLib
                     Console.WriteLine("Input department:");
                     inputString = Console.ReadLine();
                     __Department__ = inputString;
+                    rndDepartments.Add(inputString);
                     departmentFlag = true;
                 }
             }
@@ -383,7 +445,7 @@ namespace ClassIerarchyLib
         {
             base.RandomInit();
             
-            __Department__ = rndDepartments[rnd.Next(0, rndDepartments.Length)];
+            __Department__ = rndDepartments[rnd.Next(0, rndDepartments.Count)];
         }
         public override bool Equals(object obj)
         {
@@ -402,7 +464,7 @@ namespace ClassIerarchyLib
     }
     public class Admin : Employee
     {
-        public static string[] rndHeadOffices = new string[] { "Central_Perm_Office", "Central_night_street_office", "Central_space_office" };
+        public static List<string> rndHeadOffices = new List<string> { "Central_Perm_Office", "Central_night_street_office", "Central_space_office" };
         protected string __headOffice__;
         protected string __HeadOffice__ 
         {
@@ -453,6 +515,7 @@ namespace ClassIerarchyLib
                     string inputString = "";
                     inputString = Console.ReadLine();
                     __HeadOffice__ = inputString;
+                    rndHeadOffices.Add(inputString);
                     headOfficeFlag = true;
                 }
             }
@@ -466,7 +529,7 @@ namespace ClassIerarchyLib
         {
             base.RandomInit();
             Random rnd = new Random();
-            __HeadOffice__ = rndHeadOffices[rnd.Next(0, rndHeadOffices.Length)];
+            __HeadOffice__ = rndHeadOffices[rnd.Next(0, rndHeadOffices.Count)];
         }
         public override bool Equals(object obj)
         {
@@ -481,6 +544,30 @@ namespace ClassIerarchyLib
                 return true;
             }
             else { return false; }
+        }
+    }
+
+    //Реализация метода Compare из IComparer по полю Age
+    public class SortByAge : IComparer<Person> 
+    {
+        public int Compare(Person x, Person y) 
+        {
+            if (x == null || y == null)
+                throw new ArgumentException("Compared objects cannot be null.");
+            else
+                return x.__Age__.CompareTo(y.__Age__);
+
+        }
+    }
+    //Реализация метода Compare из IComparer по полю Name
+    public class SortByName : IComparer<Person>
+    {
+        public int Compare(Person x, Person y)
+        {
+            if (x == null || y == null)
+                throw new ArgumentException("Compared objects cannot be null.");
+            else
+                return x.__Name__.CompareTo(y.__Name__);
         }
     }
 }

@@ -9,6 +9,6 @@ namespace ClassIerarchyLib
     public interface IComparable
     {
         //Реализация метода прописана в классах-наследниках.
-        int CompareTo(object obj);
+        int CompareTo(object? obj);
     }
 }
