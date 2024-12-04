@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\Main\\Main.csproj": {}
+    "C:\\GIT\\OOP\\5.LabOOP\\Main\\Main.csproj": {}
   },
   "projects": {
-    "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj": {
+    "C:\\GIT\\OOP\\5.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
+        "projectUniqueName": "C:\\GIT\\OOP\\5.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
         "projectName": "ClassIerarchyLib",
-        "projectPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
+        "projectPath": "C:\\GIT\\OOP\\5.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
         "packagesPath": "C:\\Users\\Егор\\.nuget\\packages\\",
-        "outputPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\ClassIerarchyLib\\obj\\",
+        "outputPath": "C:\\GIT\\OOP\\5.LabOOP\\ClassIerarchyLib\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,8 +42,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -65,18 +65,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\Main\\Main.csproj": {
+    "C:\\GIT\\OOP\\5.LabOOP\\Main\\Main.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\Main\\Main.csproj",
+        "projectUniqueName": "C:\\GIT\\OOP\\5.LabOOP\\Main\\Main.csproj",
         "projectName": "Main",
-        "projectPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\Main\\Main.csproj",
+        "projectPath": "C:\\GIT\\OOP\\5.LabOOP\\Main\\Main.csproj",
         "packagesPath": "C:\\Users\\Егор\\.nuget\\packages\\",
-        "outputPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\Main\\obj\\",
+        "outputPath": "C:\\GIT\\OOP\\5.LabOOP\\Main\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -91,15 +91,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj": {
-                "projectPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj"
+              "C:\\GIT\\OOP\\5.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj": {
+                "projectPath": "C:\\GIT\\OOP\\5.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj"
               }
             }
           }
@@ -112,8 +111,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -134,7 +134,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

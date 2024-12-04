@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Hotspots>
+  <Hotspot>
+    <Assembly>ClassIerarchyLib</Assembly>
+    <Class>ClassIerarchyLib.QueryMaker</Class>
+    <MethodName>CalcTotalSalaryToPayByClassObject()</MethodName>
+    <ShortName />
+    <Line>166</Line>
+    <FileIndex>0</FileIndex>
+    <Metrics>
+      <Metric>
+        <Name>Cyclomatic complexity</Name>
+        <Exceeded>true</Exceeded>
+        <Value>60</Value>
+      </Metric>
+    </Metrics>
+  </Hotspot>
+  <Hotspot>
+    <Assembly>ClassIerarchyLib</Assembly>
+    <Class>ClassIerarchyLib.QueryMaker</Class>
+    <MethodName>CalcTotalSalaryToPayByClassObject(...)</MethodName>
+    <ShortName />
+    <Line>213</Line>
+    <FileIndex>0</FileIndex>
+    <Metrics>
+      <Metric>
+        <Name>Cyclomatic complexity</Name>
+        <Exceeded>true</Exceeded>
+        <Value>60</Value>
+      </Metric>
+    </Metrics>
+  </Hotspot>
+</Hotspots>

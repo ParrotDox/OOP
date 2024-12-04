@@ -284,7 +284,6 @@ namespace ClassIerarchyLib
                     Console.WriteLine("Comparison is above zero");
                     left = middle + 1;
                 }   
-                Console.ReadLine();
             }
             return -1;
         }

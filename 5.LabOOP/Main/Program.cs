@@ -171,3 +171,32 @@ person2.lnk.notes = "I changed person3 notes";
 Console.WriteLine($"Person3 notes after changes: {person3.lnk.notes}");
 Console.WriteLine($"Person4 notes after changes: {person4.lnk.notes}");
 Console.WriteLine("As you can see, person3 also changed the note field due to Shallow Copying");
+
+//[ADDITIONAL PART]
+Console.WriteLine("[ADDITIONAL PART]");
+QueryMaker.InitCompanyArray();
+
+Console.WriteLine("[SHOW QUANTITY OF CLASS OBJECTS]");
+QueryMaker.ShowCompanyArray();
+QueryMaker.ShowQuantityOfClassObjects();
+Console.WriteLine("Press enter to continue...");
+Console.ReadLine();
+Console.Clear();
+
+Console.WriteLine("[SHOW QUANTITY OF ENGINEERS OF CHOSEN DEPARTMENT]");
+QueryMaker.ShowCompanyArray();
+QueryMaker.ShowQuantityOfEngineersOfChosenDepartment();
+Console.WriteLine("Press enter to continue...");
+Console.ReadLine();
+Console.Clear();
+
+Console.WriteLine("[CALCULATE TOTAL SALARY BY CLASS OBJECT]");
+QueryMaker.ShowCompanyArray();
+QueryMaker.CalcTotalSalaryToPayByClassObject();
+Console.WriteLine("Press enter to continue...");
+Console.ReadLine();
+Console.Clear();
+
+Console.WriteLine("Press enter to continue...");
+Console.ReadLine();
+Console.Clear();

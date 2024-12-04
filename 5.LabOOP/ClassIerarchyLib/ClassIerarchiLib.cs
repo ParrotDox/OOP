@@ -87,7 +87,7 @@ namespace ClassIerarchyLib
             }
         }
         protected string __residence__;
-        protected string __Residence__ 
+        public string __Residence__ 
         {
             get
             {
@@ -235,7 +235,7 @@ namespace ClassIerarchyLib
     public class Employee : Person
     {
         protected int __id__;
-        protected int __Id__ 
+        public int __Id__ 
         {
             get
             {
@@ -251,7 +251,7 @@ namespace ClassIerarchyLib
             }
         }
         protected int __experience__;
-        protected int __Experience__
+        public int __Experience__
         {
             get 
             {
@@ -466,7 +466,7 @@ namespace ClassIerarchyLib
     {
         public static List<string> rndHeadOffices = new List<string> { "Central_Perm_Office", "Central_night_street_office", "Central_space_office" };
         protected string __headOffice__;
-        protected string __HeadOffice__ 
+        public string __HeadOffice__ 
         {
             get
             {
@@ -552,11 +552,7 @@ namespace ClassIerarchyLib
     {
         public int Compare(Person x, Person y) 
         {
-            if (x == null || y == null)
-                throw new ArgumentException("Compared objects cannot be null.");
-            else
-                return x.__Age__.CompareTo(y.__Age__);
-
+            return x.__Age__.CompareTo(y.__Age__);
         }
     }
     //Реализация метода Compare из IComparer по полю Name
@@ -564,10 +560,7 @@ namespace ClassIerarchyLib
     {
         public int Compare(Person x, Person y)
         {
-            if (x == null || y == null)
-                throw new ArgumentException("Compared objects cannot be null.");
-            else
-                return x.__Name__.CompareTo(y.__Name__);
+            return x.__Name__.CompareTo(y.__Name__);
         }
     }
 }
