@@ -1,8 +1,14 @@
 ﻿using ClassIerarchyLib;
 using System.Security.AccessControl;
 
-QueryMaker.InitCompanyArray();
-QueryMaker.ShowCompanyArray();
-QueryMaker.ShowQuantityOfClassObjects();
-QueryMaker.ShowQuantityOfEngineersOfChosenDepartment();
-QueryMaker.CalcTotalSalaryToPayByClassObject();
+List<Person> people = new List<Person> { new Person(), new Person(), new Person() };
+foreach (Person person in people)
+{ 
+    person.RandomInit();
+    person.Show();
+}
+people.Sort();
+foreach (Person person in people) 
+{
+    person.Show();
+}

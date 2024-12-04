@@ -8,7 +8,7 @@ namespace ClassIerarchyLib
     /* Person --- Employee ---|-- Engineer
      *                        |-- Admin
      */
-    public class Person
+    public class Person : IInit, IComparable
     {
         public static string[] rndNames = new string[] { "Jacky", "Johny", "Marigold", "Elizabeth", "Horo", "Danil", "Nikita", "Egor", "Sergey", "Vlad", "Andrew", "Maksim", "Oleg", "Anna", "Maddie" };
         public static string[] rndResidences = new string[] { "Visim", "Krohalevka", "Serebryanskiy_Proezd", "Tsum", "Yralskaya", "Sadoviy", "Ivanovskaya", "Takayama_Street", "Night_Street", "Waterfall_street" };
@@ -150,6 +150,25 @@ namespace ClassIerarchyLib
                 return true;
             }
             else { return false; }
+        }
+        //Реализация метода CompareTo из IComparable
+        //Сравнение идет по полю __age__
+        public int CompareTo(object obj) 
+        {
+            if (obj == null)
+                return 1;
+
+            if (!(obj is Person))
+                throw new ArgumentException("Объект должен быть типом Person");
+
+            Person temp = (Person)obj;
+            if (this.__age__ > temp.__age__)
+                return 1;
+            if (this.__age__ < temp.__age__)
+                return -1;
+            return 0;
+            //Другой вариант кода при сравнении простых полей типа int, string
+            //return this.__age__.CompareTo(temp.__age__) <-- Одно и то же
         }
     }
     public class Employee : Person
@@ -295,6 +314,7 @@ namespace ClassIerarchyLib
             }
             else { return false; }
         }
+
     }
     public class Engineer : Employee
     {
