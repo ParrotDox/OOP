@@ -5,9 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B3966A21-B5C7-4DF4-BEB0-271B4FCE90D0}|Main.csproj|b:\\git\\c#-oop-discrete\\oop\\5.laboop\\main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B3966A21-B5C7-4DF4-BEB0-271B4FCE90D0}|Main.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38D89ACE-14E8-4AE6-A2EB-60E56D932264}|..\\ClassIerarchyLib\\ClassIerarchyLib.csproj|b:\\git\\c#-oop-discrete\\oop\\5.laboop\\classierarchylib\\classierarchilib.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,22 +24,9 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\Main\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T13:33:00.374Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ClassIerarchiLib.cs",
-              "DocumentMoniker": "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\ClassIerarchyLib\\ClassIerarchiLib.cs",
-              "RelativeDocumentMoniker": "..\\ClassIerarchyLib\\ClassIerarchiLib.cs",
-              "ToolTip": "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\ClassIerarchyLib\\ClassIerarchiLib.cs",
-              "RelativeToolTip": "..\\ClassIerarchyLib\\ClassIerarchiLib.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOoAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T08:20:57.041Z",
+              "WhenOpened": "2024-12-15T19:59:29.966Z",
               "EditorCaption": ""
             }
           ]

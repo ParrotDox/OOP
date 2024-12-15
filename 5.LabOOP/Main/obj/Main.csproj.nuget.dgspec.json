@@ -4,14 +4,14 @@
     "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\Main\\Main.csproj": {}
   },
   "projects": {
-    "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj": {
+    "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\Main\\Main.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
-        "projectName": "ClassIerarchyLib",
-        "projectPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
+        "projectUniqueName": "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\Main\\Main.csproj",
+        "projectName": "Main",
+        "projectPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\Main\\Main.csproj",
         "packagesPath": "C:\\Users\\Егор\\.nuget\\packages\\",
-        "outputPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\ClassIerarchyLib\\obj\\",
+        "outputPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\Main\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -31,7 +31,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj": {
+                "projectPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -69,14 +73,14 @@
         }
       }
     },
-    "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\Main\\Main.csproj": {
+    "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\Main\\Main.csproj",
-        "projectName": "Main",
-        "projectPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\Main\\Main.csproj",
+        "projectUniqueName": "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
+        "projectName": "ClassIerarchyLib",
+        "projectPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
         "packagesPath": "C:\\Users\\Егор\\.nuget\\packages\\",
-        "outputPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\Main\\obj\\",
+        "outputPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\ClassIerarchyLib\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -96,11 +100,7 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {
-              "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj": {
-                "projectPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\5.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {

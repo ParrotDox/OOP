@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ClassIerarchyLib\ClassIerarchyLib.csproj" />
+    <ProjectReference Include="..\..\6.LabOOP\ClassIerarchyLib\ClassIerarchyLib.csproj" />
   </ItemGroup>
 
 </Project>
