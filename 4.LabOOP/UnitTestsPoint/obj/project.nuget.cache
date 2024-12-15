@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pVPIv5UO5OE=",
+  "dgSpecHash": "/ReQEYEe6XE=",
   "success": true,
-  "projectFilePath": "C:\\GIT\\OOP\\4.LabOOP\\UnitTestsPoint\\UnitTestsPoint.csproj",
+  "projectFilePath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\4.LabOOP\\UnitTestsPoint\\UnitTestsPoint.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Егор\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
     "C:\\Users\\Егор\\.nuget\\packages\\microsoft.codecoverage\\17.11.1\\microsoft.codecoverage.17.11.1.nupkg.sha512",
@@ -20,12 +20,5 @@
     "C:\\Users\\Егор\\.nuget\\packages\\xunit.extensibility.execution\\2.9.2\\xunit.extensibility.execution.2.9.2.nupkg.sha512",
     "C:\\Users\\Егор\\.nuget\\packages\\xunit.runner.visualstudio\\2.8.2\\xunit.runner.visualstudio.2.8.2.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Произошла ошибка при получении данных уязвимости пакета: Не удалось загрузить индекс службы для источника https://api.nuget.org/v3/index.json."
-    }
-  ]
+  "logs": []
 }

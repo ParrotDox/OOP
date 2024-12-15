@@ -1,28 +1,31 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\GIT\\OOP\\4.LabOOP\\Lab9\\",
+  "WorkspaceRootPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\4.LabOOP\\Lab9\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{96362B7D-0159-49E2-95A4-6345B8624317}|..\\UnitTestsPoint\\UnitTestsPoint.csproj|c:\\git\\oop\\4.laboop\\unittestspoint\\point_tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FD8D6BAD-75EB-4439-BA11-676066A84967}|..\\PointLibrary\\PointLibrary.csproj|b:\\git\\c#-oop-discrete\\oop\\4.laboop\\pointlibrary\\ui_point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{96362B7D-0159-49E2-95A4-6345B8624317}|..\\UnitTestsPoint\\UnitTestsPoint.csproj|c:\\git\\oop\\4.laboop\\unittestspoint\\unittestspoint.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\Point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FD8D6BAD-75EB-4439-BA11-676066A84967}|..\\PointLibrary\\PointLibrary.csproj|c:\\git\\oop\\4.laboop\\pointlibrary\\pointarray.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD8D6BAD-75EB-4439-BA11-676066A84967}|..\\PointLibrary\\PointLibrary.csproj|c:\\git\\oop\\4.laboop\\pointlibrary\\point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD8D6BAD-75EB-4439-BA11-676066A84967}|..\\PointLibrary\\PointLibrary.csproj|c:\\git\\oop\\4.laboop\\pointlibrary\\ui_point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{877EA4FA-8614-43F5-B391-01A4E49C0885}|Lab9.csproj|c:\\git\\oop\\4.laboop\\lab9\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{877EA4FA-8614-43F5-B391-01A4E49C0885}|Lab9.csproj|b:\\git\\c#-oop-discrete\\oop\\4.laboop\\lab9\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{877EA4FA-8614-43F5-B391-01A4E49C0885}|Lab9.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FD8D6BAD-75EB-4439-BA11-676066A84967}|..\\PointLibrary\\PointLibrary.csproj|c:\\git\\oop\\4.laboop\\pointlibrary\\pointstatic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GIT\\OOP\\4.LabOOP\\UnitTestsPoint\\UnitTestsPoint.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GIT\\OOP\\4.LabOOP\\UnitTestsPoint\\Point_tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\UI_Point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\PointStatic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\PointArray.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,28 +35,38 @@
       "DocumentGroups": [
         {
           "DockedWidth": 836,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UnitTestsPoint",
-              "DocumentMoniker": "C:\\GIT\\OOP\\4.LabOOP\\UnitTestsPoint\\UnitTestsPoint.csproj",
-              "RelativeDocumentMoniker": "..\\UnitTestsPoint\\UnitTestsPoint.csproj",
-              "ToolTip": "C:\\GIT\\OOP\\4.LabOOP\\UnitTestsPoint\\UnitTestsPoint.csproj",
-              "RelativeToolTip": "..\\UnitTestsPoint\\UnitTestsPoint.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-19T10:22:56.226Z",
+              "DocumentIndex": 0,
+              "Title": "UI_Point.cs",
+              "DocumentMoniker": "B:\\GIT\\C#-OOP-Discrete\\OOP\\4.LabOOP\\PointLibrary\\UI_Point.cs",
+              "RelativeDocumentMoniker": "..\\PointLibrary\\UI_Point.cs",
+              "ToolTip": "B:\\GIT\\C#-OOP-Discrete\\OOP\\4.LabOOP\\PointLibrary\\UI_Point.cs",
+              "RelativeToolTip": "..\\PointLibrary\\UI_Point.cs",
+              "ViewState": "AgIAAFkBAAAAAAAAAAAmwGgBAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T11:22:55.71Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
+              "Title": "UnitTestsPoint.csproj",
+              "DocumentMoniker": "C:\\GIT\\OOP\\4.LabOOP\\UnitTestsPoint\\UnitTestsPoint.csproj",
+              "ToolTip": "C:\\GIT\\OOP\\4.LabOOP\\UnitTestsPoint\\UnitTestsPoint.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-19T10:22:56.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\GIT\\OOP\\4.LabOOP\\Lab9\\Program.cs",
+              "DocumentMoniker": "B:\\GIT\\C#-OOP-Discrete\\OOP\\4.LabOOP\\Lab9\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\GIT\\OOP\\4.LabOOP\\Lab9\\Program.cs",
+              "ToolTip": "B:\\GIT\\C#-OOP-Discrete\\OOP\\4.LabOOP\\Lab9\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -61,26 +74,21 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Point_tests.cs",
               "DocumentMoniker": "C:\\GIT\\OOP\\4.LabOOP\\UnitTestsPoint\\Point_tests.cs",
-              "RelativeDocumentMoniker": "..\\UnitTestsPoint\\Point_tests.cs",
               "ToolTip": "C:\\GIT\\OOP\\4.LabOOP\\UnitTestsPoint\\Point_tests.cs",
-              "RelativeToolTip": "..\\UnitTestsPoint\\Point_tests.cs",
               "ViewState": "AgIAAK8AAAAAAAAAAADwvxAAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T06:23:27.621Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-16T06:23:27.621Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "UI_Point.cs",
               "DocumentMoniker": "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\UI_Point.cs",
-              "RelativeDocumentMoniker": "..\\PointLibrary\\UI_Point.cs",
               "ToolTip": "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\UI_Point.cs",
-              "RelativeToolTip": "..\\PointLibrary\\UI_Point.cs",
-              "ViewState": "AgIAAAIBAAAAAAAAAAAowDEBAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T22:18:58.179Z"
             },
@@ -89,38 +97,29 @@
               "DocumentIndex": 6,
               "Title": "PointStatic.cs",
               "DocumentMoniker": "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\PointStatic.cs",
-              "RelativeDocumentMoniker": "..\\PointLibrary\\PointStatic.cs",
               "ToolTip": "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\PointStatic.cs",
-              "RelativeToolTip": "..\\PointLibrary\\PointStatic.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T22:18:42.092Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Point.cs",
               "DocumentMoniker": "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\Point.cs",
-              "RelativeDocumentMoniker": "..\\PointLibrary\\Point.cs",
               "ToolTip": "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\Point.cs",
-              "RelativeToolTip": "..\\PointLibrary\\Point.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAuwFEAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T22:18:18.525Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T22:18:18.525Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "PointArray.cs",
               "DocumentMoniker": "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\PointArray.cs",
-              "RelativeDocumentMoniker": "..\\PointLibrary\\PointArray.cs",
               "ToolTip": "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\PointArray.cs",
-              "RelativeToolTip": "..\\PointLibrary\\PointArray.cs",
               "ViewState": "AgIAAJEAAAAAAAAAAAAmwHMAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T22:17:37.189Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T22:17:37.189Z"
             }
           ]
         }

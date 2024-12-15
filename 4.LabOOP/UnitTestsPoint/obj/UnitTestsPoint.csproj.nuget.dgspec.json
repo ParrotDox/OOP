@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GIT\\OOP\\4.LabOOP\\UnitTestsPoint\\UnitTestsPoint.csproj": {}
+    "B:\\GIT\\C#-OOP-Discrete\\OOP\\4.LabOOP\\UnitTestsPoint\\UnitTestsPoint.csproj": {}
   },
   "projects": {
-    "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\PointLibrary.csproj": {
+    "B:\\GIT\\C#-OOP-Discrete\\OOP\\4.LabOOP\\PointLibrary\\PointLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\PointLibrary.csproj",
+        "projectUniqueName": "B:\\GIT\\C#-OOP-Discrete\\OOP\\4.LabOOP\\PointLibrary\\PointLibrary.csproj",
         "projectName": "PointLibrary",
-        "projectPath": "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\PointLibrary.csproj",
+        "projectPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\4.LabOOP\\PointLibrary\\PointLibrary.csproj",
         "packagesPath": "C:\\Users\\Егор\\.nuget\\packages\\",
-        "outputPath": "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\obj\\",
+        "outputPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\4.LabOOP\\PointLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -42,7 +42,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -65,18 +65,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\GIT\\OOP\\4.LabOOP\\UnitTestsPoint\\UnitTestsPoint.csproj": {
+    "B:\\GIT\\C#-OOP-Discrete\\OOP\\4.LabOOP\\UnitTestsPoint\\UnitTestsPoint.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GIT\\OOP\\4.LabOOP\\UnitTestsPoint\\UnitTestsPoint.csproj",
+        "projectUniqueName": "B:\\GIT\\C#-OOP-Discrete\\OOP\\4.LabOOP\\UnitTestsPoint\\UnitTestsPoint.csproj",
         "projectName": "UnitTestsPoint",
-        "projectPath": "C:\\GIT\\OOP\\4.LabOOP\\UnitTestsPoint\\UnitTestsPoint.csproj",
+        "projectPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\4.LabOOP\\UnitTestsPoint\\UnitTestsPoint.csproj",
         "packagesPath": "C:\\Users\\Егор\\.nuget\\packages\\",
-        "outputPath": "C:\\GIT\\OOP\\4.LabOOP\\UnitTestsPoint\\obj\\",
+        "outputPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\4.LabOOP\\UnitTestsPoint\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -97,8 +97,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\PointLibrary.csproj": {
-                "projectPath": "C:\\GIT\\OOP\\4.LabOOP\\PointLibrary\\PointLibrary.csproj"
+              "B:\\GIT\\C#-OOP-Discrete\\OOP\\4.LabOOP\\PointLibrary\\PointLibrary.csproj": {
+                "projectPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\4.LabOOP\\PointLibrary\\PointLibrary.csproj"
               }
             }
           }
@@ -111,7 +111,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -156,7 +156,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
