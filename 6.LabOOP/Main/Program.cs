@@ -10,15 +10,5 @@
 using ClassIerarchyLib;
 using System.Collections;
 
-Menu menu1 = new Menu();
+MenuNonGeneralized menu1 = new MenuNonGeneralized();
 menu1.Execute();
-ArrayList people = new ArrayList
-{
-    new Person("Bob",25,"Home"),
-    new Person("Bob",45,"Home")
-};
-
-var person1 = (Person)people[0];
-var person2 = (Person)people[1];
-
-Console.WriteLine(person1.CompareTo(person2));

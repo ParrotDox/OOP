@@ -69,13 +69,19 @@ namespace ClassIerarchyLib
             __Experience__ = experience;
             __Salary__ = salary;
         }
+        public Employee(string name, int age, string residence, int id, int experience, int salary, Link lnkSample) : base(name, age, residence, lnkSample)
+        {
+            __Id__ = id;
+            __Experience__ = experience;
+            __Salary__ = salary;
+        }
         public Employee(Employee copySample) : base(copySample)
         {
             this.__Id__ = copySample.__id__;
             this.__Experience__ = copySample.__experience__;
             this.__Salary__ = copySample.__salary__;
         }
-
+        
         public override void Show()
         {
             base.Show();
@@ -149,6 +155,9 @@ namespace ClassIerarchyLib
             }
             else { return false; }
         }
-
+        public override object Clone()
+        {
+            return new Employee(this.__Name__, this.__Age__, this.__Residence__,this.__Id__ ,this.__Experience__, this.__Salary__, new Link(lnk.data, lnk.notes));
+        }
     }
 }

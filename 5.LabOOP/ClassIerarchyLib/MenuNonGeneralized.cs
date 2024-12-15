@@ -35,7 +35,7 @@ enum Commands
 namespace ClassIerarchyLib
 {
     //Меню для работы с коллекцией
-    public class Menu
+    public class MenuNonGeneralized
     {
         //Массив доступных классов
         string[] classes = new string[] { "Person", "Employee", "Engineer", "Admin"};
@@ -129,7 +129,7 @@ namespace ClassIerarchyLib
                             }
                         case (uint)Commands.Sort:
                             {
-                                mainArray.Sort();
+                                mainArray.Sort(new SortObjects());
                                 break;
                             }
                         case (uint)Commands.CountType:

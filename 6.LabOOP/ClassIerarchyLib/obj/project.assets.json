@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GIT\\OOP\\6.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
+      "projectUniqueName": "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
       "projectName": "ClassIerarchyLib",
-      "projectPath": "C:\\GIT\\OOP\\6.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
+      "projectPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
       "packagesPath": "C:\\Users\\Егор\\.nuget\\packages\\",
-      "outputPath": "C:\\GIT\\OOP\\6.LabOOP\\ClassIerarchyLib\\obj\\",
+      "outputPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\ClassIerarchyLib\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

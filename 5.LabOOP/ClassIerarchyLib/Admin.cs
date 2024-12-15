@@ -34,11 +34,14 @@ namespace ClassIerarchyLib
         {
             __HeadOffice__ = headOffice;
         }
+        public Admin(string name, int age, string residence, int id, int experience, int salary, string headOffice, Link lnkSample) : base(name, age, residence, id, experience, salary, lnkSample)
+        {
+            __HeadOffice__ = headOffice;
+        }
         public Admin(Admin copySample) : base(copySample)
         {
             this.__HeadOffice__ = copySample.__HeadOffice__;
         }
-
         public override void Show()
         {
             base.Show();
@@ -88,6 +91,10 @@ namespace ClassIerarchyLib
                 return true;
             }
             else { return false; }
+        }
+        public override object Clone()
+        {
+            return new Admin(this.__Name__, this.__Age__, this.__Residence__, this.__Id__, this.__Experience__, this.__Salary__, this.__HeadOffice__, new Link(lnk.data, lnk.notes));
         }
     }
 }

@@ -31,7 +31,11 @@ namespace ClassIerarchyLib
         {
             __department__ = "Undefined";
         }
-        public Engineer(string name, int age, string residence, int id, int experience, int salary, string department) : base(name, age, residence, id, experience, salary)
+        public Engineer(string name, int age, string residence, int id, int experience, int salary, string department ) : base(name, age, residence, id, experience, salary)
+        {
+            __department__ = department;
+        }
+        public Engineer(string name, int age, string residence, int id, int experience, int salary, string department, Link lnkSample) : base(name, age, residence, id, experience, salary, lnkSample)
         {
             __department__ = department;
         }
@@ -39,7 +43,6 @@ namespace ClassIerarchyLib
         {
             this.__department__ = copySample.__department__;
         }
-
         public override void Show()
         {
             base.Show();
@@ -89,6 +92,10 @@ namespace ClassIerarchyLib
                 return true;
             }
             else { return false; }
+        }
+        public override object Clone()
+        {
+            return new Engineer(this.__Name__, this.__Age__, this.__Residence__, this.__Id__, this.__Experience__, this.__Salary__, this.__Department__, new Link(lnk.data, lnk.notes));
         }
     }
 }
