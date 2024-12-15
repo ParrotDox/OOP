@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClassIerarchyLib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+98be6b86cfbc8a077d95c5f68d1833f5db1df49e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1bc0bbd1510a58ed2790c8733064dfd403b98954")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClassIerarchyLib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClassIerarchyLib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -225,16 +225,16 @@ namespace ClassIerarchyLib
         }
         public int CompareTo(object? obj)
         {
-            //if (obj is null) return 1;
-            //if (this.__age__ > temp.__age__)
-            //    return 1;
-            //if (this.__age__ < temp.__age__)
-            //    return -1;
-            //return 0;
-            //Другой вариант кода при сравнении простых полей типа int, string
-            Person p1 = (Person)this;
-            Person p2 = (Person)obj;
-            return p1.__Age__.CompareTo(p2.__Age__);
+            if (obj is null)
+            {
+                throw new ArgumentNullException("Object link is null");
+            }
+            if (obj is not Person other)
+            {
+                throw new ArgumentException("Object is not a Person");
+            }
+
+            return this.__Age__.CompareTo(other.__Age__);
         }
         //Реализация метода из ICloneable, глубокое копирование
         public virtual object Clone() 
@@ -248,17 +248,11 @@ namespace ClassIerarchyLib
         }
     }
     //Реализация метода Compare из IComparer по полю Age
-    public class SortByAge : IComparer<Person>, IComparer
+    public class SortByAge : IComparer<Person>
     {
         public int Compare(Person x, Person y) 
         {
             return x.__Age__.CompareTo(y.__Age__);
-        }
-        public int Compare(object? x, object? y) 
-        {
-            Person p1 = (Person)x;
-            Person p2 = (Person)y;
-            return p1.__Age__.CompareTo(p2.__Age__);
         }
     }
     //Реализация метода Compare из IComparer по полю Name
@@ -267,6 +261,19 @@ namespace ClassIerarchyLib
         public int Compare(Person x, Person y)
         {
             return x.__Name__.CompareTo(y.__Name__);
+        }
+    }
+    public class PersonComparer : IComparer<object>
+    {
+        public int Compare(object x, object y)
+        {
+            if (x is Person personX && y is Person personY)
+            {
+                return personX.__Age__.CompareTo(personY.__Age__);
+            }
+            if (x == null) return y == null ? 0 : -1;
+            if (y == null) return 1;
+            throw new ArgumentException("Both objects must be of type Person.");
         }
     }
 }

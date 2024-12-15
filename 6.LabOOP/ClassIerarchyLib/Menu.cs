@@ -117,7 +117,7 @@ namespace ClassIerarchyLib
                                 //Запрашиваем требуемый класс для создания экземпляра класса
                                 string queryClass = GetQueryClass();
                                 //Создаем требуемый экземпляр класса
-                                object queryObject = CreateClassObject(queryClass);
+                                Person queryObject = CreateClassObject(queryClass);
                                 mainArray.Add(queryObject);
                                 break;
                             }
@@ -321,38 +321,38 @@ namespace ClassIerarchyLib
             return choice;
         }
         //Создание экземпляра
-        private object CreateClassObject(string queryClass) 
+        private Person CreateClassObject(string queryClass) 
         {
-            object obj;
+            Person obj;
             switch (queryClass) 
             {
                 case "Person": 
                     {
                         obj = new Person();
-                        ((Person)obj).RandomInit();
+                        obj.RandomInit();
                         break;
                     }
                 case "Employee":
                     {
                         obj = new Employee();
-                        ((Employee)obj).RandomInit();
+                        obj.RandomInit();
                         break;
                     }
                 case "Engineer":
                     {
                         obj = new Engineer();
-                        ((Engineer)obj).RandomInit();
+                        obj.RandomInit();
                         break;
                     }
                 case "Admin":
                     {
                         obj = new Admin();
-                        ((Admin)obj).RandomInit();
+                        obj.RandomInit();
                         break;
                     }
                 default: 
                     {
-                        obj = new object();
+                        obj = new Person();
                         break;
                     }  
             }

@@ -8,6 +8,17 @@
 6. Выполнить сортировку коллекции (если коллекция не отсортирована) и поиск заданного элемента в коллекции.
  */
 using ClassIerarchyLib;
+using System.Collections;
 
 Menu menu1 = new Menu();
 menu1.Execute();
+ArrayList people = new ArrayList
+{
+    new Person("Bob",25,"Home"),
+    new Person("Bob",45,"Home")
+};
+
+var person1 = (Person)people[0];
+var person2 = (Person)people[1];
+
+Console.WriteLine(person1.CompareTo(person2));

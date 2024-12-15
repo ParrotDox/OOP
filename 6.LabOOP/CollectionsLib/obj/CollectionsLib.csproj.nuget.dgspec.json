@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\CollectionsLib\\CollectionsLib.csproj": {}
+    "C:\\GIT\\OOP\\6.LabOOP\\CollectionsLib\\CollectionsLib.csproj": {}
   },
   "projects": {
-    "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj": {
+    "C:\\GIT\\OOP\\6.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
+        "projectUniqueName": "C:\\GIT\\OOP\\6.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
         "projectName": "ClassIerarchyLib",
-        "projectPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
+        "projectPath": "C:\\GIT\\OOP\\6.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
         "packagesPath": "C:\\Users\\Егор\\.nuget\\packages\\",
-        "outputPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\ClassIerarchyLib\\obj\\",
+        "outputPath": "C:\\GIT\\OOP\\6.LabOOP\\ClassIerarchyLib\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,14 +69,14 @@
         }
       }
     },
-    "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\CollectionsLib\\CollectionsLib.csproj": {
+    "C:\\GIT\\OOP\\6.LabOOP\\CollectionsLib\\CollectionsLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\CollectionsLib\\CollectionsLib.csproj",
+        "projectUniqueName": "C:\\GIT\\OOP\\6.LabOOP\\CollectionsLib\\CollectionsLib.csproj",
         "projectName": "CollectionsLib",
-        "projectPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\CollectionsLib\\CollectionsLib.csproj",
+        "projectPath": "C:\\GIT\\OOP\\6.LabOOP\\CollectionsLib\\CollectionsLib.csproj",
         "packagesPath": "C:\\Users\\Егор\\.nuget\\packages\\",
-        "outputPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\CollectionsLib\\obj\\",
+        "outputPath": "C:\\GIT\\OOP\\6.LabOOP\\CollectionsLib\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -97,8 +97,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj": {
-                "projectPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj"
+              "C:\\GIT\\OOP\\6.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj": {
+                "projectPath": "C:\\GIT\\OOP\\6.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj"
               }
             }
           }
