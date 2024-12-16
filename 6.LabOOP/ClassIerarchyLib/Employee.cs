@@ -8,6 +8,8 @@ namespace ClassIerarchyLib
 {
     public class Employee : Person
     {
+        protected Person personKey;
+        protected static List<int>idStorage = new List<int>();
         protected int __id__;
         public int __Id__
         {
@@ -17,9 +19,9 @@ namespace ClassIerarchyLib
             }
             set
             {
-                if (value < 0)
+                if (value < 0 && !idStorage.Contains(value))
                 {
-                    throw new ArgumentException("Id must be positive!");
+                    throw new ArgumentException("Id exception!");
                 }
                 __id__ = value;
             }
@@ -59,29 +61,44 @@ namespace ClassIerarchyLib
 
         public Employee() : base()
         {
-            __Id__ = 1;
+            __id__ = -1;
             __Experience__ = 2;
             __Salary__ = 20000;
         }
         public Employee(string name, int age, string residence, int id, int experience, int salary) : base(name, age, residence)
         {
             __Id__ = id;
+            idStorage.Add(id);
             __Experience__ = experience;
             __Salary__ = salary;
         }
         public Employee(string name, int age, string residence, int id, int experience, int salary, Link lnkSample) : base(name, age, residence, lnkSample)
         {
             __Id__ = id;
+            idStorage.Add(__Id__);
             __Experience__ = experience;
             __Salary__ = salary;
         }
         public Employee(Employee copySample) : base(copySample)
         {
-            this.__Id__ = copySample.__id__;
-            this.__Experience__ = copySample.__experience__;
-            this.__Salary__ = copySample.__salary__;
+            __Id__ = genId();
+            idStorage.Add(__Id__);
+            __Experience__ = copySample.__experience__;
+            __Salary__ = copySample.__salary__;
         }
-        
+        //Возврат ссылки на базовый экземпляр класса (3 задание 11 лаб.)
+        public Person basePerson() 
+        {
+            if (personKey is null)
+            {
+                personKey = new Person(__Name__, __Age__, __Residence__);
+                return personKey;
+            }
+            else
+            {
+                return personKey;
+            }
+        }
         public override void Show()
         {
             base.Show();
@@ -135,10 +152,12 @@ namespace ClassIerarchyLib
         {
             base.RandomInit();
             Random rnd = new Random();
-            __Id__ = rnd.Next(0, 10000000);
+            __Id__ = genId();
+            idStorage.Add(__Id__);
             __Experience__ = rnd.Next(2, 85);
             __Salary__ = rnd.Next(20000, 200001);
         }
+        //Сравнивает 2 объекта по содержимому, но не по ключу
         public override bool Equals(object obj)
         {
             if (obj is not Employee)
@@ -155,9 +174,39 @@ namespace ClassIerarchyLib
             }
             else { return false; }
         }
+        //Заметка: клонируются уникальные поля!
         public override object Clone()
         {
-            return new Employee(this.__Name__, this.__Age__, this.__Residence__,this.__Id__ ,this.__Experience__, this.__Salary__, new Link(lnk.data, lnk.notes));
+            Employee copy = new Employee();
+            copy.__Name__ = this.__Name__;
+            copy.__Age__ = this.__Age__;
+            copy.__Residence__ = this.__Residence__;
+            //id поле является уникальным, но в контексте 11 лаб.
+            //требуется найти объект по значению, а не по ссылке
+            copy.__id__ = this.__Id__;
+            copy.__Experience__ = this.__Experience__;
+            copy.__Salary__ = this.__Salary__;
+            //key поле является уникальным, но в контексте 11 лаб.
+            //требуется найти объект по значению, а не по ссылке
+            copy.key = this.key;
+            //Эти поля копируются ПОВЕРХНОСТНО с целью тестирования поиска в 11 лаб.
+            copy.lnk = this.lnk;
+            copy.personKey = this.personKey;
+            return copy;
+        }
+        private int genId() 
+        {
+            int id = 0;
+            while (idStorage.Contains(id)) 
+            {
+                ++id;
+            }
+            return id;
+        }
+        //Переопределение GetHashCode для формирования хэш-кода по значениям полей
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(base.GetHashCode(), __Experience__, __Salary__, __Id__, personKey);
         }
     }
 }

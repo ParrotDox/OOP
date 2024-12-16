@@ -114,6 +114,39 @@ namespace ClassIerarchyLib
             Console.WriteLine($"Engineers:{engineers}");
             Console.WriteLine($"Admins:{admins}");
         }
+        public static void ShowQuantityOfClassObjects(List<Person> array)
+        {
+            int persons, employees, engineers, admins;
+            persons = 0;
+            employees = 0;
+            engineers = 0;
+            admins = 0;
+
+            foreach (var person in array)
+            {
+                if (person is Admin)
+                {
+                    ++admins;
+                    continue;
+                }
+                if (person is Engineer)
+                {
+                    ++engineers;
+                    continue;
+                }
+                if (person is Employee)
+                {
+                    ++employees;
+                    continue;
+                }
+                ++persons;
+            }
+            Console.WriteLine("[RESULTS]");
+            Console.WriteLine($"Persons:{persons}");
+            Console.WriteLine($"Employees:{employees}");
+            Console.WriteLine($"Engineers:{engineers}");
+            Console.WriteLine($"Admins:{admins}");
+        }
         public static void ShowQuantityOfClassObjects(ArrayList array)
         {
             int persons, employees, engineers, admins;
@@ -177,6 +210,28 @@ namespace ClassIerarchyLib
 
             int engineers = 0;
             foreach (dynamic person in array)
+            {
+                var checkIfEngineer = person as Engineer;
+                if (checkIfEngineer != null)
+                {
+                    if (checkIfEngineer.__Department__ == queryDepartment)
+                    {
+                        Console.WriteLine("[MATCH TO YOUR REQUEST]");
+                        checkIfEngineer.Show();
+                        ++engineers;
+                        continue;
+                    }
+                }
+            }
+            Console.WriteLine("[RESULTS]");
+            Console.WriteLine($"{engineers} engineers work in {queryDepartment}");
+        }
+        public static void ShowQuantityOfEngineersOfChosenDepartment(List<Person> array)
+        {
+            string queryDepartment = ChooseDepartment();
+
+            int engineers = 0;
+            foreach (var person in array)
             {
                 var checkIfEngineer = person as Engineer;
                 if (checkIfEngineer != null)
@@ -304,6 +359,53 @@ namespace ClassIerarchyLib
                         Console.WriteLine("[MATCH TO YOUR REQUEST]");
                         person.Show();
                         totalSum += person.__Salary__;
+                        continue;
+                    }
+                }
+            }
+            Console.WriteLine("[RESULTS]");
+            Console.WriteLine($"Total sum to pay is {totalSum}");
+            return totalSum;
+        }
+        public static int CalcTotalSalaryToPayByClassObject(List<Person> array)
+        {
+            string queryPosition = ChoosePosition();
+            int totalSum = 0;
+            if (queryPosition == "Employee")
+            {
+                foreach (var person in array)
+                {
+                    if (person.GetType() == typeof(Employee))
+                    {
+                        Console.WriteLine("[MATCH TO YOUR REQUEST]");
+                        ((Employee)person).Show();
+                        totalSum += ((Employee)person).__Salary__;
+                        continue;
+                    }
+                }
+            }
+            else if (queryPosition == "Engineer")
+            {
+                foreach (var person in array)
+                {
+                    if (person.GetType() == typeof(Engineer))
+                    {
+                        Console.WriteLine("[MATCH TO YOUR REQUEST]");
+                        ((Engineer)person).Show();
+                        totalSum += ((Engineer)person).__Salary__;
+                        continue;
+                    }
+                }
+            }
+            else if (queryPosition == "Admin")
+            {
+                foreach (var person in array)
+                {
+                    if (person.GetType() == typeof(Admin))
+                    {
+                        Console.WriteLine("[MATCH TO YOUR REQUEST]");
+                        ((Admin)person).Show();
+                        totalSum += ((Admin)person).__Salary__;
                         continue;
                     }
                 }

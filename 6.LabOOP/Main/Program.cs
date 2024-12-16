@@ -1,14 +1,11 @@
-﻿/*
-2.1. Задание 1.
-1. Создать коллекцию, в которую добавить объекты созданной иерархии классов.
-2. Используя меню, реализовать в программе добавление и удаление объектов коллекции.
-3. Разработать и реализовать три запроса (количество элементов определенного вида, печать элементов определенного вида и т.п.).
-4. Выполнить перебор элементов коллекции с помощью метода foreach.
-5. Выполнить клонирование коллекции.
-6. Выполнить сортировку коллекции (если коллекция не отсортирована) и поиск заданного элемента в коллекции.
- */
+﻿
 using ClassIerarchyLib;
 using System.Collections;
 
 MenuNonGeneralized menu1 = new MenuNonGeneralized();
 menu1.Execute();
+MenuGeneralized menu2 = new MenuGeneralized();
+menu2.Execute();
+TestCollections test = new TestCollections();
+Console.WriteLine(test.TestPerformance());
+

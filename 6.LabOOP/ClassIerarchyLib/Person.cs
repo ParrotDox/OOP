@@ -52,6 +52,8 @@ namespace ClassIerarchyLib
      */
     public class Person : IInit,  IComparable<Person>, ICloneable
     {
+        protected static List<int> keyStorage = new List<int>();
+        protected int key;
         public static string[] rndNames = new string[] { "Jacky", "Johny", "Marigold", "Elizabeth", "Horo", "Danil", "Nikita", "Egor", "Sergey", "Vlad", "Andrew", "Maksim", "Oleg", "Anna", "Maddie" };
         public static string[] rndResidences = new string[] { "Visim", "Krohalevka", "Serebryanskiy_Proezd", "Tsum", "Yralskaya", "Sadoviy", "Ivanovskaya", "Takayama_Street", "Night_Street", "Waterfall_street" };
         protected string __name__;
@@ -107,6 +109,7 @@ namespace ClassIerarchyLib
 
         public Person() 
         {
+            key = -1;
             __Name__ = "Undefined";
             __Age__ = 16;
             __Residence__ = "Undefined";
@@ -114,6 +117,8 @@ namespace ClassIerarchyLib
         }
         public Person(string name, int age, string residence) 
         {
+            key = genKey();
+            keyStorage.Add(key);
             __Name__ = name;
             __Age__ = age;
             __Residence__ = residence;
@@ -121,6 +126,8 @@ namespace ClassIerarchyLib
         }
         public Person(string name, int age, string residence, Link lnkSample)
         {
+            key = genKey();
+            keyStorage.Add(key);
             __Name__ = name;
             __Age__ = age;
             __Residence__ = residence;
@@ -129,6 +136,8 @@ namespace ClassIerarchyLib
         //Этот метод копирования проводит копирование только ЗНАЧИМЫХ полей, ссылочное поле не затронуто, создается по-умолчанию новый экзепляр Link через базовый конструктор
         public Person(Person copySample)
         {
+            this.key = genKey();
+            keyStorage.Add(key);
             this.__Name__ = copySample.__Name__;
             this.__Age__ = copySample.__Age__;
             this.__Residence__ = copySample.__Residence__;
@@ -190,10 +199,12 @@ namespace ClassIerarchyLib
         public virtual void RandomInit() 
         {
             Random rnd = new Random();
+            key = genKey();
             __Name__ = rndNames[rnd.Next(0, rndNames.Length)];
             __Age__ = rnd.Next(16, 61);
             __Residence__ = rndResidences[rnd.Next(0, rndResidences.Length)];
         }
+        //Сравнивает 2 объекта по содержимому, но не по ключу
         public override bool Equals(object obj) 
         {
             if (obj is not Person)
@@ -224,14 +235,53 @@ namespace ClassIerarchyLib
         }
 
         //Реализация метода из ICloneable, глубокое копирование
+        //Заметка: клонируются уникальные поля!
         public virtual object Clone() 
         {
-            return new Person(this.__Name__, this.__Age__, this.__Residence__, new Link(lnk.data, lnk.notes));
+            Person copy = new Person();
+            //key поле является уникальным, но в контексте 11 лаб.
+            //требуется найти объект по значению, а не по ссылке
+            copy.key = this.key;
+            //copy.key = genKey();
+            //keyStorage.Add(key);
+            copy.__Name__ = this.__Name__;
+            copy.__Age__ = this.__Age__;
+            copy.__Residence__ = this.__Residence__;
+            copy.lnk = new Link(this.lnk.data, this.lnk.notes);
+            return copy;
         }
         //Метод поверхностного копирования
+        //Заметка: клонируются уникальные поля!
         public virtual object ShallowCopy() 
         {
-            return this.MemberwiseClone();
+            Person copy = new Person();
+            copy.key = this.key;
+            //copy.key = genKey();
+            //keyStorage.Add(key);
+            copy.__Name__ = this.__Name__;
+            copy.__Age__ = this.__Age__;
+            copy.__Residence__ = this.__Residence__;
+            copy.lnk = this.lnk;
+            return copy;
+        }
+        //Переопределение метода ToString для 11 лаб.
+        public override string ToString()
+        {
+            return $"{key}";
+        }
+        private int genKey()
+        {
+            int key = 0;
+            while (keyStorage.Contains(key))
+            {
+                ++key;
+            }
+            return key;
+        }
+        //Переопределение GetHashCode для формирования хэш-кода по значениям полей
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(__Name__, __Age__, __Residence__, key);
         }
     }
     //Реализация метода Compare из IComparer по полю Age

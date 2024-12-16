@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace ClassIerarchyLib
 {
-    //Меню для работы с коллекцией
-    public class MenuNonGeneralized
+    //Меню для работы с обобщенной коллекцией
+    public class MenuGeneralized
     {
         //Массив доступных классов
         string[] classes = new string[] { "Person", "Employee", "Engineer", "Admin"};
@@ -18,10 +18,10 @@ namespace ClassIerarchyLib
         //ВАЖНО: значение переменной должно быть равно кол-ву элементов enum Commands
         private uint commandAmount = 14;
         //Основной ArrayList для работы
-        ArrayList mainArray = new ArrayList();
+        List<Person> mainList = new List<Person>();
         //Доп.ArrayList'ы для демонстрации копирований
-        ArrayList shallowCopyArray;
-        ArrayList deepCopyArray;
+        List<Person> shallowCopyList;
+        List<Person> deepCopyList;
         public void Execute()
         {
         Start:
@@ -43,45 +43,45 @@ namespace ClassIerarchyLib
                     {
                         case (uint)Commands.Print:
                             {
-                                if(mainArray.Count == 0) 
+                                if(mainList.Count == 0) 
                                 {
-                                    Console.WriteLine($"mainArray is empty");
+                                    Console.WriteLine($"mainList is empty");
                                 }
                                 else 
                                 {
-                                    Console.WriteLine($"mainArray:");
-                                    ForEachEnum(mainArray);
+                                    Console.WriteLine($"mainList:");
+                                    ForEachEnum(mainList);
                                 }
-                                if(shallowCopyArray is null) 
+                                if(shallowCopyList is null) 
                                 {
-                                    Console.WriteLine($"shallowCopyArray is not init");
+                                    Console.WriteLine($"shallowCopyList is not init");
                                 }
                                 else 
                                 {
-                                    if (shallowCopyArray.Count == 0) 
+                                    if (shallowCopyList.Count == 0) 
                                     {
-                                        Console.WriteLine($"shallowCopyArray is empty");
+                                        Console.WriteLine($"shallowCopyList is empty");
                                     }
                                     else 
                                     {
-                                        Console.WriteLine($"shallowCopyArray:");
-                                        ForEachEnum(shallowCopyArray);
+                                        Console.WriteLine($"shallowCopyList:");
+                                        ForEachEnum(shallowCopyList);
                                     }
                                 }
-                                if (deepCopyArray is null)
+                                if (deepCopyList is null)
                                 {
-                                    Console.WriteLine($"deepCopyArray is not init");
+                                    Console.WriteLine($"deepCopyList is not init");
                                 }
                                 else 
                                 {
-                                    if (deepCopyArray.Count == 0)
+                                    if (deepCopyList.Count == 0)
                                     {
-                                        Console.WriteLine($"deepCopyArray is empty");
+                                        Console.WriteLine($"deepCopyList is empty");
                                     }
                                     else
                                     {
-                                        Console.WriteLine($"deepCopyArray:");
-                                        ForEachEnum(deepCopyArray);
+                                        Console.WriteLine($"deepCopyList:");
+                                        ForEachEnum(deepCopyList);
                                     }
                                 }
                                 break;
@@ -92,82 +92,82 @@ namespace ClassIerarchyLib
                                 string queryClass = GetQueryClass();
                                 //Создаем требуемый экземпляр класса
                                 Person queryObject = CreateClassObject(queryClass);
-                                mainArray.Add(queryObject);
+                                mainList.Add(queryObject);
                                 break;
                             }
                         case (uint)Commands.DeleteIndex:
                             {
                                 int queryInt = GetQueryIndex();
-                                mainArray.RemoveAt(queryInt);
+                                mainList.RemoveAt(queryInt);
                                 break;
                             }
                         case (uint)Commands.Sort:
                             {
-                                mainArray.Sort(new SortObjects());
+                                mainList.Sort(new SortByAge());
                                 break;
                             }
                         case (uint)Commands.CountType:
                             {
                                 //Обращение к отдельному классу с запросом (из 10 лаб.)
-                                QueryMaker.ShowQuantityOfClassObjects(mainArray);
+                                QueryMaker.ShowQuantityOfClassObjects(mainList);
                                 break;
                             }
                         case (uint)Commands.CountDepartmentEngineers:
                             {
-                                QueryMaker.ShowQuantityOfEngineersOfChosenDepartment(mainArray);
+                                QueryMaker.ShowQuantityOfEngineersOfChosenDepartment(mainList);
                                 break;
                             }
                         case (uint)Commands.CalcTotalSalaryByType:
                             {
-                                QueryMaker.CalcTotalSalaryToPayByClassObject(mainArray);
+                                QueryMaker.CalcTotalSalaryToPayByClassObject(mainList);
                                 break;
                             }
                         case (uint)Commands.Enumeration:
                             {
-                                ForEachEnum(mainArray);
+                                ForEachEnum(mainList);
                                 break;
                             }
                         case (uint)Commands.ShallowCopy:
                             {
-                                shallowCopyArray = new ArrayList(mainArray);
+                                shallowCopyList = new List<Person>(mainList);
                                 break;
                             }
                         case (uint)Commands.DeepCopy:
                             {
-                                if(deepCopyArray is not null) 
+                                if(deepCopyList is not null) 
                                 {
-                                    deepCopyArray.Clear();
+                                    deepCopyList.Clear();
                                 }
-                                deepCopyArray = DeepCopy(mainArray);
+                                deepCopyList = DeepCopy(mainList);
                                 break;
                             }
                         case (uint)Commands.FindBySample:
                             {
                                 int queryInt = GetQueryIndex();
-                                int index = mainArray.IndexOf(mainArray[queryInt]);
+                                int index = mainList.IndexOf(mainList[queryInt]);
                                 Console.WriteLine($"Query Index = {queryInt} | Object was found on {index}");
                                 break;
                             }
                         case (uint)Commands.MainIsShallow:
                             {
-                                if(shallowCopyArray is null) 
+                                if(shallowCopyList is null) 
                                 {
-                                    Console.WriteLine("Initialize shallowCopyArray!");
+                                    Console.WriteLine("Initialize shallowCopyList!");
                                     break;
                                 }
-                                AreLinksOfArraysEqual(mainArray, shallowCopyArray);
-                                AreLinksOfItemsInArraysEqual(mainArray, shallowCopyArray);
+                                AreLinksOfArraysEqual(mainList, shallowCopyList);
+                                AreLinksOfItemsInArraysEqual(mainList, shallowCopyList);
                                 break;
                             }
                         case (uint)Commands.MainIsDeep:
                             {
-                                if (deepCopyArray is null)
+                                if (deepCopyList is null)
                                 {
-                                    Console.WriteLine("Initialize deepCopyArray!");
+                                    Console.WriteLine("Initialize deepCopyList!");
                                     break;
                                 }
-                                AreLinksOfArraysEqual(mainArray, deepCopyArray);
-                                AreLinksOfItemsInArraysEqual(mainArray, deepCopyArray);
+                                AreLinksOfArraysEqual(mainList, deepCopyList);
+                                AreLinksOfItemsInArraysEqual(mainList, deepCopyList);
                                 break;
                             }
                         case (uint)Commands.Exit:
@@ -348,60 +348,26 @@ namespace ClassIerarchyLib
             } while (isInt == false);
             return choice;
         }
-        //Итерация по ArrayList с вызовом метода Show у каждого экземпляра
-        private void ForEachEnum(ArrayList array) 
+        //Итерация по List<Person> с вызовом метода Show у каждого экземпляра
+        private void ForEachEnum(List<Person> array) 
         {
-            foreach (object obj in array) 
+            foreach (Person obj in array) 
             {
                 Console.Write("----:----:----\n");
-                if (obj is Admin)
-                {
-                    ((Admin)obj).Show();
-                    continue;
-                }
-                if (obj is Engineer)
-                {
-                    ((Engineer)obj).Show();
-                    continue;
-                }
-                if (obj is Employee)
-                {
-                    ((Employee)obj).Show();
-                    continue;
-                }
-                ((Person)obj).Show();
+                obj.Show();
             }
         }
-        //Глубокое копирование с возвратом нового ArrayList
-        private ArrayList DeepCopy(ArrayList array) 
+        //Глубокое копирование с возвратом нового List<Person>
+        private List<Person> DeepCopy(List<Person> array) 
         {
-            ArrayList tempArrayList = new ArrayList();
-            foreach (object obj in array)
+            List<Person> tempArrayList = new List<Person>();
+            foreach (Person obj in array)
             {
-                if (obj is Admin)
-                {
-                    var ad = (Admin)obj;
-                    tempArrayList.Add(ad.Clone());
-                    continue;
-                }
-                if (obj is Engineer)
-                {
-                    var en = (Engineer)obj;
-                    tempArrayList.Add(en.Clone());
-                    continue;
-                }
-                if (obj is Employee)
-                {
-                    var em = (Employee)obj;
-                    tempArrayList.Add(em.Clone());
-                    continue;
-                }
-                var pe = (Person)obj;
-                tempArrayList.Add(pe.Clone());
+                tempArrayList.Add((Person)obj.Clone());
             }
             return tempArrayList;
         }
-        private bool AreLinksOfArraysEqual(ArrayList a, ArrayList b) 
+        private bool AreLinksOfArraysEqual(List<Person> a, List<Person> b) 
         {
             bool result = false;
             if (a == b)
@@ -417,14 +383,14 @@ namespace ClassIerarchyLib
             return result;
         }
         /*Сравнение ссылок ссылочных объектов у:
-          1)Оригинального ArrayList
-          2)У копии оригинала ArrayList (копирование ArrayList может быть как глубоким, так и поверхностным)
+          1)Оригинального List<Person>
+          2)У копии оригинала List<Person> (копирование List<Person> может быть как глубоким, так и поверхностным)
         */
-        private bool AreLinksOfItemsInArraysEqual(ArrayList a, ArrayList b) 
+        private bool AreLinksOfItemsInArraysEqual(List<Person> a, List<Person> b) 
         {
             bool result = false;
-            Person toCompareItem1 = ((Person)a[0]);
-            Person toCompareItem2 = ((Person)b[0]);
+            Person toCompareItem1 = a[0];
+            Person toCompareItem2 = b[0];
             if (toCompareItem1.lnk == toCompareItem2.lnk)
             {
                 result = true;
