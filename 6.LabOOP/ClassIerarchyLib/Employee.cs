@@ -8,7 +8,6 @@ namespace ClassIerarchyLib
 {
     public class Employee : Person
     {
-        protected Person personKey;
         protected static List<int>idStorage = new List<int>();
         protected int __id__;
         public int __Id__
@@ -89,15 +88,7 @@ namespace ClassIerarchyLib
         //Возврат ссылки на базовый экземпляр класса (3 задание 11 лаб.)
         public Person basePerson() 
         {
-            if (personKey is null)
-            {
-                personKey = new Person(__Name__, __Age__, __Residence__);
-                return personKey;
-            }
-            else
-            {
-                return personKey;
-            }
+            return (Person)this.Clone();
         }
         public override void Show()
         {
@@ -181,17 +172,15 @@ namespace ClassIerarchyLib
             copy.__Name__ = this.__Name__;
             copy.__Age__ = this.__Age__;
             copy.__Residence__ = this.__Residence__;
+            copy.lnk = new Link(lnk.notes, lnk.data);
+            copy.__Experience__ = this.__Experience__;
+            copy.__Salary__ = this.__Salary__;
             //id поле является уникальным, но в контексте 11 лаб.
             //требуется найти объект по значению, а не по ссылке
             copy.__id__ = this.__Id__;
-            copy.__Experience__ = this.__Experience__;
-            copy.__Salary__ = this.__Salary__;
             //key поле является уникальным, но в контексте 11 лаб.
             //требуется найти объект по значению, а не по ссылке
             copy.key = this.key;
-            //Эти поля копируются ПОВЕРХНОСТНО с целью тестирования поиска в 11 лаб.
-            copy.lnk = this.lnk;
-            copy.personKey = this.personKey;
             return copy;
         }
         private int genId() 
@@ -206,7 +195,7 @@ namespace ClassIerarchyLib
         //Переопределение GetHashCode для формирования хэш-кода по значениям полей
         public override int GetHashCode()
         {
-            return HashCode.Combine(base.GetHashCode(), __Experience__, __Salary__, __Id__, personKey);
+            return HashCode.Combine(base.GetHashCode(), __Experience__, __Salary__, __Id__);
         }
     }
 }

@@ -200,6 +200,7 @@ namespace ClassIerarchyLib
         {
             Random rnd = new Random();
             key = genKey();
+            keyStorage.Add(key);
             __Name__ = rndNames[rnd.Next(0, rndNames.Length)];
             __Age__ = rnd.Next(16, 61);
             __Residence__ = rndResidences[rnd.Next(0, rndResidences.Length)];
@@ -233,21 +234,20 @@ namespace ClassIerarchyLib
             //Другой вариант кода при сравнении простых полей типа int, string
             return this.__Age__.CompareTo(obj.__Age__);
         }
-
         //Реализация метода из ICloneable, глубокое копирование
         //Заметка: клонируются уникальные поля!
         public virtual object Clone() 
         {
             Person copy = new Person();
+            copy.__Name__ = this.__Name__;
+            copy.__Age__ = this.__Age__;
+            copy.__Residence__ = this.__Residence__;
+            copy.lnk = new Link(this.lnk.data, this.lnk.notes);
             //key поле является уникальным, но в контексте 11 лаб.
             //требуется найти объект по значению, а не по ссылке
             copy.key = this.key;
             //copy.key = genKey();
             //keyStorage.Add(key);
-            copy.__Name__ = this.__Name__;
-            copy.__Age__ = this.__Age__;
-            copy.__Residence__ = this.__Residence__;
-            copy.lnk = new Link(this.lnk.data, this.lnk.notes);
             return copy;
         }
         //Метод поверхностного копирования

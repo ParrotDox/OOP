@@ -1,0 +1,16 @@
+B:\GIT\C#-OOP-Discrete\OOP\6.LabOOP\CollectionsLib\bin\Debug\net8.0\CollectionsLib.deps.json
+B:\GIT\C#-OOP-Discrete\OOP\6.LabOOP\CollectionsLib\bin\Debug\net8.0\CollectionsLib.dll
+B:\GIT\C#-OOP-Discrete\OOP\6.LabOOP\CollectionsLib\bin\Debug\net8.0\CollectionsLib.pdb
+B:\GIT\C#-OOP-Discrete\OOP\6.LabOOP\CollectionsLib\bin\Debug\net8.0\ClassIerarchyLib.dll
+B:\GIT\C#-OOP-Discrete\OOP\6.LabOOP\CollectionsLib\bin\Debug\net8.0\ClassIerarchyLib.pdb
+B:\GIT\C#-OOP-Discrete\OOP\6.LabOOP\CollectionsLib\obj\Debug\net8.0\CollectionsLib.csproj.AssemblyReference.cache
+B:\GIT\C#-OOP-Discrete\OOP\6.LabOOP\CollectionsLib\obj\Debug\net8.0\CollectionsLib.GeneratedMSBuildEditorConfig.editorconfig
+B:\GIT\C#-OOP-Discrete\OOP\6.LabOOP\CollectionsLib\obj\Debug\net8.0\CollectionsLib.AssemblyInfoInputs.cache
+B:\GIT\C#-OOP-Discrete\OOP\6.LabOOP\CollectionsLib\obj\Debug\net8.0\CollectionsLib.AssemblyInfo.cs
+B:\GIT\C#-OOP-Discrete\OOP\6.LabOOP\CollectionsLib\obj\Debug\net8.0\CollectionsLib.csproj.CoreCompileInputs.cache
+B:\GIT\C#-OOP-Discrete\OOP\6.LabOOP\CollectionsLib\obj\Debug\net8.0\CollectionsLib.sourcelink.json
+B:\GIT\C#-OOP-Discrete\OOP\6.LabOOP\CollectionsLib\obj\Debug\net8.0\Collecti.0E7E90B6.Up2Date
+B:\GIT\C#-OOP-Discrete\OOP\6.LabOOP\CollectionsLib\obj\Debug\net8.0\CollectionsLib.dll
+B:\GIT\C#-OOP-Discrete\OOP\6.LabOOP\CollectionsLib\obj\Debug\net8.0\refint\CollectionsLib.dll
+B:\GIT\C#-OOP-Discrete\OOP\6.LabOOP\CollectionsLib\obj\Debug\net8.0\CollectionsLib.pdb
+B:\GIT\C#-OOP-Discrete\OOP\6.LabOOP\CollectionsLib\obj\Debug\net8.0\ref\CollectionsLib.dll
