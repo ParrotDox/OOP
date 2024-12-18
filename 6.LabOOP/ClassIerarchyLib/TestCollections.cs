@@ -105,7 +105,8 @@ namespace ClassIerarchyLib
 
             string result = $"pL: ";
             result += isFound ? "Found " : "notFound ";
-            result += $", time: {sw.Elapsed}\n";
+            //result += $", time: {sw.Elapsed}\n";
+            result += $", time: {sw.Elapsed.Ticks}\n";
             return result;
         }
         //Метод возвращает результат замера времени при поиске экземпляра string в List<string>
@@ -118,7 +119,8 @@ namespace ClassIerarchyLib
 
             string result = $"sL: ";
             result += isFound ? "Found " : "notFound ";
-            result += $", time: {sw.Elapsed}\n";
+            //result += $", time: {sw.Elapsed}\n";
+            result += $", time: {sw.Elapsed.Ticks}\n";
             return result;
         }
         //Метод возвращает результат замера времени при поиске экземпляра по ключу Person в Dictionary<Person, Employee>
@@ -131,7 +133,8 @@ namespace ClassIerarchyLib
 
             string result = $"dPE: ";
             result += isFound ? "Found " : "notFound ";
-            result += $", time: {sw.Elapsed}\n";
+            //result += $", time: {sw.Elapsed}\n";
+            result += $", time: {sw.Elapsed.Ticks}\n";
             return result;
         }
         //Метод возвращает результат замера времени при поиске экземпляра по ключу string в Dictionary<string, Employee>
@@ -144,7 +147,8 @@ namespace ClassIerarchyLib
 
             string result = $"dPE: ";
             result += isFound ? "Found " : "notFound ";
-            result += $", time: {sw.Elapsed}\n";
+            //result += $", time: {sw.Elapsed}\n";
+            result += $", time: {sw.Elapsed.Ticks}\n";
             return result;
         }
     }
