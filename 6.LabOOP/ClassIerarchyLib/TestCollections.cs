@@ -69,11 +69,13 @@ namespace ClassIerarchyLib
             string resultSL = "";
             string resultDPE = "";
             string resultDSE = "";
+            string resultDPEval = "";
             uint counter = 1;
             //Header для понимания, какой тест за поиск какого экземпляра отвечает
             resultPL += $"1 - first | 2 - middle | 3 - last | 4 - absence\n";
             resultSL += $"1 - first | 2 - middle | 3 - last | 4 - absence\n";
             resultDPE += $"1 - first | 2 - middle | 3 - last | 4 - absence\n";
+            resultDPEval += $"1 - first | 2 - middle | 3 - last | 4 - absence\n";
             resultDSE += $"1 - first | 2 - middle | 3 - last | 4 - absence\n";
             //Вызов тестов
             foreach (Employee emp in searchList) 
@@ -83,16 +85,18 @@ namespace ClassIerarchyLib
                 resultSL += $"{counter})\n";
                 resultDPE += $"{counter})\n";
                 resultDSE += $"{counter})\n";
+                resultDPEval += $"{counter})\n";
                 //Запись каждого из результатов поиска
                 resultPL += MeasurePersonList(personList, emp);
                 resultSL += MeasureStringList(stringList, emp.ToString());
                 resultDPE += MeasureDictPE(dictPE, emp.basePerson());
+                resultDPEval += MeasureDictPEbyVal(dictPE, emp);
                 resultDSE += MeasureDictSE(dictSE, emp.ToString());
                 //Обновление счетчика
                 counter++;
             }
             //Возврат результата тестов
-            string log = resultPL + resultSL + resultDPE + resultDSE;
+            string log = resultPL + resultSL + resultDPE + resultDPEval + resultDSE;
             return log;
         }
         //Метод возвращает результат замера времени при поиске экземпляра Employee в List<Employee>
@@ -132,6 +136,20 @@ namespace ClassIerarchyLib
             sw.Stop();
 
             string result = $"dPE: ";
+            result += isFound ? "Found " : "notFound ";
+            //result += $", time: {sw.Elapsed}\n";
+            result += $", time: {sw.Elapsed.Ticks}\n";
+            return result;
+        }
+        //Метод возвращает результат замера времени при поиске экземпляра по значению Employee в Dictionary<Person, Employee>
+        private string MeasureDictPEbyVal(Dictionary<Person, Employee> dPE, Employee val)
+        {
+            var sw = new Stopwatch();
+            sw.Start();
+            bool isFound = dPE.ContainsValue(val);
+            sw.Stop();
+
+            string result = $"dPE-val: ";
             result += isFound ? "Found " : "notFound ";
             //result += $", time: {sw.Elapsed}\n";
             result += $", time: {sw.Elapsed.Ticks}\n";
