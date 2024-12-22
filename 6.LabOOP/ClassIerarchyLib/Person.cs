@@ -215,7 +215,8 @@ namespace ClassIerarchyLib
             Person sample = (Person)obj;
             if (this.__Name__ == sample.__Name__ &&
                 this.__Age__ == sample.__Age__ &&
-                this.__Residence__ == sample.__Residence__) 
+                this.__Residence__ == sample.__Residence__ &&
+                this.GetHashCode() == sample.GetHashCode()) 
             {
                 return true;
             }

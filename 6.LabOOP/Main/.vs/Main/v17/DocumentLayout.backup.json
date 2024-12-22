@@ -3,14 +3,11 @@
   "WorkspaceRootPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\Main\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{41DAC945-6FF2-4F49-A53C-D03F09877A84}|..\\ClassIerarchyLib\\ClassIerarchyLib.csproj|b:\\git\\c#-oop-discrete\\oop\\6.laboop\\classierarchylib\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CBB76EDA-28A7-42BA-928F-6F2C57F25BC1}|Main.csproj|b:\\git\\c#-oop-discrete\\oop\\6.laboop\\main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBB76EDA-28A7-42BA-928F-6F2C57F25BC1}|Main.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{41DAC945-6FF2-4F49-A53C-D03F09877A84}|..\\ClassIerarchyLib\\ClassIerarchyLib.csproj|b:\\git\\c#-oop-discrete\\oop\\6.laboop\\classierarchylib\\testcollections.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{41DAC945-6FF2-4F49-A53C-D03F09877A84}|..\\ClassIerarchyLib\\ClassIerarchyLib.csproj|b:\\git\\c#-oop-discrete\\oop\\6.laboop\\classierarchylib\\menunongeneralized.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,15 +17,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 769,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Person.cs",
+              "DocumentMoniker": "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\ClassIerarchyLib\\Person.cs",
+              "RelativeDocumentMoniker": "..\\ClassIerarchyLib\\Person.cs",
+              "ToolTip": "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\ClassIerarchyLib\\Person.cs",
+              "RelativeToolTip": "..\\ClassIerarchyLib\\Person.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAuwNoAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T13:07:14.576Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\Main\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -37,38 +47,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-15T18:58:30.14Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 903,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MenuNonGeneralized.cs",
-              "DocumentMoniker": "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\ClassIerarchyLib\\MenuNonGeneralized.cs",
-              "RelativeDocumentMoniker": "..\\ClassIerarchyLib\\MenuNonGeneralized.cs",
-              "ToolTip": "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\ClassIerarchyLib\\MenuNonGeneralized.cs",
-              "RelativeToolTip": "..\\ClassIerarchyLib\\MenuNonGeneralized.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwBQAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T17:39:44.468Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TestCollections.cs",
-              "DocumentMoniker": "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\ClassIerarchyLib\\TestCollections.cs",
-              "RelativeDocumentMoniker": "..\\ClassIerarchyLib\\TestCollections.cs",
-              "ToolTip": "B:\\GIT\\C#-OOP-Discrete\\OOP\\6.LabOOP\\ClassIerarchyLib\\TestCollections.cs",
-              "RelativeToolTip": "..\\ClassIerarchyLib\\TestCollections.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T17:39:39.023Z",
               "EditorCaption": ""
             }
           ]
