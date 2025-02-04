@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\C#\\OOP\\1.LabOOP\\Lab1_2\\",
+  "WorkspaceRootPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\1.LabOOP\\Lab1_2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6DF65338-C989-496F-97FE-529AC2562A5B}|Lab1_2.csproj|c:\\c#\\oop\\1.laboop\\lab1_2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6DF65338-C989-496F-97FE-529AC2562A5B}|Lab1_2.csproj|b:\\git\\c#-oop-discrete\\oop\\1.laboop\\lab1_2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6DF65338-C989-496F-97FE-529AC2562A5B}|Lab1_2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,17 +14,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 836,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\C#\\OOP\\1.LabOOP\\Lab1_2\\Program.cs",
+              "DocumentMoniker": "B:\\GIT\\C#-OOP-Discrete\\OOP\\1.LabOOP\\Lab1_2\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\C#\\OOP\\1.LabOOP\\Lab1_2\\Program.cs",
+              "ToolTip": "B:\\GIT\\C#-OOP-Discrete\\OOP\\1.LabOOP\\Lab1_2\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAADwvz4AAAARAAAA",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T10:55:12.78Z",
               "EditorCaption": ""

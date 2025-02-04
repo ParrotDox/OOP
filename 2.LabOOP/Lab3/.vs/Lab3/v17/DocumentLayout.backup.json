@@ -18,8 +18,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 836,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,7 +32,7 @@
               "RelativeDocumentMoniker": "Calculations.cs",
               "ToolTip": "B:\\GIT\\C#-OOP-Discrete\\OOP\\2.LabOOP\\Lab3\\Calculations.cs",
               "RelativeToolTip": "Calculations.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wCgAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-06T15:49:34.11Z",
               "EditorCaption": ""
@@ -41,7 +45,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "B:\\GIT\\C#-OOP-Discrete\\OOP\\2.LabOOP\\Lab3\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABNAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T17:24:27.994Z",
               "EditorCaption": ""

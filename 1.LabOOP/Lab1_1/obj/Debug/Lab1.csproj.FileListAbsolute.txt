@@ -26,3 +26,10 @@ C:\C#\OOP\1.LabOOP\Lab1_1\obj\Debug\Lab1.csproj.AssemblyReference.cache
 C:\C#\OOP\1.LabOOP\Lab1_1\obj\Debug\Lab1.csproj.CoreCompileInputs.cache
 C:\C#\OOP\1.LabOOP\Lab1_1\obj\Debug\Lab1.exe
 C:\C#\OOP\1.LabOOP\Lab1_1\obj\Debug\Lab1.pdb
+B:\GIT\C#-OOP-Discrete\OOP\1.LabOOP\Lab1_1\bin\Debug\Lab1.exe.config
+B:\GIT\C#-OOP-Discrete\OOP\1.LabOOP\Lab1_1\bin\Debug\Lab1.exe
+B:\GIT\C#-OOP-Discrete\OOP\1.LabOOP\Lab1_1\bin\Debug\Lab1.pdb
+B:\GIT\C#-OOP-Discrete\OOP\1.LabOOP\Lab1_1\obj\Debug\Lab1.csproj.AssemblyReference.cache
+B:\GIT\C#-OOP-Discrete\OOP\1.LabOOP\Lab1_1\obj\Debug\Lab1.csproj.CoreCompileInputs.cache
+B:\GIT\C#-OOP-Discrete\OOP\1.LabOOP\Lab1_1\obj\Debug\Lab1.exe
+B:\GIT\C#-OOP-Discrete\OOP\1.LabOOP\Lab1_1\obj\Debug\Lab1.pdb
