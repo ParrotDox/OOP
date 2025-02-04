@@ -79,7 +79,6 @@ namespace ClassIerarchyLib
             }
             get { return _capacity; }
         }
-        private int _count;
         public int Count 
         {
             get 
@@ -95,6 +94,14 @@ namespace ClassIerarchyLib
                     ctr++;
                 }
                 return ctr;
+            }
+        }
+        bool isReadOnly;
+        public bool IsReadOnly 
+        {
+            get 
+            {
+                return false;
             }
         }
         //Constructors
@@ -232,6 +239,33 @@ namespace ClassIerarchyLib
             {
                 array[arrayIndex + i] = cur_point;
                 cur_point = cur_point.Link_to_next;
+            }
+        }
+        public bool Remove(Point sample) 
+        {
+            Point cur_point = _beg;
+            Point prev_point;
+            while (!cur_point.Info.Equals(sample.Info)) 
+            {
+                if(cur_point == null) 
+                {
+                    return false;
+                }
+                cur_point = cur_point.Link_to_next;
+                prev_point = cur_point;
+            }
+            //If "while" ended and "false" was not returned
+            if(cur_point.Link_to_next == null) 
+            {
+                cur_point = null;
+                prev_point = null;
+                return true;
+            }
+            else 
+            {
+                prev_point = cur_point.Link_to_next;
+                cur_point = null;
+                return true;
             }
         }
     }
