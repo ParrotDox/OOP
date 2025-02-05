@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -27,13 +28,13 @@ namespace ClassIerarchyLib
             get { return _link_to_next;  }
             set
             {
-                if(value is Person) 
+                if(value is Point || value is null) 
                 {
                     _link_to_next = value;
                 }
                 else 
                 {
-                    throw new ArgumentException("set _link_to_next: Wrong data type or nullable data");
+                    throw new ArgumentException("set _link_to_next: Wrong data type");
                 }
             }
         }
@@ -65,30 +66,19 @@ namespace ClassIerarchyLib
         }
     }
 
-    public class PointList: ICollection<Point>
+    public class PersonList: ICollection<Person>
     {
-        private Point _beg;
-        private Point _end;
-        private uint _capacity;
-        private uint Capacity 
-        {
-            set 
-            {
-                if (value == 0)
-                    throw new ArgumentException("set _capacity: can't set capacity = 0, use constructor without parameters");
-            }
-            get { return _capacity; }
-        }
+        public Point beg;
         public int Count 
         {
             get 
             {
-                if (_beg == null)
+                if (beg == null)
                     return 0;
                 
-                Point cur_point = _beg;
+                Point cur_point = beg;
                 int ctr = 1;
-                while (cur_point != null) 
+                while (cur_point.Link_to_next != null) 
                 {
                     cur_point = cur_point.Link_to_next;
                     ctr++;
@@ -105,70 +95,63 @@ namespace ClassIerarchyLib
             }
         }
         //Constructors
-        public PointList() 
+        public PersonList() 
         {
-            _beg = null;
-            _end = null;
-            _capacity = 0;
+            beg = null;
         }
-        public PointList(uint capacity) 
+        public PersonList(uint capacity) 
         {
-            //Checking if atribute correct using setter
-            Capacity = capacity;
-
-            Point sample = Point.Create();
-            sample.Info.RandomInit();
-
-            //capacity = 1
-            if (capacity == 1) 
+            if (capacity == 0)
             {
-                _beg = sample;
-                _end = sample;
+                beg = null;
             }
-            else if (capacity > 1)
+            else
             {
-                _beg = sample;
-                //Temp is used to iterate through list
-                Point cur_list_point = _beg;
-                for(int c = 1; c < capacity; c++) 
+                Point sample = Point.Create();
+                sample.Info.RandomInit();
+
+                if (capacity == 1)
                 {
-                    while (cur_list_point.Link_to_next != null)
-                        cur_list_point = cur_list_point.Link_to_next;
-
-                    sample = Point.Create();
-                    sample.Info.RandomInit();
-
-                    cur_list_point.Link_to_next = sample;
+                    beg = sample;
                 }
-                _end = cur_list_point.Link_to_next;
+                else if (capacity > 1)
+                {
+                    beg = sample;
+                    //cur_list_point is used to iterate through list
+                    Point cur_list_point = beg;
+                    for (int c = 1; c < capacity; c++)
+                    {
+                        while (cur_list_point.Link_to_next != null)
+                            cur_list_point = cur_list_point.Link_to_next;
+
+                        sample = Point.Create();
+                        sample.Info.RandomInit();
+
+                        cur_list_point.Link_to_next = sample;
+                    }
+                }
             }
         }
-        public PointList(PointList pointList_sample) 
+        public PersonList(PersonList pointList_sample) 
         {
-            //User may try to copy empty collection. Using setter is incorrect
-            _capacity = pointList_sample.Capacity;
-
-            if(pointList_sample.Capacity == 0) 
+            if(pointList_sample.Count == 0) 
             {
-                _beg = null;
-                _end = null;
-                _capacity = 0;
+                beg = null;
             }
-            else if(pointList_sample.Capacity == 1) 
+            else if(pointList_sample.Count == 1) 
             {
-                Point sample = Point.Create(pointList_sample._beg.Info);
-                _beg = sample;
-                _end = sample;
+                Point sample = Point.Create(pointList_sample.beg.Info);
+                beg = sample;
             }
-            else if(pointList_sample.Capacity > 1) 
+            else if(pointList_sample.Count > 1) 
             {
-                Point sample = Point.Create(pointList_sample._beg.Info);
-                _beg = sample;
+                Point sample = Point.Create(pointList_sample.beg.Info);
+                beg = sample;
                 //temp is used to iterate through creating list
-                Point cur_list_point = _beg;
+                Point cur_list_point = beg;
                 //temp_sample is used to iterate through pointList_sample
-                Point cur_sample_point = pointList_sample._beg;
-                for(int c = 1; c < Capacity; ++c)
+                Point cur_sample_point = pointList_sample.beg;
+                for(int c = 1; c < Count; ++c)
                 {
                     while (cur_list_point.Link_to_next != null) 
                     {
@@ -180,53 +163,60 @@ namespace ClassIerarchyLib
 
                     cur_list_point.Link_to_next = sample;
                 }
-                _end = cur_list_point.Link_to_next;
             }
         }
         //Create and return PointList object
         //Empty
-        static public PointList Create() 
+        static public PersonList Create() 
         {
-            PointList pointList = new PointList();
+            PersonList pointList = new PersonList();
             return pointList;
         }
         //With specified length
-        static public PointList Create(uint capacity)
+        static public PersonList Create(uint capacity)
         {
-            PointList pointList = new PointList(capacity);
+            PersonList pointList = new PersonList(capacity);
             return pointList;
         }
         
         //ICollection methods
-        public void Add(Point sample) 
+        public void Add(Person sample) 
         {
-            Point cur_point = _beg;
-            while(cur_point.Link_to_next != null)
-                cur_point = cur_point.Link_to_next;
-            cur_point.Link_to_next = sample;
-            ++Capacity;
+            Point cur_point = beg;
+            if(beg == null) 
+            {
+                beg = Point.Create(sample);
+            }
+            else 
+            {
+                while (cur_point.Link_to_next != null)
+                    cur_point = cur_point.Link_to_next;
+                cur_point.Link_to_next = Point.Create(sample);
+            }
         }
         public void Clear() 
         {
-            _beg = null;
-            _end = null;
-            _capacity = 0;
+            beg = null;
         }
-        public bool Contains(Point sample) 
+        public bool Contains(Person sample) 
         {
             //Checking using Equals
             bool isEquals = false;
             
-            Point cur_point = _beg;
+            Point cur_point = beg;
             while (cur_point.Link_to_next != null) 
             {
-                isEquals = sample.Equals(cur_point.Info);
+                if(sample.Equals(cur_point.Info)) 
+                {
+                    isEquals = true;
+                    break;
+                }
                 cur_point = cur_point.Link_to_next;
             }
 
             return isEquals;
         }
-        public void CopyTo(Point[] array, int arrayIndex) 
+        public void CopyTo(Person[] array, int arrayIndex) 
         {
             if (array == null)
                 throw new ArgumentNullException("array argument: not initialized");
@@ -234,39 +224,51 @@ namespace ClassIerarchyLib
                 throw new ArgumentOutOfRangeException("arrayIndex argument: index is out of range");
             if(arrayIndex + Count > array.Length)
                 throw new ArgumentOutOfRangeException("copyTo: can't copy, remain array part < Collection.Count");
-            Point cur_point = _beg;
+
+            Point cur_point = beg;
             for (int i = 0; i < Count; ++i) 
             {
-                array[arrayIndex + i] = cur_point;
+                array[arrayIndex + i] = cur_point.Info;
                 cur_point = cur_point.Link_to_next;
             }
         }
-        public bool Remove(Point sample) 
+        public bool Remove(Person sample) 
         {
-            Point cur_point = _beg;
-            Point prev_point;
-            while (!cur_point.Info.Equals(sample.Info)) 
+            Point cur_point = beg;
+            Point prev_point = null;
+
+            // Seeking queue-point
+            while (cur_point != null && !cur_point.Info.Equals(sample))
             {
-                if(cur_point == null) 
-                {
-                    return false;
-                }
-                cur_point = cur_point.Link_to_next;
                 prev_point = cur_point;
+                cur_point = cur_point.Link_to_next;
             }
-            //If "while" ended and "false" was not returned
-            if(cur_point.Link_to_next == null) 
+
+            // If haven't found
+            if (cur_point == null)
             {
-                cur_point = null;
-                prev_point = null;
-                return true;
+                return false;
             }
-            else 
+
+            // If queue-point at beggining
+            if (prev_point == null)
             {
-                prev_point = cur_point.Link_to_next;
-                cur_point = null;
-                return true;
+                beg = cur_point.Link_to_next;
             }
+            else
+            {
+                prev_point.Link_to_next = cur_point.Link_to_next; // Reconnecting links
+            }
+
+            return true;
+        }
+        IEnumerator<Person> IEnumerable<Person>.GetEnumerator() 
+        {
+            return new CustomEnumerator(this);
+        }
+        IEnumerator IEnumerable.GetEnumerator() 
+        {
+            return new CustomEnumerator(this);
         }
     }
 }

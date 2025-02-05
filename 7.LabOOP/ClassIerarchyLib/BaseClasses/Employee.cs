@@ -57,7 +57,6 @@ namespace ClassIerarchyLib
                 _salary = value;
             }
         }
-
         public Employee() : base()
         {
             _id = -1;
