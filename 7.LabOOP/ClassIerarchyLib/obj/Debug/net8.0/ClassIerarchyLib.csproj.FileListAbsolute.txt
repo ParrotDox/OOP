@@ -58,3 +58,15 @@ B:\GIT\C#-OOP-Discrete\OOP\7.LabOOP\ClassIerarchyLib\obj\Debug\net8.0\ClassIerar
 B:\GIT\C#-OOP-Discrete\OOP\7.LabOOP\ClassIerarchyLib\obj\Debug\net8.0\refint\ClassIerarchyLib.dll
 B:\GIT\C#-OOP-Discrete\OOP\7.LabOOP\ClassIerarchyLib\obj\Debug\net8.0\ClassIerarchyLib.pdb
 B:\GIT\C#-OOP-Discrete\OOP\7.LabOOP\ClassIerarchyLib\obj\Debug\net8.0\ref\ClassIerarchyLib.dll
+C:\GIT\OOP\7.LabOOP\ClassIerarchyLib\bin\Debug\net8.0\ClassIerarchyLib.deps.json
+C:\GIT\OOP\7.LabOOP\ClassIerarchyLib\bin\Debug\net8.0\ClassIerarchyLib.dll
+C:\GIT\OOP\7.LabOOP\ClassIerarchyLib\bin\Debug\net8.0\ClassIerarchyLib.pdb
+C:\GIT\OOP\7.LabOOP\ClassIerarchyLib\obj\Debug\net8.0\ClassIerarchyLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\GIT\OOP\7.LabOOP\ClassIerarchyLib\obj\Debug\net8.0\ClassIerarchyLib.AssemblyInfoInputs.cache
+C:\GIT\OOP\7.LabOOP\ClassIerarchyLib\obj\Debug\net8.0\ClassIerarchyLib.AssemblyInfo.cs
+C:\GIT\OOP\7.LabOOP\ClassIerarchyLib\obj\Debug\net8.0\ClassIerarchyLib.csproj.CoreCompileInputs.cache
+C:\GIT\OOP\7.LabOOP\ClassIerarchyLib\obj\Debug\net8.0\ClassIerarchyLib.sourcelink.json
+C:\GIT\OOP\7.LabOOP\ClassIerarchyLib\obj\Debug\net8.0\ClassIerarchyLib.dll
+C:\GIT\OOP\7.LabOOP\ClassIerarchyLib\obj\Debug\net8.0\refint\ClassIerarchyLib.dll
+C:\GIT\OOP\7.LabOOP\ClassIerarchyLib\obj\Debug\net8.0\ClassIerarchyLib.pdb
+C:\GIT\OOP\7.LabOOP\ClassIerarchyLib\obj\Debug\net8.0\ref\ClassIerarchyLib.dll

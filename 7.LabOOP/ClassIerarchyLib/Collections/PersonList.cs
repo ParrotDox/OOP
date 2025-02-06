@@ -228,7 +228,7 @@ namespace ClassIerarchyLib
             Point cur_point = beg;
             for (int i = 0; i < Count; ++i) 
             {
-                array[arrayIndex + i] = cur_point.Info;
+                array[arrayIndex + i] = (Person)(cur_point.Info.Clone());
                 cur_point = cur_point.Link_to_next;
             }
         }
