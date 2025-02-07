@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClassIerarchyLib
 {
-    public class CustomEnumerator: IEnumerator<Person>
+    public class PersonListEnumerator: IEnumerator<Person>
     {
         private Point _beg;
         private Point _cur;
@@ -19,18 +19,15 @@ namespace ClassIerarchyLib
         object IEnumerator.Current => Current;
 
         //Constructors
-        public CustomEnumerator(PersonList pointList)
+        public PersonListEnumerator(PersonList personList)
         {
-            _beg = pointList.beg;
+            _beg = personList.beg;
             _cur = null;
             _firstStep = false;
         }
         //Methods
         public bool MoveNext() 
         {
-            if (_beg == null)
-                return false;
-
             if (_firstStep == false && _beg != null) 
             {
                 _cur = _beg;

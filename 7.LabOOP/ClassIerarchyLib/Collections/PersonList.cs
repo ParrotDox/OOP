@@ -86,10 +86,10 @@ namespace ClassIerarchyLib
                 return ctr;
             }
         }
-        bool isReadOnly;
-        public bool IsReadOnly 
+        private bool _is_read_only;
+        public bool IsReadOnly
         {
-            get 
+            get
             {
                 return false;
             }
@@ -216,19 +216,22 @@ namespace ClassIerarchyLib
 
             return isEquals;
         }
-        public void CopyTo(Person[] array, int arrayIndex) 
+        public void CopyTo(Person[] array, int array_index) 
         {
             if (array == null)
                 throw new ArgumentNullException("array argument: not initialized");
-            if (arrayIndex < 0 || arrayIndex >= array.Length)
-                throw new ArgumentOutOfRangeException("arrayIndex argument: index is out of range");
-            if(arrayIndex + Count > array.Length)
+            if (array_index < 0 || array_index >= array.Length)
+                throw new ArgumentOutOfRangeException("array index argument: index is out of range");
+            if(array_index + Count > array.Length)
                 throw new ArgumentOutOfRangeException("copyTo: can't copy, remain array part < Collection.Count");
+
+            if (beg == null)
+                return;
 
             Point cur_point = beg;
             for (int i = 0; i < Count; ++i) 
             {
-                array[arrayIndex + i] = (Person)(cur_point.Info.Clone());
+                array[array_index + i] = (Person)(cur_point.Info.Clone());
                 cur_point = cur_point.Link_to_next;
             }
         }
@@ -264,11 +267,11 @@ namespace ClassIerarchyLib
         }
         IEnumerator<Person> IEnumerable<Person>.GetEnumerator() 
         {
-            return new CustomEnumerator(this);
+            return new PersonListEnumerator(this);
         }
         IEnumerator IEnumerable.GetEnumerator() 
         {
-            return new CustomEnumerator(this);
+            return new PersonListEnumerator(this);
         }
     }
 }
