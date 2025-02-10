@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -322,11 +323,28 @@ namespace ClassIerarchyLib
         }
         IEnumerator<KeyValuePair<string, Person>> IEnumerable<KeyValuePair<string, Person>>.GetEnumerator()
         {
-            return new PersonHashTableEnumerator(this);
+            for(int i = 0; i < Size; ++i) 
+            {
+                HashPoint cur_hashpoint = table[i];
+                while (cur_hashpoint != null) 
+                {
+                    Console.WriteLine("Returning!");
+                    yield return new KeyValuePair<string, Person>(cur_hashpoint.key, cur_hashpoint.value);
+                    cur_hashpoint = cur_hashpoint.Link_to_next;
+                }
+            }
         }
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return new PersonHashTableEnumerator(this);
+            for (int i = 0; i < Size; ++i)
+            {
+                HashPoint cur_hashpoint = table[0];
+                while (cur_hashpoint != null)
+                {
+                    yield return new KeyValuePair<string, Person>(cur_hashpoint.key, cur_hashpoint.value);
+                    cur_hashpoint = cur_hashpoint.Link_to_next;
+                }
+            }
         }
     }
 }

@@ -27,21 +27,26 @@ namespace ClassIerarchyLib
         }
 
         //Methods
+        //MoveNextNotWorking!
         public bool MoveNext()
         {
+            Console.WriteLine("Call");
             if (_index == -1 && _beg[0] != null)
             {
+                Console.WriteLine("First");
                 ++_index;
                 _cur = _beg[0];
                 return true;
             }
             if (_cur.Link_to_next != null) 
             {
+                Console.WriteLine("Second");
                 _cur = _cur.Link_to_next;
                 return true;
             }
             if (_beg[_index + 1] != null) 
             {
+                Console.WriteLine("Third");
                 _cur = _beg[_index + 1];
                 return true;
             }

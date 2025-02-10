@@ -51,3 +51,27 @@ Console.WriteLine("____Clear____");
 myHashTable.Clear();
 Console.WriteLine("____Count(After_Clear)____");
 Console.WriteLine(myHashTable.Count);
+Console.WriteLine("____Add(Another)____");
+myHashTable.Add("KeyOne", p);
+myHashTable.Add(p.ToString(), p);
+myHashTable.Add(pair);
+Console.WriteLine("____CopyTo____");
+KeyValuePair<string, Person>[] key_array = new KeyValuePair<string, Person>[5];
+myHashTable.CopyTo(key_array, 0);
+Console.WriteLine("____Foreach_key_array____");
+foreach(KeyValuePair<string, Person> key in key_array) 
+{
+    if(key.Value == null) 
+    {
+        Console.WriteLine("None");
+    }
+    else
+    {
+        Console.WriteLine(key.Value.Name);
+    }
+}
+Console.WriteLine("____Foreach_HASHTABLE____");
+foreach(KeyValuePair<string, Person> point in myHashTable) 
+{
+    Console.WriteLine(point.Value.Name);
+}
