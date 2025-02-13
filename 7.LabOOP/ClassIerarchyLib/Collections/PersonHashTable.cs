@@ -145,6 +145,10 @@ namespace ClassIerarchyLib
             {
                 return false;
             }
+            set 
+            {
+                _is_read_only = value;
+            }
         }
 
         //Constructors
@@ -157,6 +161,9 @@ namespace ClassIerarchyLib
         //Methods
         public void Add(string key, Person sample) 
         {
+            if (IsReadOnly)
+                throw new InvalidOperationException("IsReadOnly: true. Collection is not changeable");
+
             if (sample == null || key == "")
                 return;
 
@@ -178,26 +185,29 @@ namespace ClassIerarchyLib
         }
         public void Add(KeyValuePair<string, Person> sample) 
         {
+            if (IsReadOnly)
+                throw new InvalidOperationException("IsReadOnly: true. Collection is not changeable");
+
             Add(sample.Key, sample.Value);
         }
         public bool ContainsKey(string key) 
         {
+            if(Count == 0) return false;
+
             int index = Math.Abs(key.GetHashCode() % Size);
-            if(table[index] == null)
+            if (table[index] == null)
                 return false;
-            else 
+
+            HashPoint cur_hashpoint = table[index];
+            if (cur_hashpoint.key == key)
+                return true;
+            while (cur_hashpoint != null)
             {
-                HashPoint cur_hashpoint = table[index];
-                if(cur_hashpoint.key == key)
+                if (cur_hashpoint.key == key)
                     return true;
-                while(cur_hashpoint != null) 
-                {
-                    if (cur_hashpoint.key == key)
-                        return true;
-                    cur_hashpoint = cur_hashpoint.Link_to_next;
-                }
-                return false;
+                cur_hashpoint = cur_hashpoint.Link_to_next;
             }
+            return false;
         }
         public bool Contains(Person sample) 
         {
@@ -232,13 +242,16 @@ namespace ClassIerarchyLib
         }
         public bool Remove(string key) 
         {
+            if (IsReadOnly)
+                throw new InvalidOperationException("IsReadOnly: true. Collection is not changeable");
+
             int index = Math.Abs(key.GetHashCode() % Size);
             if (table[index] == null)
                 return false;
             else
             {
                 HashPoint cur_hashpoint = table[index];
-                HashPoint prev_hashpoint;
+                HashPoint prev_hashpoint = null;
                 if(cur_hashpoint.key == key && cur_hashpoint.Link_to_next == null) 
                 {
                     table[index] = null;
@@ -247,13 +260,13 @@ namespace ClassIerarchyLib
                 if (cur_hashpoint.key == key && cur_hashpoint.Link_to_next != null)
                 {
                     table[index] = cur_hashpoint.Link_to_next;
-                    return false;
+                    return true;
                 }
                 while (cur_hashpoint != null) 
                 {
                     if(cur_hashpoint.key == key) 
                     {
-                        prev_hashpoint = cur_hashpoint.Link_to_next;
+                        prev_hashpoint.Link_to_next = cur_hashpoint.Link_to_next;
                         cur_hashpoint = null;
                         return true;
                     }
@@ -265,23 +278,28 @@ namespace ClassIerarchyLib
         }
         public bool Remove(KeyValuePair<string, Person> pair_sample) 
         {
+            if (IsReadOnly)
+                throw new InvalidOperationException("IsReadOnly: true. Collection is not changeable");
+
             bool isRemoved = Remove(pair_sample.Key);
             return isRemoved;
         }
         public void Clear() 
         {
+            if (IsReadOnly)
+                throw new InvalidOperationException("IsReadOnly: true. Collection is not changeable");
+
             table = new HashPoint[Size];
         }
         public bool TryGetValue(string key, out Person value)
         { 
-            int index = Math.Abs(key.GetHashCode() % Size);
-            HashPoint cur_hashpoint = table[index];
-
-            if (cur_hashpoint == null) 
+            if(Size == 0) 
             {
                 value = null;
                 return false;
             }
+            int index = Math.Abs(key.GetHashCode() % Size);
+            HashPoint cur_hashpoint = table[index];
             while (cur_hashpoint != null) 
             {
                 if(cur_hashpoint.key == key) 
@@ -338,7 +356,7 @@ namespace ClassIerarchyLib
         {
             for (int i = 0; i < Size; ++i)
             {
-                HashPoint cur_hashpoint = table[0];
+                HashPoint cur_hashpoint = table[i];
                 while (cur_hashpoint != null)
                 {
                     yield return new KeyValuePair<string, Person>(cur_hashpoint.key, cur_hashpoint.value);

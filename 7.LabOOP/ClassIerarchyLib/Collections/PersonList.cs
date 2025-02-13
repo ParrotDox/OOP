@@ -77,8 +77,8 @@ namespace ClassIerarchyLib
                     return 0;
                 
                 Point cur_point = beg;
-                int ctr = 1;
-                while (cur_point.Link_to_next != null) 
+                int ctr = 0;
+                while (cur_point != null) 
                 {
                     cur_point = cur_point.Link_to_next;
                     ctr++;
@@ -204,7 +204,7 @@ namespace ClassIerarchyLib
             bool isEquals = false;
             
             Point cur_point = beg;
-            while (cur_point.Link_to_next != null) 
+            while (cur_point != null) 
             {
                 if(sample.Equals(cur_point.Info)) 
                 {
@@ -229,14 +229,20 @@ namespace ClassIerarchyLib
                 return;
 
             Point cur_point = beg;
+
             for (int i = 0; i < Count; ++i) 
             {
-                array[array_index + i] = (Person)(cur_point.Info.Clone());
+                if (cur_point == null)
+                    array[array_index + i] = null;
+                else
+                    array[array_index + i] = (Person)(cur_point.Info.Clone());
                 cur_point = cur_point.Link_to_next;
             }
         }
         public bool Remove(Person sample) 
         {
+            if(beg == null)
+                return false;
             Point cur_point = beg;
             Point prev_point = null;
 

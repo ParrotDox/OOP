@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main", "Main.csproj", "{B6E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassIerarchyLib", "..\ClassIerarchyLib\ClassIerarchyLib.csproj", "{B16C35F3-01F7-4DB8-9153-DB0EB63BB285}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "..\UnitTests\UnitTests.csproj", "{6E46C664-FFB0-4030-9BB4-7CB1B4061FB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B16C35F3-01F7-4DB8-9153-DB0EB63BB285}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B16C35F3-01F7-4DB8-9153-DB0EB63BB285}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B16C35F3-01F7-4DB8-9153-DB0EB63BB285}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E46C664-FFB0-4030-9BB4-7CB1B4061FB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E46C664-FFB0-4030-9BB4-7CB1B4061FB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E46C664-FFB0-4030-9BB4-7CB1B4061FB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E46C664-FFB0-4030-9BB4-7CB1B4061FB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
