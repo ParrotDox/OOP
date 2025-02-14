@@ -34,7 +34,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "B:\\GIT\\C#-OOP-Discrete\\OOP\\7.LabOOP\\Main\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAQwGMAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAowHMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-04T07:47:49.937Z",
               "EditorCaption": ""
@@ -49,8 +49,7 @@
               "RelativeToolTip": "..\\ClassIerarchyLib\\Collections\\CustomHashTable.cs",
               "ViewState": "AgIAAA4BAAAAAAAAAAAiwGQBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T07:34:18.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-11T07:34:18.032Z"
             },
             {
               "$type": "Document",
@@ -62,8 +61,7 @@
               "RelativeToolTip": "..\\UnitTests\\UnitTest.cs",
               "ViewState": "AgIAAM0AAAAAAAAAAAAYwHgAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T17:57:19.169Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T17:57:19.169Z"
             }
           ]
         }

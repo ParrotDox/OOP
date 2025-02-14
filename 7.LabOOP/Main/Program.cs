@@ -105,3 +105,12 @@ foreach(KeyValuePair<string, Person> kvp  in example_hash_table)
 {
     Console.WriteLine(kvp.Value.GetInfo());
 }
+Console.WriteLine("--- --- --- --- --- ---");
+Console.WriteLine("Creating new hashTable of size 1 and filling it with 10 elements:");
+CustomHashTable<string, Person> new_hash_table = new CustomHashTable<string, Person>(1);
+GenerateObjects(10, new_hash_table);
+Console.WriteLine($"new hashTable count: {new_hash_table.Count}");
+foreach (KeyValuePair<string, Person> kvp in new_hash_table)
+{
+    Console.WriteLine(kvp.Value.GetInfo());
+}
