@@ -12,7 +12,7 @@ namespace UnitTests
         {
             //Arrange
             List<string> keys = new List<string>();
-            PersonHashTable myHashTable = new PersonHashTable(10);
+            CustomHashTable<string, Person> myHashTable = new CustomHashTable<string, Person>(10);
             Person p = new Person();
             p.RandomInit();
             //Act
@@ -28,7 +28,7 @@ namespace UnitTests
         {
             //Arrange
             List<Person> vals = new List<Person>();
-            PersonHashTable myHashTable = new PersonHashTable(10);
+            CustomHashTable<string, Person> myHashTable = new CustomHashTable<string, Person>(10);
             Person p = new Person();
             p.RandomInit();
             //Act
@@ -44,7 +44,7 @@ namespace UnitTests
         public void TestAddMethods()
         {
             //Arrange
-            PersonHashTable myHashTable = new PersonHashTable(10);
+            CustomHashTable<string, Person> myHashTable = new CustomHashTable<string, Person>(10);
             Person p = new Person();
             p.RandomInit();
             KeyValuePair<string, Person> pair = new KeyValuePair<string, Person>("KeyThree", p);
@@ -62,8 +62,8 @@ namespace UnitTests
         public void TestContainsKeyMethods()
         {
             //Arrange
-            PersonHashTable myHashTable = new PersonHashTable(10);
-            PersonHashTable emptyHashTable = new PersonHashTable(0);
+            CustomHashTable<string, Person> myHashTable = new CustomHashTable<string, Person>(10);
+            CustomHashTable<string, Person> emptyHashTable = new CustomHashTable<string, Person>(0);
             Person p = new Person();
             p.RandomInit();
             KeyValuePair<string, Person> pair = new KeyValuePair<string, Person>("KeyThree", p);
@@ -92,7 +92,7 @@ namespace UnitTests
         public void TestContainsMethods() 
         {
             //Arrange
-            PersonHashTable myHashTable = new PersonHashTable(10);
+            CustomHashTable<string, Person> myHashTable = new CustomHashTable<string, Person>(10);
             Person p = new Person();
             p.RandomInit();
             KeyValuePair<string, Person> pair = new KeyValuePair<string, Person>("KeyThree", p);
@@ -111,7 +111,7 @@ namespace UnitTests
         public void TestRemoveMethods() 
         {
             //Arrange
-            PersonHashTable myHashTable = new PersonHashTable(10);
+            CustomHashTable<string, Person> myHashTable = new CustomHashTable<string, Person>(10);
             Person p = new Person();
             p.RandomInit();
             KeyValuePair<string, Person> pair = new KeyValuePair<string, Person>("KeyThree", p);
@@ -141,7 +141,7 @@ namespace UnitTests
         public void TestClearMethod()
         {
             //Arrange
-            PersonHashTable myHashTable = new PersonHashTable(10);
+            CustomHashTable<string, Person> myHashTable = new CustomHashTable<string, Person>(10);
             Person p = new Person();
             p.RandomInit();
             KeyValuePair<string, Person> pair = new KeyValuePair<string, Person>("KeyThree", p);
@@ -156,8 +156,8 @@ namespace UnitTests
         public void TestTryGetValueMethod()
         {
             //Arrange
-            PersonHashTable myHashTable = new PersonHashTable(10);
-            PersonHashTable emptyHashTable = new PersonHashTable(0);
+            CustomHashTable<string, Person> myHashTable = new CustomHashTable<string, Person>(10);
+            CustomHashTable<string, Person> emptyHashTable = new CustomHashTable<string, Person>(0);
             Person p = new Person();
             p.RandomInit();
             //Act
@@ -179,7 +179,7 @@ namespace UnitTests
         {
             //Arrange
             int ctr = 0;
-            PersonHashTable myHashTable = new PersonHashTable(10);
+            CustomHashTable<string, Person> myHashTable = new CustomHashTable<string, Person>(10);
             Person p = new Person();
             p.RandomInit();
             KeyValuePair<string, Person>[] key_array = new KeyValuePair<string, Person>[5];
@@ -207,7 +207,7 @@ namespace UnitTests
         {
             //Arrange
             int iterations = 0;
-            PersonHashTable myHashTable = new PersonHashTable(10);
+            CustomHashTable<string, Person> myHashTable = new CustomHashTable<string, Person>(10);
             //Act
             for (int i = 0; i < 10; ++i) 
             {

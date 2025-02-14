@@ -1,142 +1,107 @@
 ﻿using ClassIerarchyLib;
+using System.Linq;
 
-
-
-PersonHashTable myHashTable = new PersonHashTable(1000);
-Person p = new Person();    //In HashTable
-Person p2 = new Person();
-Person notForContained = new Person();  //Not in HashTable
-KeyValuePair<string, Person> pair = new KeyValuePair<string, Person>("KeyThree", p);  //In HashTable
-p.RandomInit();
-p2.RandomInit();
-
-Console.WriteLine("____Add____");
-myHashTable.Add("KeyOne", p);
-myHashTable.Add(p.ToString(), p);
-myHashTable.Add(pair);
-Console.WriteLine("____Count____");
-Console.WriteLine(myHashTable.Count);
-Console.WriteLine("____ContainsKey____");
-Console.WriteLine(myHashTable.ContainsKey("KeyOne"));
-Console.WriteLine(myHashTable.ContainsKey(p.ToString()));
-Console.WriteLine(myHashTable.ContainsKey("KeyThree"));
-Console.WriteLine("____Contains____");
-Console.WriteLine(myHashTable.Contains(p));
-Console.WriteLine(myHashTable.Contains(notForContained) + " (must be false)");
-Console.WriteLine(myHashTable.Contains(pair));
-Console.WriteLine("____Try_Get_Value____");
-Person toOut;
-Console.WriteLine("TryGetValue(string val, out)");
-Console.WriteLine(myHashTable.TryGetValue("KeyOne", out toOut));
-Console.WriteLine(toOut.GetInfo());
-Console.WriteLine("TryGetValue(Person val.ToString(), out)");
-Console.WriteLine(myHashTable.TryGetValue(p.ToString(), out toOut));
-Console.WriteLine(toOut.GetInfo());
-Console.WriteLine("TryGetValue(string val, out)");
-Console.WriteLine(myHashTable.TryGetValue("KeyThree", out toOut));
-Console.WriteLine(toOut.GetInfo());
-Console.WriteLine("____Remove____");
-myHashTable.Remove("KeyOne");
-myHashTable.Remove(p.ToString());
-myHashTable.Remove("KeyThree");
-myHashTable.Remove("NotAKey");
-Console.WriteLine("____Contains(After_Remove)____");
-Console.WriteLine(myHashTable.ContainsKey("KeyOne"));
-Console.WriteLine(myHashTable.ContainsKey("KeyTwo"));
-Console.WriteLine(myHashTable.ContainsKey("KeyThree"));
-Console.WriteLine("____Count(After_Remove)____");
-Console.WriteLine(myHashTable.Count);
-Console.WriteLine("____Add(Another)____");
-myHashTable.Add("KeyOne", p);
-myHashTable.Add(p.ToString(), p);
-myHashTable.Add(pair);
-Console.WriteLine("____Count(After_Add)____");
-Console.WriteLine(myHashTable.Count);
-Console.WriteLine("____Clear____");
-myHashTable.Clear();
-Console.WriteLine("____Count(After_Clear)____");
-Console.WriteLine(myHashTable.Count);
-Console.WriteLine("____Add(Another)____");
-myHashTable.Add("KeyOne", p);
-myHashTable.Add(p.ToString(), p);
-myHashTable.Add(pair);
-myHashTable.Add("GGGBBB", p2);
-Console.WriteLine("____CopyTo____");
-KeyValuePair<string, Person>[] key_array = new KeyValuePair<string, Person>[6];
-myHashTable.CopyTo(key_array, 0);
-Console.WriteLine("____Foreach_key_array____");
-foreach(KeyValuePair<string, Person> key in key_array) 
+void GenerateObjects(int quantity, CustomHashTable<string, Person> table) 
 {
-    if(key.Value == null) 
+    CustomHashTable<string, Person> temp = table;
+    for (int i = 0; i < quantity; i++)
     {
-        Console.WriteLine("None");
-    }
-    else
-    {
-        Console.WriteLine(key.Value.Name);
+        string gen_key = "";
+        for (int c = 0; c < 5; c++)
+        {
+            char[] letters = new char[] { 'a', 'b', 'C', 'Q', 'z' };
+            Random rnd = new Random();
+            int letter_index = rnd.Next(0, 5);
+            gen_key += letters[letter_index];
+        }
+        Person person = new Person();
+        person.RandomInit();
+        temp.Add(gen_key, person);
     }
 }
-Console.WriteLine("____Foreach_HASHTABLE____");
-foreach(KeyValuePair<string, Person> point in myHashTable) 
-{
-    Console.WriteLine(point.Value.Name);
-}
-Console.WriteLine("____Values____");
-List<Person> list_val;
-list_val = (List<Person>)myHashTable.Values;
-foreach(Person per in list_val) 
-{
-    Console.WriteLine(per.GetInfo());
-}
-Console.WriteLine("____Keys____");
-List<string> list_key;
-list_key = (List<string>)myHashTable.Keys;
-foreach (string k in list_key)
-{
-    Console.WriteLine(k);
-}
+CustomHashTable<string, Person> example_hash_table = new CustomHashTable<string, Person>(100);
 
-Console.WriteLine("****PersonList part****");
-Console.WriteLine("****Creating and count****");
-PersonList myList = new PersonList();
-Console.WriteLine(myList.Count);
-Console.WriteLine("****Init 5 elements****");
-Person p3;
-for(int i = 0; i < 5; i++) 
+Console.WriteLine("Generating hashTable by Add(key, sample) method <100 objects>:");
+GenerateObjects(100, example_hash_table);
+Console.WriteLine("--- --- --- --- --- ---");
+Console.WriteLine($"HashTable Count: {example_hash_table.Count}");
+Console.WriteLine("Getting key list:");
+List<string> keys  = (List<string>)example_hash_table.Keys;
+Console.WriteLine($"List<string> keys has {keys.Count} keys");
+Console.WriteLine("Getting vals list:");
+List<Person> vals = (List<Person>)example_hash_table.Values;
+Console.WriteLine($"List<string> vals has {vals.Count} vals");
+Console.WriteLine("--- --- --- --- --- ---");
+Console.WriteLine("Adding KeyPairValue(customHashCode, customPerson):");
+Person customPerson = new Person(); customPerson.RandomInit();
+KeyValuePair<string, Person> pair = new KeyValuePair<string, Person>("customHashCode", customPerson);
+example_hash_table.Add(pair);
+Console.WriteLine($"Is the pair in the hashTable?: {example_hash_table.Contains(pair)}");
+Console.WriteLine($"Is the key(customHashCode) in the hashTable?: {example_hash_table.ContainsKey("customHashCode")}");
+Console.WriteLine($"Is the value(customPerson) in the hashTable?: {example_hash_table.Contains((Person)customPerson.Clone())}");
+Console.WriteLine("--- --- --- --- --- ---");
+Console.WriteLine($"Removing by key(customHashCode): {example_hash_table.Remove("customHashCode")} <- Should be true");
+Console.WriteLine("Adding pair again...");
+example_hash_table.Add(pair);
+Console.WriteLine($"Removing by pair(pair): {example_hash_table.Remove(pair)} <- Should be true");
+Console.WriteLine($"Does hashTable contains KeyPairValue(customHashCode, customPerson)?: {example_hash_table.Contains(pair)}");
+Console.WriteLine("--- --- --- --- --- ---");
+Console.WriteLine("Adding KeyPairValue(keyToCopy, personToGet):");
+Person personToGet = new Person();
+personToGet.RandomInit();
+KeyValuePair<string, Person> pair2 = new KeyValuePair<string, Person>("keyToCopy", personToGet);
+example_hash_table.Add(pair2);
+Console.WriteLine("Person empty gets a sample after TryGetValue method completion:");
+Person empty;
+Console.WriteLine($"TryGetValue method successful?: {example_hash_table.TryGetValue("keyToCopy", out empty)}");
+Console.WriteLine($"Person empty info:\n{empty.GetInfo()}");
+Console.WriteLine($"Deleting Person empty...");
+Console.WriteLine($"Is removal succeed? {example_hash_table.Remove("keyToCopy")}");
+Console.WriteLine("--- --- --- --- --- ---");
+Console.WriteLine("Creating arrayEnough<100 cells>, arrayTooShort<50 cells>, arrayNull<null>...");
+KeyValuePair<string, Person>[] arrayEnough = new KeyValuePair<string, Person>[100];
+KeyValuePair<string, Person>[] arrayTooShort = new KeyValuePair<string, Person>[50];
+KeyValuePair<string, Person>[] arrayNull = null;
+Console.WriteLine("Calling copyToMethods:");
+try 
 {
-    Person temp = new Person();
-    temp.RandomInit();
-    myList.Add(temp);
-
-    p = (Person)temp.Clone();
+    Console.WriteLine("hashTable CopyTo arrayEnough...");
+    example_hash_table.CopyTo(arrayEnough, 0);
+    Console.WriteLine("... ... ...");
 }
-Console.WriteLine("****Show 5 elements****");
-foreach (Person person in myList) 
+catch (ArgumentOutOfRangeException ex)
 {
-    Console.WriteLine(person.GetInfo());
+    Console.WriteLine(ex.Message);
 }
-Console.WriteLine("****Contains element****");
-Console.WriteLine($"Does contain element: {myList.Contains(p)}");
-Console.WriteLine("****Counting before removal****");
-Console.WriteLine(myList.Count);
-Console.WriteLine("****Remove element****");
-myList.Remove(p);
-Console.WriteLine($"Does contain element: {myList.Contains(p)}");
-Console.WriteLine("****Counting after removal****");
-Console.WriteLine(myList.Count);
-Console.WriteLine("****CopyTo elements****");
-Person[] prsArr = new Person[5];
-myList.CopyTo(prsArr, 0);
-Console.WriteLine("****Printing Array****");
-foreach (Person prs in prsArr) 
+try
 {
-    if(prs == null) 
-    {
-        Console.WriteLine("\nNULL\n"); continue;
-    }
-    Console.WriteLine(prs.GetInfo());
+    Console.WriteLine("hashTable CopyTo arrayTooShort...");
+    example_hash_table.CopyTo(arrayTooShort, 0);
 }
-Console.WriteLine("****Clear list****");
-myList.Clear();
-Console.WriteLine("****Counting after clear****");
-Console.WriteLine(myList.Count);
+catch (ArgumentOutOfRangeException ex)
+{
+    Console.WriteLine(ex.Message);
+    Console.WriteLine("... ... ...");
+}
+try
+{
+    Console.WriteLine("hashTable CopyTo arrayNull...");
+    example_hash_table.CopyTo(arrayNull, 0);
+}
+catch (ArgumentNullException ex)
+{
+    Console.WriteLine(ex.Message);
+    Console.WriteLine("... ... ...");
+}
+Console.WriteLine("--- --- --- --- --- ---");
+Console.WriteLine("Calling clear method...");
+example_hash_table.Clear();
+Console.WriteLine($"HashTable Count: {example_hash_table.Count}");
+Console.WriteLine("--- --- --- --- --- ---");
+Console.WriteLine("Generating hashTable by Add(key, sample) method <10 objects>:");
+GenerateObjects(10, example_hash_table);
+Console.WriteLine("Using foreach using custom iterator:");
+foreach(KeyValuePair<string, Person> kvp  in example_hash_table) 
+{
+    Console.WriteLine(kvp.Value.GetInfo());
+}

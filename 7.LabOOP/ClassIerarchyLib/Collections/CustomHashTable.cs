@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace ClassIerarchyLib
 {
-    public class HashPoint 
+    public class HashPoint<TKey, TVal>
     {
-        public string key;
-        public Person value;
-        private HashPoint _link_to_next;
-        public HashPoint Link_to_next
+        public TKey key;
+        public TVal value;
+        private HashPoint<TKey, TVal> _link_to_next;
+        public HashPoint<TKey, TVal> Link_to_next
         {
             get { return _link_to_next; }
             set
             {
-                if (value is HashPoint || value is null)
+                if (value is HashPoint<TKey, TVal> || value is null)
                 {
                     _link_to_next = value;
                 }
@@ -30,33 +30,22 @@ namespace ClassIerarchyLib
         }
 
         //Constructors
-        public HashPoint(Person sample) 
-        {
-            value = sample;
-            key = sample.ToString();
-            Link_to_next = null;
-        }
-        public HashPoint(string key, Person sample) 
+        public HashPoint(TKey key, TVal sample) 
         {
             value = sample;
             this.key = key;
             Link_to_next = null;
         }
         //Methods
-        static public HashPoint Create(Person sample) 
+        static public HashPoint<TKey, TVal> Create(TKey key, TVal sample)
         {
-            HashPoint temp = new HashPoint(sample);
-            return temp;
-        }
-        static public HashPoint Create(string key, Person sample)
-        {
-            HashPoint temp = new HashPoint(key, sample);
+            HashPoint<TKey, TVal> temp = new HashPoint<TKey, TVal>(key, sample);
             return temp;
         }
     }
-    public class PersonHashTable : IDictionary<string, Person>
+    public class CustomHashTable<TKey, TVal> : IDictionary<TKey, TVal>
     {
-        public HashPoint[] table;
+        public HashPoint<TKey, TVal>[] table;
         private int _size;
         public int Size 
         {
@@ -68,33 +57,33 @@ namespace ClassIerarchyLib
             }
             get { return _size; }
         }
-        public Person this[string key] 
+        public TVal this[TKey key] 
         {
             get 
             {
-                Person temp;
+                TVal temp;
                 bool isFound = TryGetValue(key, out temp);
                 if (isFound)
                     return temp;
                 else
-                    return null;
+                    return default;
             }
             set 
             {
-                Person temp;
+                TVal temp;
                 bool isFound = TryGetValue(key, out temp);
                 if(isFound)
                     temp = value;
             }
         }
-        public ICollection<string> Keys 
+        public ICollection<TKey> Keys 
         {
             get 
             {
-                List<string> keys = new List<string>();
-                foreach(HashPoint hashpoint in table) 
+                List<TKey> keys = new List<TKey>();
+                foreach(HashPoint<TKey, TVal> hashpoint in table) 
                 {
-                    HashPoint cur_hashpoint = hashpoint;
+                    HashPoint<TKey, TVal> cur_hashpoint = hashpoint;
                     while(cur_hashpoint != null) 
                     {
                         keys.Add(cur_hashpoint.key);
@@ -104,14 +93,14 @@ namespace ClassIerarchyLib
                 return keys;
             }
         }
-        public ICollection<Person> Values
+        public ICollection<TVal> Values
         {
             get
             {
-                List<Person> values = new List<Person>();
-                foreach (HashPoint hashpoint in table)
+                List<TVal> values = new List<TVal>();
+                foreach (HashPoint<TKey, TVal> hashpoint in table)
                 {
-                    HashPoint cur_hashpoint = hashpoint;
+                    HashPoint<TKey, TVal> cur_hashpoint = hashpoint;
                     while (cur_hashpoint != null)
                     {
                         values.Add(cur_hashpoint.value);
@@ -126,9 +115,9 @@ namespace ClassIerarchyLib
             get 
             {
                 int count = 0;
-                foreach (HashPoint hashpoint in table)
+                foreach (HashPoint<TKey, TVal> hashpoint in table)
                 {
-                    HashPoint cur_hashpoint = hashpoint;
+                    HashPoint<TKey, TVal> cur_hashpoint = hashpoint;
                     while (cur_hashpoint != null)
                     {
                         ++count;
@@ -152,28 +141,28 @@ namespace ClassIerarchyLib
         }
 
         //Constructors
-        public PersonHashTable(int capacity) 
+        public CustomHashTable(int capacity) 
         {
             this.Size = capacity;
-            table = new HashPoint[Size];
+            table = new HashPoint<TKey, TVal>[Size];
         }
 
         //Methods
-        public void Add(string key, Person sample) 
+        public void Add(TKey key, TVal sample) 
         {
             if (IsReadOnly)
                 throw new InvalidOperationException("IsReadOnly: true. Collection is not changeable");
 
-            if (sample == null || key == "")
+            if (sample == null || key == null)
                 return;
 
-            HashPoint temp = HashPoint.Create(key, sample);
+            HashPoint<TKey, TVal> temp = HashPoint<TKey, TVal>.Create(key, sample);
             int index = Math.Abs(temp.key.GetHashCode() % Size);
             if(table[index] == null)
                 table[index] = temp;
             else 
             {
-                HashPoint cur_hashpoint = table[index];
+                HashPoint<TKey, TVal> cur_hashpoint = table[index];
 
                 while (cur_hashpoint.Link_to_next != null) 
                 {
@@ -183,37 +172,40 @@ namespace ClassIerarchyLib
             }
             return;
         }
-        public void Add(KeyValuePair<string, Person> sample) 
+        public void Add(KeyValuePair<TKey, TVal> sample) 
         {
             if (IsReadOnly)
                 throw new InvalidOperationException("IsReadOnly: true. Collection is not changeable");
 
             Add(sample.Key, sample.Value);
         }
-        public bool ContainsKey(string key) 
+        public bool ContainsKey(TKey key) 
         {
             if(Count == 0) return false;
+
+            if(key is null)
+                return false;
 
             int index = Math.Abs(key.GetHashCode() % Size);
             if (table[index] == null)
                 return false;
 
-            HashPoint cur_hashpoint = table[index];
-            if (cur_hashpoint.key == key)
+            HashPoint<TKey, TVal> cur_hashpoint = table[index];
+            if (cur_hashpoint.key.Equals(key))
                 return true;
             while (cur_hashpoint != null)
             {
-                if (cur_hashpoint.key == key)
+                if (cur_hashpoint.key.Equals(key))
                     return true;
                 cur_hashpoint = cur_hashpoint.Link_to_next;
             }
             return false;
         }
-        public bool Contains(Person sample) 
+        public bool Contains(TVal sample) 
         {
-            foreach(HashPoint hashPoint in table) 
+            foreach(HashPoint<TKey, TVal> hashPoint in table) 
             {
-                HashPoint cur_point = hashPoint;
+                HashPoint<TKey, TVal> cur_point = hashPoint;
                 while(cur_point != null) 
                 {
                     if(cur_point.value.Equals(sample))
@@ -223,14 +215,14 @@ namespace ClassIerarchyLib
             }
             return false;
         }
-        public bool Contains(KeyValuePair<string, Person> sample) 
+        public bool Contains(KeyValuePair<TKey, TVal> sample) 
         {
             int index = Math.Abs(sample.Key.GetHashCode() % Size);
             if (table[index] == null)
                 return false;
             else
             {
-                HashPoint cur_hashpoint = table[index];
+                HashPoint<TKey, TVal> cur_hashpoint = table[index];
                 while (cur_hashpoint != null)
                 {
                     if (cur_hashpoint.value.Equals(sample.Value))
@@ -240,7 +232,7 @@ namespace ClassIerarchyLib
                 return false;
             }
         }
-        public bool Remove(string key) 
+        public bool Remove(TKey key) 
         {
             if (IsReadOnly)
                 throw new InvalidOperationException("IsReadOnly: true. Collection is not changeable");
@@ -250,21 +242,21 @@ namespace ClassIerarchyLib
                 return false;
             else
             {
-                HashPoint cur_hashpoint = table[index];
-                HashPoint prev_hashpoint = null;
-                if(cur_hashpoint.key == key && cur_hashpoint.Link_to_next == null) 
+                HashPoint<TKey, TVal> cur_hashpoint = table[index];
+                HashPoint<TKey, TVal> prev_hashpoint = null;
+                if(cur_hashpoint.key.Equals(key) && cur_hashpoint.Link_to_next == null) 
                 {
                     table[index] = null;
                     return true;
                 }
-                if (cur_hashpoint.key == key && cur_hashpoint.Link_to_next != null)
+                if (cur_hashpoint.key.Equals(key) && cur_hashpoint.Link_to_next != null)
                 {
                     table[index] = cur_hashpoint.Link_to_next;
                     return true;
                 }
                 while (cur_hashpoint != null) 
                 {
-                    if(cur_hashpoint.key == key) 
+                    if(cur_hashpoint.key.Equals(key)) 
                     {
                         prev_hashpoint.Link_to_next = cur_hashpoint.Link_to_next;
                         cur_hashpoint = null;
@@ -276,7 +268,7 @@ namespace ClassIerarchyLib
                 return false;
             }
         }
-        public bool Remove(KeyValuePair<string, Person> pair_sample) 
+        public bool Remove(KeyValuePair<TKey, TVal> pair_sample) 
         {
             if (IsReadOnly)
                 throw new InvalidOperationException("IsReadOnly: true. Collection is not changeable");
@@ -289,30 +281,30 @@ namespace ClassIerarchyLib
             if (IsReadOnly)
                 throw new InvalidOperationException("IsReadOnly: true. Collection is not changeable");
 
-            table = new HashPoint[Size];
+            table = new HashPoint<TKey, TVal>[Size];
         }
-        public bool TryGetValue(string key, out Person value)
+        public bool TryGetValue(TKey key, out TVal value)
         { 
             if(Size == 0) 
             {
-                value = null;
+                value = default;
                 return false;
             }
             int index = Math.Abs(key.GetHashCode() % Size);
-            HashPoint cur_hashpoint = table[index];
+            HashPoint<TKey, TVal> cur_hashpoint = table[index];
             while (cur_hashpoint != null) 
             {
-                if(cur_hashpoint.key == key) 
+                if(cur_hashpoint.key.Equals(key)) 
                 {
                     value = cur_hashpoint.value;
                     return true;
                 }
                 cur_hashpoint = cur_hashpoint.Link_to_next;
             }
-            value = null;
+            value = default;
             return false;
         }
-        public void CopyTo(KeyValuePair<string, Person>[] array, int array_index) 
+        public void CopyTo(KeyValuePair<TKey, TVal>[] array, int array_index) 
         {
             if (array == null)
                 throw new ArgumentNullException("array argument: not initialized");
@@ -325,29 +317,28 @@ namespace ClassIerarchyLib
                 return;
             
             int index = array_index;
-            foreach(HashPoint hashPoint in table) 
+            foreach(HashPoint<TKey, TVal> hashPoint in table) 
             {
-                HashPoint cur_hashpoint = hashPoint;
+                HashPoint<TKey, TVal> cur_hashpoint = hashPoint;
                 //Going throught list of HashPoints
                 while (cur_hashpoint != null) 
                 {
                     //Creating new individual pair
-                    KeyValuePair<string, Person> pair = new KeyValuePair<string, Person>(cur_hashpoint.key, cur_hashpoint.value);
+                    KeyValuePair<TKey, TVal> pair = new KeyValuePair<TKey, TVal>(cur_hashpoint.key, cur_hashpoint.value);
                     array[index] = pair;
                     ++index;
                     cur_hashpoint = cur_hashpoint.Link_to_next;
                 }
             }
         }
-        IEnumerator<KeyValuePair<string, Person>> IEnumerable<KeyValuePair<string, Person>>.GetEnumerator()
+        IEnumerator<KeyValuePair<TKey, TVal>> IEnumerable<KeyValuePair<TKey, TVal>>.GetEnumerator()
         {
             for(int i = 0; i < Size; ++i) 
             {
-                HashPoint cur_hashpoint = table[i];
+                HashPoint<TKey, TVal> cur_hashpoint = table[i];
                 while (cur_hashpoint != null) 
                 {
-                    Console.WriteLine("Returning!");
-                    yield return new KeyValuePair<string, Person>(cur_hashpoint.key, cur_hashpoint.value);
+                    yield return new KeyValuePair<TKey, TVal>(cur_hashpoint.key, cur_hashpoint.value);
                     cur_hashpoint = cur_hashpoint.Link_to_next;
                 }
             }
@@ -356,10 +347,10 @@ namespace ClassIerarchyLib
         {
             for (int i = 0; i < Size; ++i)
             {
-                HashPoint cur_hashpoint = table[i];
+                HashPoint<TKey, TVal> cur_hashpoint = table[i];
                 while (cur_hashpoint != null)
                 {
-                    yield return new KeyValuePair<string, Person>(cur_hashpoint.key, cur_hashpoint.value);
+                    yield return new KeyValuePair<TKey, TVal>(cur_hashpoint.key, cur_hashpoint.value);
                     cur_hashpoint = cur_hashpoint.Link_to_next;
                 }
             }
