@@ -70,10 +70,12 @@ namespace ClassIerarchyLib
             }
             set 
             {
-                TVal temp;
-                bool isFound = TryGetValue(key, out temp);
-                if(isFound)
-                    temp = value;
+                if (IsReadOnly)
+                    throw new InvalidOperationException("IsReadOnly: true. Collection is not changeable");
+
+                if (value == null || key == null)
+                    return;
+                Add(key, value);
             }
         }
         public ICollection<TKey> Keys 

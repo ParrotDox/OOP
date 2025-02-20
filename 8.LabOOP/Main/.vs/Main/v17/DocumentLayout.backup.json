@@ -1,19 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\8.LabOOP\\Main\\",
+  "WorkspaceRootPath": "C:\\GIT\\OOP\\8.LabOOP\\Main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{48C0AD6E-BE63-4600-A6AF-BC290A1E19CC}|..\\ClassIerarchyLib\\ClassIerarchyLib.csproj|b:\\git\\c#-oop-discrete\\oop\\8.laboop\\classierarchylib\\collections\\newcustomhashtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48C0AD6E-BE63-4600-A6AF-BC290A1E19CC}|..\\ClassIerarchyLib\\ClassIerarchyLib.csproj|c:\\git\\oop\\8.laboop\\classierarchylib\\collections\\newcustomhashtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48C0AD6E-BE63-4600-A6AF-BC290A1E19CC}|..\\ClassIerarchyLib\\ClassIerarchyLib.csproj|b:\\git\\c#-oop-discrete\\oop\\8.laboop\\classierarchylib\\collections\\customhashtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{682063D1-E5C3-460E-A555-4051A05392A6}|..\\UnitTests\\UnitTests.csproj|c:\\git\\oop\\8.laboop\\unittests\\unittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04FC8ED6-2CDF-4A96-9F69-4274F9FB8215}|Main.csproj|b:\\git\\c#-oop-discrete\\oop\\8.laboop\\main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{48C0AD6E-BE63-4600-A6AF-BC290A1E19CC}|..\\ClassIerarchyLib\\ClassIerarchyLib.csproj|c:\\git\\oop\\8.laboop\\classierarchylib\\collections\\journal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04FC8ED6-2CDF-4A96-9F69-4274F9FB8215}|Main.csproj|c:\\git\\oop\\8.laboop\\main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04FC8ED6-2CDF-4A96-9F69-4274F9FB8215}|Main.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48C0AD6E-BE63-4600-A6AF-BC290A1E19CC}|..\\ClassIerarchyLib\\ClassIerarchyLib.csproj|b:\\git\\c#-oop-discrete\\oop\\8.laboop\\classierarchylib\\collections\\journal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48C0AD6E-BE63-4600-A6AF-BC290A1E19CC}|..\\ClassIerarchyLib\\ClassIerarchyLib.csproj|c:\\git\\oop\\8.laboop\\classierarchylib\\baseclasses\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48C0AD6E-BE63-4600-A6AF-BC290A1E19CC}|..\\ClassIerarchyLib\\ClassIerarchyLib.csproj|c:\\git\\oop\\8.laboop\\classierarchylib\\collections\\customhashtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,60 +29,82 @@
       "DocumentGroups": [
         {
           "DockedWidth": 836,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Journal.cs",
-              "DocumentMoniker": "B:\\GIT\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\Collections\\Journal.cs",
-              "RelativeDocumentMoniker": "..\\ClassIerarchyLib\\Collections\\Journal.cs",
-              "ToolTip": "B:\\GIT\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\Collections\\Journal.cs",
-              "RelativeToolTip": "..\\ClassIerarchyLib\\Collections\\Journal.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAEwCwAAABkAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\GIT\\OOP\\8.LabOOP\\ClassIerarchyLib\\BaseClasses\\Person.cs",
+              "RelativeDocumentMoniker": "..\\ClassIerarchyLib\\BaseClasses\\Person.cs",
+              "ToolTip": "C:\\GIT\\OOP\\8.LabOOP\\ClassIerarchyLib\\BaseClasses\\Person.cs",
+              "RelativeToolTip": "..\\ClassIerarchyLib\\BaseClasses\\Person.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T14:13:46.338Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NewCustomHashTable.cs",
-              "DocumentMoniker": "B:\\GIT\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\Collections\\NewCustomHashTable.cs",
-              "RelativeDocumentMoniker": "..\\ClassIerarchyLib\\Collections\\NewCustomHashTable.cs",
-              "ToolTip": "B:\\GIT\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\Collections\\NewCustomHashTable.cs",
-              "RelativeToolTip": "..\\ClassIerarchyLib\\Collections\\NewCustomHashTable.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAuwEcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T09:07:42.971Z",
+              "WhenOpened": "2025-02-20T15:31:48.464Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CustomHashTable.cs",
-              "DocumentMoniker": "B:\\GIT\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\Collections\\CustomHashTable.cs",
-              "RelativeDocumentMoniker": "..\\ClassIerarchyLib\\Collections\\CustomHashTable.cs",
-              "ToolTip": "B:\\GIT\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\Collections\\CustomHashTable.cs",
-              "RelativeToolTip": "..\\ClassIerarchyLib\\Collections\\CustomHashTable.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAEIAAAAgAAAAAAAAAA==",
+              "Title": "UnitTest.cs",
+              "DocumentMoniker": "C:\\GIT\\OOP\\8.LabOOP\\UnitTests\\UnitTest.cs",
+              "RelativeDocumentMoniker": "..\\UnitTests\\UnitTest.cs",
+              "ToolTip": "C:\\GIT\\OOP\\8.LabOOP\\UnitTests\\UnitTest.cs",
+              "RelativeToolTip": "..\\UnitTests\\UnitTest.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAwwH4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T09:07:29.973Z",
+              "WhenOpened": "2025-02-20T15:24:40.051Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Journal.cs",
+              "DocumentMoniker": "C:\\GIT\\OOP\\8.LabOOP\\ClassIerarchyLib\\Collections\\Journal.cs",
+              "RelativeDocumentMoniker": "..\\ClassIerarchyLib\\Collections\\Journal.cs",
+              "ToolTip": "C:\\GIT\\OOP\\8.LabOOP\\ClassIerarchyLib\\Collections\\Journal.cs",
+              "RelativeToolTip": "..\\ClassIerarchyLib\\Collections\\Journal.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwCwAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T06:31:02.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NewCustomHashTable.cs",
+              "DocumentMoniker": "C:\\GIT\\OOP\\8.LabOOP\\ClassIerarchyLib\\Collections\\NewCustomHashTable.cs",
+              "RelativeDocumentMoniker": "..\\ClassIerarchyLib\\Collections\\NewCustomHashTable.cs",
+              "ToolTip": "C:\\GIT\\OOP\\8.LabOOP\\ClassIerarchyLib\\Collections\\NewCustomHashTable.cs",
+              "RelativeToolTip": "..\\ClassIerarchyLib\\Collections\\NewCustomHashTable.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAqwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T06:31:01.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CustomHashTable.cs",
+              "DocumentMoniker": "C:\\GIT\\OOP\\8.LabOOP\\ClassIerarchyLib\\Collections\\CustomHashTable.cs",
+              "RelativeDocumentMoniker": "..\\ClassIerarchyLib\\Collections\\CustomHashTable.cs",
+              "ToolTip": "C:\\GIT\\OOP\\8.LabOOP\\ClassIerarchyLib\\Collections\\CustomHashTable.cs",
+              "RelativeToolTip": "..\\ClassIerarchyLib\\Collections\\CustomHashTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T06:30:59.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "B:\\GIT\\C#-OOP-Discrete\\OOP\\8.LabOOP\\Main\\Program.cs",
+              "DocumentMoniker": "C:\\GIT\\OOP\\8.LabOOP\\Main\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "B:\\GIT\\C#-OOP-Discrete\\OOP\\8.LabOOP\\Main\\Program.cs",
+              "ToolTip": "C:\\GIT\\OOP\\8.LabOOP\\Main\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwB8AAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAowDEAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-16T08:29:13.243Z",
               "EditorCaption": ""
