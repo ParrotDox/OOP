@@ -53,10 +53,10 @@ KeyValuePair<string, Person> pair2 = new KeyValuePair<string, Person>("keyToCopy
 example_hash_table.Add(pair2);
 Console.WriteLine("Person empty gets a sample after TryGetValue method completion:");
 Person empty;
-Console.WriteLine($"TryGetValue method successful?: {example_hash_table.TryGetValue("keyToCopy", out empty)}");
+Console.WriteLine($"TryGetValue method successful using key -> keyToCopy?: {example_hash_table.TryGetValue("keyToCopy", out empty)}");
 Console.WriteLine($"Person empty info:\n{empty.GetInfo()}");
 Console.WriteLine($"Deleting Person empty...");
-Console.WriteLine($"Is removal succeed? {example_hash_table.Remove("keyToCopy")}");
+Console.WriteLine($"Is removal by key -> keyToCopy succeed? {example_hash_table.Remove("keyToCopy")}");
 Console.WriteLine("--- --- --- --- --- ---");
 Console.WriteLine("Creating arrayEnough<100 cells>, arrayTooShort<50 cells>, arrayNull<null>...");
 KeyValuePair<string, Person>[] arrayEnough = new KeyValuePair<string, Person>[100];
