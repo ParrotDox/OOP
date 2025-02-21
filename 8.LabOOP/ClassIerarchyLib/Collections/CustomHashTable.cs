@@ -49,12 +49,6 @@ namespace ClassIerarchyLib
         private int _size;
         public int Size 
         {
-            set 
-            {
-                if (value < 0)
-                    throw new ArgumentException("Set _size: size is under zero!");
-                _size = value;
-            }
             get { return _size; }
         }
         public virtual TVal this[TKey key] 
@@ -145,8 +139,8 @@ namespace ClassIerarchyLib
         //Constructors
         public CustomHashTable(int capacity) 
         {
-            this.Size = capacity;
-            table = new HashPoint<TKey, TVal>[Size];
+            this._size = capacity;
+            table = new HashPoint<TKey, TVal>[capacity];
         }
 
         //Methods

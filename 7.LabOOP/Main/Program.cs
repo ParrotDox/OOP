@@ -114,3 +114,27 @@ foreach (KeyValuePair<string, Person> kvp in new_hash_table)
 {
     Console.WriteLine(kvp.Value.GetInfo());
 }
+Console.WriteLine("--- --- --- --- --- ---");
+Console.WriteLine("Creating new hashTable2 of size 5 and filling it with 10 elements:");
+CustomHashTable<string, Person> new_hash_table2 = new CustomHashTable<string, Person>(5);
+GenerateObjects(10, new_hash_table2);
+Console.WriteLine($"new hashTable2 count: {new_hash_table.Count}");
+Console.WriteLine($"Deep copy to emptyTable:");
+CustomHashTable<string, Person> emptyTable = new_hash_table2.DeepClone();
+Console.WriteLine($"emptyTable count: {new_hash_table.Count}");
+Console.WriteLine("Clearing hashTable2");
+new_hash_table2.Clear();
+Console.WriteLine($"new hashTable2 count: {new_hash_table.Count}");
+Console.WriteLine($"emptyTable count: {emptyTable.Count}");
+Console.WriteLine("--- --- --- --- --- ---");
+Console.WriteLine("Creating new hashTable3 of size 5 and filling it with 10 elements:");
+CustomHashTable<string, Person> new_hash_table3 = new CustomHashTable<string, Person>(5);
+GenerateObjects(10, new_hash_table3);
+Console.WriteLine($"new hashTable2 count: {new_hash_table2.Count}");
+Console.WriteLine($"Shallow copy to emptyTable2:");
+CustomHashTable<string, Person> emptyTable2 = new_hash_table2.ShallowClone();
+Console.WriteLine($"emptyTable count: {new_hash_table.Count}");
+Console.WriteLine("Clearing hashTable3");
+new_hash_table3.Clear();
+Console.WriteLine($"new hashTable3 count: {new_hash_table3.Count}");
+Console.WriteLine($"emptyTable count: {emptyTable2.Count}");

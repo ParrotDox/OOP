@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.1204" branch-rate="0.0475" version="1.9" timestamp="1740066640" lines-covered="275" lines-valid="2283" branches-covered="35" branches-valid="736">
+<coverage line-rate="0.1204" branch-rate="0.0475" version="1.9" timestamp="1740109138" lines-covered="275" lines-valid="2283" branches-covered="35" branches-valid="736">
   <sources>
-    <source>C:\</source>
+    <source>C:\Users\Bibub\</source>
   </sources>
   <packages>
     <package name="ClassIerarchyLib" line-rate="0.086" branch-rate="0.0475" complexity="843">
       <classes>
-        <class name="ClassIerarchyLib.Admin" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\BaseClasses\Admin.cs" line-rate="0" branch-rate="0" complexity="19">
+        <class name="ClassIerarchyLib.Admin" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\BaseClasses\Admin.cs" line-rate="0" branch-rate="0" complexity="19">
           <methods>
             <method name="get_HeadOffice" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -232,7 +232,7 @@
             <line number="11" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="ClassIerarchyLib.Employee" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\BaseClasses\Employee.cs" line-rate="0" branch-rate="0" complexity="44">
+        <class name="ClassIerarchyLib.Employee" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\BaseClasses\Employee.cs" line-rate="0" branch-rate="0" complexity="44">
           <methods>
             <method name="get_Id" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -700,7 +700,7 @@
             <line number="11" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="ClassIerarchyLib.Engineer" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\BaseClasses\Engineer.cs" line-rate="0" branch-rate="0" complexity="20">
+        <class name="ClassIerarchyLib.Engineer" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\BaseClasses\Engineer.cs" line-rate="0" branch-rate="0" complexity="20">
           <methods>
             <method name="get_Department" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -940,7 +940,7 @@
             <line number="11" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="ClassIerarchyLib.Link" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\BaseClasses\Person.cs" line-rate="0.35479999999999995" branch-rate="1" complexity="6">
+        <class name="ClassIerarchyLib.Link" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\BaseClasses\Person.cs" line-rate="0.35479999999999995" branch-rate="1" complexity="6">
           <methods>
             <method name="Show" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -1032,7 +1032,7 @@
             <line number="29" hits="6" branch="False" />
           </lines>
         </class>
-        <class name="ClassIerarchyLib.Person" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\BaseClasses\Person.cs" line-rate="0.2586" branch-rate="0.23070000000000002" complexity="42">
+        <class name="ClassIerarchyLib.Person" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\BaseClasses\Person.cs" line-rate="0.2586" branch-rate="0.23070000000000002" complexity="42">
           <methods>
             <method name="get_Name" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -1554,7 +1554,7 @@
             <line number="59" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="ClassIerarchyLib.SortObjects" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\BaseClasses\Person.cs" line-rate="0" branch-rate="0" complexity="8">
+        <class name="ClassIerarchyLib.SortObjects" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\BaseClasses\Person.cs" line-rate="0" branch-rate="0" complexity="8">
           <methods>
             <method name="Compare" signature="(System.Object,System.Object)" line-rate="0" branch-rate="0" complexity="8">
               <lines>
@@ -1602,7 +1602,7 @@
             <line number="316" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="ClassIerarchyLib.SortByAge" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\BaseClasses\Person.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="ClassIerarchyLib.SortByAge" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\BaseClasses\Person.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name="Compare" signature="(ClassIerarchyLib.Person,ClassIerarchyLib.Person)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -1618,7 +1618,7 @@
             <line number="323" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="ClassIerarchyLib.SortByName" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\BaseClasses\Person.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="ClassIerarchyLib.SortByName" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\BaseClasses\Person.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name="Compare" signature="(ClassIerarchyLib.Person,ClassIerarchyLib.Person)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -1634,7 +1634,7 @@
             <line number="331" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="ClassIerarchyLib.HashPoint`2" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\Collections\CustomHashTable.cs" line-rate="0.8946999999999999" branch-rate="0.75" complexity="7">
+        <class name="ClassIerarchyLib.HashPoint`2" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\Collections\CustomHashTable.cs" line-rate="0.8946999999999999" branch-rate="0.75" complexity="7">
           <methods>
             <method name="get_Link_to_next" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -1704,7 +1704,7 @@
             <line number="38" hits="6" branch="False" />
           </lines>
         </class>
-        <class name="ClassIerarchyLib.CustomHashTable`2" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\Collections\CustomHashTable.cs" line-rate="0.3165" branch-rate="0.22" complexity="104">
+        <class name="ClassIerarchyLib.CustomHashTable`2" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\Collections\CustomHashTable.cs" line-rate="0.3165" branch-rate="0.22" complexity="104">
           <methods>
             <method name="set_Size" signature="(System.Int32)" line-rate="0.8" branch-rate="0.5" complexity="2">
               <lines>
@@ -2590,7 +2590,7 @@
             <line number="150" hits="5" branch="False" />
           </lines>
         </class>
-        <class name="ClassIerarchyLib.CustomHashTable`2/&lt;System-Collections-Generic-IEnumerable&lt;System-Collections-Generic-KeyValuePair&lt;TKey,TVal&gt;&gt;-GetEnumerator&gt;d__29" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\Collections\CustomHashTable.cs" line-rate="0" branch-rate="0" complexity="4">
+        <class name="ClassIerarchyLib.CustomHashTable`2/&lt;System-Collections-Generic-IEnumerable&lt;System-Collections-Generic-KeyValuePair&lt;TKey,TVal&gt;&gt;-GetEnumerator&gt;d__29" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\Collections\CustomHashTable.cs" line-rate="0" branch-rate="0" complexity="4">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="4">
               <lines>
@@ -2638,7 +2638,7 @@
             <line number="347" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="ClassIerarchyLib.CustomHashTable`2/&lt;System-Collections-IEnumerable-GetEnumerator&gt;d__30" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\Collections\CustomHashTable.cs" line-rate="0" branch-rate="0" complexity="4">
+        <class name="ClassIerarchyLib.CustomHashTable`2/&lt;System-Collections-IEnumerable-GetEnumerator&gt;d__30" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\Collections\CustomHashTable.cs" line-rate="0" branch-rate="0" complexity="4">
           <methods>
             <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="4">
               <lines>
@@ -2686,7 +2686,7 @@
             <line number="359" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="ClassIerarchyLib.Journal`1" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\Collections\Journal.cs" line-rate="0" branch-rate="0" complexity="4">
+        <class name="ClassIerarchyLib.Journal`1" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\Collections\Journal.cs" line-rate="0" branch-rate="0" complexity="4">
           <methods>
             <method name="AddEntry" signature="(ClassIerarchyLib.JournalEntry`1&lt;TVal&gt;)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -2738,7 +2738,7 @@
             <line number="15" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="ClassIerarchyLib.JournalEntry`1" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\Collections\Journal.cs" line-rate="0" branch-rate="0" complexity="6">
+        <class name="ClassIerarchyLib.JournalEntry`1" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\Collections\Journal.cs" line-rate="0" branch-rate="0" complexity="6">
           <methods>
             <method name="get_collection_name" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -2808,7 +2808,7 @@
             <line number="38" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="ClassIerarchyLib.NewCustomHashTable`2" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\Collections\NewCustomHashTable.cs" line-rate="0.9268000000000001" branch-rate="1" complexity="14">
+        <class name="ClassIerarchyLib.NewCustomHashTable`2" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\Collections\NewCustomHashTable.cs" line-rate="0.9268000000000001" branch-rate="1" complexity="14">
           <methods>
             <method name="get_collection_name" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -2960,7 +2960,7 @@
             <line number="56" hits="5" branch="False" />
           </lines>
         </class>
-        <class name="ClassIerarchyLib.CollectionHandlerEventArgs`1" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\Collections\NewCustomHashTable.cs" line-rate="0.5" branch-rate="0" complexity="6">
+        <class name="ClassIerarchyLib.CollectionHandlerEventArgs`1" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\Collections\NewCustomHashTable.cs" line-rate="0.5" branch-rate="0" complexity="6">
           <methods>
             <method name="get_collection_name" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -3030,7 +3030,7 @@
             <line number="90" hits="9" branch="False" />
           </lines>
         </class>
-        <class name="ClassIerarchyLib.Point" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\Collections\PersonList.cs" line-rate="0" branch-rate="0" complexity="12">
+        <class name="ClassIerarchyLib.Point" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\Collections\PersonList.cs" line-rate="0" branch-rate="0" complexity="12">
           <methods>
             <method name="get_Info" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -3152,7 +3152,7 @@
             <line number="52" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="ClassIerarchyLib.PersonList" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\Collections\PersonList.cs" line-rate="0" branch-rate="0" complexity="63">
+        <class name="ClassIerarchyLib.PersonList" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\Collections\PersonList.cs" line-rate="0" branch-rate="0" complexity="63">
           <methods>
             <method name="get_Count" signature="()" line-rate="0" branch-rate="0" complexity="4">
               <lines>
@@ -3742,7 +3742,7 @@
             <line number="167" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="ClassIerarchyLib.PersonListEnumerator" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\Collections\PersonListEnumerator.cs" line-rate="0" branch-rate="0" complexity="11">
+        <class name="ClassIerarchyLib.PersonListEnumerator" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\Collections\PersonListEnumerator.cs" line-rate="0" branch-rate="0" complexity="11">
           <methods>
             <method name="get_Current" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -3846,7 +3846,7 @@
             <line number="27" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="ClassIerarchyLib.MenuGeneralized" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\MenusForTesting\MenuGeneralized.cs" line-rate="0" branch-rate="0" complexity="100">
+        <class name="ClassIerarchyLib.MenuGeneralized" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\MenusForTesting\MenuGeneralized.cs" line-rate="0" branch-rate="0" complexity="100">
           <methods>
             <method name="Execute" signature="()" line-rate="0" branch-rate="0" complexity="35">
               <lines>
@@ -4742,7 +4742,7 @@
             <line number="21" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="ClassIerarchyLib.MenuNonGeneralized" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\MenusForTesting\MenuNonGeneralized.cs" line-rate="0" branch-rate="0" complexity="112">
+        <class name="ClassIerarchyLib.MenuNonGeneralized" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\MenusForTesting\MenuNonGeneralized.cs" line-rate="0" branch-rate="0" complexity="112">
           <methods>
             <method name="Execute" signature="()" line-rate="0" branch-rate="0" complexity="35">
               <lines>
@@ -5742,7 +5742,7 @@
             <line number="21" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="ClassIerarchyLib.QueryMaker" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\MenusForTesting\QueryLib.cs" line-rate="0" branch-rate="0" complexity="239">
+        <class name="ClassIerarchyLib.QueryMaker" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\MenusForTesting\QueryLib.cs" line-rate="0" branch-rate="0" complexity="239">
           <methods>
             <method name="InitCompanyArray" signature="()" line-rate="0" branch-rate="0" complexity="10">
               <lines>
@@ -7472,7 +7472,7 @@
             <line number="14" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="ClassIerarchyLib.TestCollections" filename="GIT\OOP\8.LabOOP\ClassIerarchyLib\MenusForTesting\TestCollections.cs" line-rate="0" branch-rate="0" complexity="16">
+        <class name="ClassIerarchyLib.TestCollections" filename="Documents\GitHub\OOP\8.LabOOP\ClassIerarchyLib\MenusForTesting\TestCollections.cs" line-rate="0" branch-rate="0" complexity="16">
           <methods>
             <method name="Add" signature="(ClassIerarchyLib.Employee)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -7806,7 +7806,7 @@
     </package>
     <package name="UnitTests" line-rate="0.9884999999999999" branch-rate="1" complexity="6">
       <classes>
-        <class name="AutoGeneratedProgram" filename="Users\Bibub\.nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="AutoGeneratedProgram" filename=".nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name="Main" signature="(System.String[])" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -7818,7 +7818,7 @@
             <line number="4" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="UnitTests.UnitTest" filename="GIT\OOP\8.LabOOP\UnitTests\UnitTest.cs" line-rate="1" branch-rate="1" complexity="5">
+        <class name="UnitTests.UnitTest" filename="Documents\GitHub\OOP\8.LabOOP\UnitTests\UnitTest.cs" line-rate="1" branch-rate="1" complexity="5">
           <methods>
             <method name="Add_ShouldTriggerCollectionCountChangedEvent" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>

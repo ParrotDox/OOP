@@ -306,6 +306,40 @@ namespace ClassIerarchyLib
             value = default;
             return false;
         }
+        public CustomHashTable<TKey, TVal> ShallowClone()
+        {
+            CustomHashTable<TKey, TVal> tableToCopy = new CustomHashTable<TKey, TVal>(this.Size);
+
+            for (int i = 0; i < Size; i++)
+            {
+                HashPoint<TKey, TVal> current = table[i];
+                while (current != null)
+                {
+                    TVal clonedValue = current.value;
+                    tableToCopy.Add(current.key, clonedValue);
+                    current = current.Link_to_next;
+                }
+            }
+            return tableToCopy;
+        }
+        public CustomHashTable<TKey, TVal> DeepClone() 
+        {
+            CustomHashTable<TKey, TVal> tableToCopy = new CustomHashTable<TKey, TVal>(this.Size);
+
+            for (int i = 0; i < Size; i++)
+            {
+                HashPoint<TKey, TVal> current = table[i];
+                while (current != null)
+                {
+                    TVal clonedValue = (TVal)((ICloneable)current.value).Clone();
+                    tableToCopy.Add(current.key, clonedValue);
+                    current = current.Link_to_next;
+                }
+            }
+
+            return tableToCopy;
+
+        }
         public void CopyTo(KeyValuePair<TKey, TVal>[] array, int array_index) 
         {
             if (array == null)
