@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Hotspots>
+  <Hotspot>
+    <Assembly>ClassIerarchyLib</Assembly>
+    <Class>ClassIerarchyLib.QueryMaker</Class>
+    <MethodName>CalcTotalSalaryToPayByClassObject()</MethodName>
+    <ShortName />
+    <Line>277</Line>
+    <FileIndex>0</FileIndex>
+    <Metrics>
+      <Metric>
+        <Name>Cyclomatic complexity</Name>
+        <Exceeded>true</Exceeded>
+        <Value>60</Value>
+      </Metric>
+    </Metrics>
+  </Hotspot>
+  <Hotspot>
+    <Assembly>ClassIerarchyLib</Assembly>
+    <Class>ClassIerarchyLib.QueryMaker</Class>
+    <MethodName>CalcTotalSalaryToPayByClassObject(...)</MethodName>
+    <ShortName />
+    <Line>324</Line>
+    <FileIndex>0</FileIndex>
+    <Metrics>
+      <Metric>
+        <Name>Cyclomatic complexity</Name>
+        <Exceeded>true</Exceeded>
+        <Value>60</Value>
+      </Metric>
+    </Metrics>
+  </Hotspot>
+  <Hotspot>
+    <Assembly>ClassIerarchyLib</Assembly>
+    <Class>ClassIerarchyLib.MenuGeneralized</Class>
+    <MethodName>Execute()</MethodName>
+    <ShortName />
+    <Line>26</Line>
+    <FileIndex>0</FileIndex>
+    <Metrics>
+      <Metric>
+        <Name>Cyclomatic complexity</Name>
+        <Exceeded>true</Exceeded>
+        <Value>35</Value>
+      </Metric>
+    </Metrics>
+  </Hotspot>
+  <Hotspot>
+    <Assembly>ClassIerarchyLib</Assembly>
+    <Class>ClassIerarchyLib.MenuNonGeneralized</Class>
+    <MethodName>Execute()</MethodName>
+    <ShortName />
+    <Line>26</Line>
+    <FileIndex>0</FileIndex>
+    <Metrics>
+      <Metric>
+        <Name>Cyclomatic complexity</Name>
+        <Exceeded>true</Exceeded>
+        <Value>35</Value>
+      </Metric>
+    </Metrics>
+  </Hotspot>
+</Hotspots>
