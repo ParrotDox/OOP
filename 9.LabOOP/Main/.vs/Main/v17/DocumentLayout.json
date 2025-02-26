@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "B:\\GIT\\OOP\\9.LabOOP\\Main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8AE9E8E4-E758-41FA-8DF0-67BC3DBFB843}|Main.csproj|b:\\git\\oop\\9.laboop\\main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AE9E8E4-E758-41FA-8DF0-67BC3DBFB843}|Main.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A351FBF-4425-41A7-9B5F-6ED0E108698D}|..\\..\\..\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj|b:\\git\\c#-oop-discrete\\oop\\8.laboop\\classierarchylib\\collections\\linqhashtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A351FBF-4425-41A7-9B5F-6ED0E108698D}|..\\..\\..\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj|b:\\git\\c#-oop-discrete\\oop\\8.laboop\\classierarchylib\\collections\\newcustomhashtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A351FBF-4425-41A7-9B5F-6ED0E108698D}|..\\..\\..\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj|b:\\git\\c#-oop-discrete\\oop\\8.laboop\\classierarchylib\\baseclasses\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A351FBF-4425-41A7-9B5F-6ED0E108698D}|..\\..\\..\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj|b:\\git\\c#-oop-discrete\\oop\\8.laboop\\classierarchylib\\baseclasses\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 836,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "B:\\GIT\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\BaseClasses\\Employee.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\BaseClasses\\Employee.cs",
+              "ToolTip": "B:\\GIT\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\BaseClasses\\Employee.cs",
+              "RelativeToolTip": "..\\..\\..\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\BaseClasses\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T08:47:36.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Person.cs",
+              "DocumentMoniker": "B:\\GIT\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\BaseClasses\\Person.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\BaseClasses\\Person.cs",
+              "ToolTip": "B:\\GIT\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\BaseClasses\\Person.cs",
+              "RelativeToolTip": "..\\..\\..\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\BaseClasses\\Person.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T08:46:23.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NewCustomHashTable.cs",
+              "DocumentMoniker": "B:\\GIT\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\Collections\\NewCustomHashTable.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\Collections\\NewCustomHashTable.cs",
+              "ToolTip": "B:\\GIT\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\Collections\\NewCustomHashTable.cs",
+              "RelativeToolTip": "..\\..\\..\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\Collections\\NewCustomHashTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T17:36:00.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LINQHashTable.cs",
+              "DocumentMoniker": "B:\\GIT\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\Collections\\LINQHashTable.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\Collections\\LINQHashTable.cs",
+              "ToolTip": "B:\\GIT\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\Collections\\LINQHashTable.cs",
+              "RelativeToolTip": "..\\..\\..\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\Collections\\LINQHashTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T12:11:18.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "B:\\GIT\\OOP\\9.LabOOP\\Main\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "B:\\GIT\\OOP\\9.LabOOP\\Main\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAGAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T17:33:23.836Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

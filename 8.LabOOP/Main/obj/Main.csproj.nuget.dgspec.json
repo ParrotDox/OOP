@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bibub\\Documents\\GitHub\\OOP\\8.LabOOP\\Main\\Main.csproj": {}
+    "B:\\GIT\\OOP\\8.LabOOP\\Main\\Main.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bibub\\Documents\\GitHub\\OOP\\8.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj": {
+    "B:\\GIT\\OOP\\8.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bibub\\Documents\\GitHub\\OOP\\8.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
+        "projectUniqueName": "B:\\GIT\\OOP\\8.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
         "projectName": "ClassIerarchyLib",
-        "projectPath": "C:\\Users\\Bibub\\Documents\\GitHub\\OOP\\8.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
-        "packagesPath": "C:\\Users\\Bibub\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bibub\\Documents\\GitHub\\OOP\\8.LabOOP\\ClassIerarchyLib\\obj\\",
+        "projectPath": "B:\\GIT\\OOP\\8.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
+        "packagesPath": "C:\\Users\\Егор\\.nuget\\packages\\",
+        "outputPath": "B:\\GIT\\OOP\\8.LabOOP\\ClassIerarchyLib\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Bibub\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Егор\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -65,24 +65,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Bibub\\Documents\\GitHub\\OOP\\8.LabOOP\\Main\\Main.csproj": {
+    "B:\\GIT\\OOP\\8.LabOOP\\Main\\Main.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bibub\\Documents\\GitHub\\OOP\\8.LabOOP\\Main\\Main.csproj",
+        "projectUniqueName": "B:\\GIT\\OOP\\8.LabOOP\\Main\\Main.csproj",
         "projectName": "Main",
-        "projectPath": "C:\\Users\\Bibub\\Documents\\GitHub\\OOP\\8.LabOOP\\Main\\Main.csproj",
-        "packagesPath": "C:\\Users\\Bibub\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bibub\\Documents\\GitHub\\OOP\\8.LabOOP\\Main\\obj\\",
+        "projectPath": "B:\\GIT\\OOP\\8.LabOOP\\Main\\Main.csproj",
+        "packagesPath": "C:\\Users\\Егор\\.nuget\\packages\\",
+        "outputPath": "B:\\GIT\\OOP\\8.LabOOP\\Main\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Bibub\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Егор\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -97,8 +97,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Bibub\\Documents\\GitHub\\OOP\\8.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj": {
-                "projectPath": "C:\\Users\\Bibub\\Documents\\GitHub\\OOP\\8.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj"
+              "B:\\GIT\\OOP\\8.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj": {
+                "projectPath": "B:\\GIT\\OOP\\8.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj"
               }
             }
           }
@@ -113,7 +113,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -134,7 +134,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
