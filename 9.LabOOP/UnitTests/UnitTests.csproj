@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\C#-OOP-Discrete\OOP\8.LabOOP\ClassIerarchyLib\ClassIerarchyLib.csproj" />
+    <ProjectReference Include="..\ClassIerarchyLib\ClassIerarchyLib.csproj" />
   </ItemGroup>
 
   <ItemGroup>

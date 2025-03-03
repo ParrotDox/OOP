@@ -62,7 +62,7 @@ namespace ClassIerarchyLib
         }
         public override void Add(KeyValuePair<TKey, TVal> sample) 
         {
-            //OnCollectionCountChanged(this, new CollectionHandlerEventArgs<TVal>(this.collection_name, "AddPair", sample.Value));
+            OnCollectionCountChanged(this, new CollectionHandlerEventArgs<TVal>(this.collection_name, "AddPair", sample.Value));
             base.Add(sample);
         }
         public override bool Remove(TKey key) 
@@ -72,7 +72,7 @@ namespace ClassIerarchyLib
         }
         public override bool Remove(KeyValuePair<TKey, TVal> pair_sample) 
         {
-            //OnCollectionCountChanged(this, new CollectionHandlerEventArgs<TVal>(this.collection_name, "RemovePair", base[pair_sample.Key]));
+            OnCollectionCountChanged(this, new CollectionHandlerEventArgs<TVal>(this.collection_name, "RemovePair", base[pair_sample.Key]));
             return base.Remove(pair_sample);
         }
     }

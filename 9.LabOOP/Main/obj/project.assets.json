@@ -17,8 +17,8 @@
   "libraries": {
     "ClassIerarchyLib/1.0.0": {
       "type": "project",
-      "path": "../../../C#-OOP-Discrete/OOP/8.LabOOP/ClassIerarchyLib/ClassIerarchyLib.csproj",
-      "msbuildProject": "../../../C#-OOP-Discrete/OOP/8.LabOOP/ClassIerarchyLib/ClassIerarchyLib.csproj"
+      "path": "../ClassIerarchyLib/ClassIerarchyLib.csproj",
+      "msbuildProject": "../ClassIerarchyLib/ClassIerarchyLib.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -58,8 +58,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "B:\\GIT\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj": {
-              "projectPath": "B:\\GIT\\C#-OOP-Discrete\\OOP\\8.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj"
+            "B:\\GIT\\OOP\\9.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj": {
+              "projectPath": "B:\\GIT\\OOP\\9.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj"
             }
           }
         }

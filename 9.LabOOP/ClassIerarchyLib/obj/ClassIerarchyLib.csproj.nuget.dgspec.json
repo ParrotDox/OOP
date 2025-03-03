@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "B:\\GIT\\OOP\\8.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj": {}
+    "B:\\GIT\\OOP\\9.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj": {}
   },
   "projects": {
-    "B:\\GIT\\OOP\\8.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj": {
+    "B:\\GIT\\OOP\\9.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "B:\\GIT\\OOP\\8.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
+        "projectUniqueName": "B:\\GIT\\OOP\\9.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
         "projectName": "ClassIerarchyLib",
-        "projectPath": "B:\\GIT\\OOP\\8.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
+        "projectPath": "B:\\GIT\\OOP\\9.LabOOP\\ClassIerarchyLib\\ClassIerarchyLib.csproj",
         "packagesPath": "C:\\Users\\Егор\\.nuget\\packages\\",
-        "outputPath": "B:\\GIT\\OOP\\8.LabOOP\\ClassIerarchyLib\\obj\\",
+        "outputPath": "B:\\GIT\\OOP\\9.LabOOP\\ClassIerarchyLib\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
