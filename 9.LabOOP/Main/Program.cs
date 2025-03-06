@@ -72,7 +72,7 @@ var let_info = from workshop in factoryQueue
                let info = $"{person.Name} lives in {person.Residence}"
                select new { person, info };
 //Let with extension
-var let_info_ = factoryQueue.
+var let_info_with_extension = factoryQueue.
     SelectMany(workshop => workshop)
     .Select(person => new { person.Name, info = $"{person.Name} lives in {person.Residence}" });
 //f)
@@ -88,68 +88,118 @@ var join_by_name_with_extension = factoryQueue
     .Join(names_for_join, person => person.Name, name => name, (person, name) => new { Name = name, Residence = person.Residence });
 
 //CUSTOM LINQ METHODS
-var custom_where = factoryQueue.SelectMany(workshop => workshop).WhereCustom(person => person is Employee emp && emp.Experience > 10);
-var custom_aggregate = factoryQueue.SelectMany(workshop => workshop).Where(person => person is Employee).AggregateCustom(emp => ((Employee)emp).Salary, (accumulator, val) => accumulator + val);
-var custor_order_by = factoryQueue.SelectMany(workshop => workshop).Where(person => person is Employee).OrderByCustom(emp => ((Employee)emp).Age);
+NewCustomHashTable<string, Person> customTable = new(100);
+for (int i = 0; i < 100; i++) 
+{
+    Person temp = new();
+    temp.RandomInit();
+    customTable.Add(temp.ToString(), temp);
+}
+var filter_by_age = customTable.WhereCustom(pair => pair.Value.Age > 30);
+double totalSalary = customTable.AggregateCustom(pair => pair.Value.Age, (sum, x) => sum + x);
+var filter_by_ascending_age = customTable.OrderByCustom(pair => pair.Value.Age);
+
+
 
 //Results
+// a) Experienced workers (experience > 10 years)
 Console.WriteLine("Experienced Workers:");
 foreach (var worker in experienced_workers)
-    Console.WriteLine(worker.Name);
-
-Console.WriteLine("\nExperienced Workers (Extensions):");
+{
+    Console.WriteLine($"{worker.Name}, {((Employee)worker).Experience} years of experience");
+}
+Console.WriteLine(new string('-', 40));
+Console.WriteLine("Experienced Workers EXTENSION:");
 foreach (var worker in experienced_workers_with_extensions)
-    Console.WriteLine(worker.Name);
+{
+    Console.WriteLine($"{worker.Name}, {((Employee)worker).Experience} years of experience");
+}
+Console.WriteLine(new string('-', 40));
 
-Console.WriteLine("\nSame Employees (Union):");
-foreach (var emp in same_employees)
-    Console.WriteLine(emp.Name);
+// b) Find same employees in both workshops
+Console.WriteLine("Same Employees in Both Workshops:");
+foreach (var employee in same_employees)
+{
+    Console.WriteLine($"{employee.Name}, {employee.Residence}");
+}
+Console.WriteLine(new string('-', 40));
+Console.WriteLine("Same Employees in Both Workshops EXTENSION:");
+foreach (var employee in same_employees_with_extensions)
+{
+    Console.WriteLine($"{employee.Name}, {employee.Residence}");
+}
+Console.WriteLine(new string('-', 40));
 
-Console.WriteLine("\nSame Employees (Except):");
-foreach (var emp in same_employees_with_extensions)
-    Console.WriteLine(emp.Name);
+// c) Salary summary
+Console.WriteLine($"Total Salary of All Employees: {salary_summary}");
+Console.WriteLine(new string('-', 40));
+Console.WriteLine($"Total Salary of All Employees EXTENSION: {salary_summary_with_extension}");
+Console.WriteLine(new string('-', 40));
 
-Console.WriteLine($"\nTotal Salary: {salary_summary}");
-Console.WriteLine($"Total Salary (Extensions): {salary_summary_with_extension}");
-
-Console.WriteLine("\nGroup by Residence:");
+// d) Group by residence
+Console.WriteLine("Group by Residence:");
 foreach (var group in group_by_residence)
 {
     Console.WriteLine($"Residence: {group.Key}");
     foreach (var person in group)
-        Console.WriteLine($"  {person.Name}");
+    {
+        Console.WriteLine($" - {person.Name}");
+    }
 }
-
-Console.WriteLine("\nGroup by Residence (Extensions):");
+Console.WriteLine(new string('-', 40));
+Console.WriteLine("Group by Residence EXTENSION:");
 foreach (var group in group_by_residence_with_extension)
 {
     Console.WriteLine($"Residence: {group.Key}");
     foreach (var person in group)
-        Console.WriteLine($"  {person.Name}");
+    {
+        Console.WriteLine($" - {person.Name}");
+    }
 }
+Console.WriteLine(new string('-', 40));
 
-Console.WriteLine("\nPeople Info (Let):");
-foreach (var info in let_info)
-    Console.WriteLine(info.info);
+// e) Using let (creating info objects based on employees)
+Console.WriteLine("Person Info:");
+foreach (var item in let_info)
+{
+    Console.WriteLine(item.info);
+}
+Console.WriteLine(new string('-', 40));
+Console.WriteLine("Person Info EXTENSION:");
+foreach (var item in let_info_with_extension)
+{
+    Console.WriteLine(item.info);
+}
+Console.WriteLine(new string('-', 40));
 
-Console.WriteLine("\nPeople Info (Let, Extensions):");
-foreach (var info in let_info_)
-    Console.WriteLine(info.info);
+// f) Join employee with same names -> create new object {Name = first_emp.name, Residence = second_emp.residence}
+Console.WriteLine("People with Matching Names:");
+foreach (var person in join_by_name)
+{
+    Console.WriteLine($"Name: {person.Name}, Residence: {person.Residence}");
+}
+Console.WriteLine(new string('-', 40));
+Console.WriteLine("People with Matching Names EXTENSION:");
+foreach (var person in join_by_name_with_extension)
+{
+    Console.WriteLine($"Name: {person.Name}, Residence: {person.Residence}");
+}
+Console.WriteLine(new string('-', 40));
 
-Console.WriteLine("\nJoined by Name:");
-foreach (var item in join_by_name)
-    Console.WriteLine($"Name: {item.Name}, Residence: {item.Residence}");
+// CUSTOM LINQ METHODS
+Console.WriteLine("Filtered by Age > 30:");
+foreach (var pair in filter_by_age)
+{
+    Console.WriteLine($"{pair.Key}: {pair.Value.Name}, Age: {pair.Value.Age}");
+}
+Console.WriteLine(new string('-', 40));
 
-Console.WriteLine("\nJoined by Name (Extensions):");
-foreach (var item in join_by_name_with_extension)
-    Console.WriteLine($"Name: {item.Name}, Residence: {item.Residence}");
+Console.WriteLine($"Total Sum of Ages: {totalSalary}");
+Console.WriteLine(new string('-', 40));
 
-Console.WriteLine("\nCustom Where (Experienced Workers):");
-foreach (var worker in custom_where)
-    Console.WriteLine(worker.Name);
-
-Console.WriteLine($"\nCustom Aggregate (Total Salary): {custom_aggregate}");
-
-Console.WriteLine("\nCustom Order By (Employees Sorted by Age):");
-foreach (var emp in custor_order_by)
-    Console.WriteLine($"{emp.Name} - {((Employee)emp).Age} years");
+Console.WriteLine("Sorted by Age in Ascending Order:");
+foreach (var pair in filter_by_ascending_age)
+{
+    Console.WriteLine($"{pair.Key}: {pair.Value.Name}, Age: {pair.Value.Age}");
+}
+Console.WriteLine(new string('-', 40));

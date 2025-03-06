@@ -4,52 +4,79 @@ namespace UnitTests
 {
     public class LINQHashTableTests
     {
-        private readonly List<int> numbers = new() { 10, 5, 15, 20, 25 };
-
-        //Test for WhereCustom (numbers > 10)
         [Fact]
-        public void WhereCustom_ReturnNumbersGreaterThan()
+        public void WhereCustom_ShouldFilterElementsByCondition()
         {
-            var result = numbers.WhereCustom(n => n > 10).ToList();
+            // Arrange
+            var table = new NewCustomHashTable<int, int>(10);
+            table.Add(1, 10);
+            table.Add(2, 20);
+            table.Add(3, 30);
+            table.Add(4, 40);
 
-            Assert.Equal(new List<int> { 15, 20, 25 }, result);
+            // Act
+            var result = table.WhereCustom(pair => pair.Value > 20).ToList();
+
+            // Assert
+            Assert.Equal(2, result.Count);
+            Assert.Contains(result, p => p.Key == 3 && p.Value == 30);
+            Assert.Contains(result, p => p.Key == 4 && p.Value == 40);
+            Assert.DoesNotContain(result, p => p.Key == 1 && p.Value == 10);
+            Assert.DoesNotContain(result, p => p.Key == 2 && p.Value == 20);
         }
 
-        //Test for AggregateCustom (Sum of all numbers)
         [Fact]
-        public void AggregateCustom_ReturnSumOfNumbers()
+        public void AggregateCustom_ShouldSumValuesCorrectly()
         {
-            double result = numbers.AggregateCustom(n => (double)n, (sum, num) => sum + num);
+            // Arrange
+            var table = new NewCustomHashTable<int, int>(10);
+            table.Add(1, 10);
+            table.Add(2, 20);
+            table.Add(3, 30);
 
-            Assert.Equal(75, result);
+            // Act
+            double sum = table.AggregateCustom(pair => pair.Value, (total, next) => total + next);
+
+            // Assert
+            Assert.Equal(60, sum);
         }
 
-        //Test for AggregateCustom (multiplication of all numbers)
         [Fact]
-        public void AggregateCustom_ReturnProductOfNumbers()
+        public void OrderByCustom_ShouldSortAscendingByDefault()
         {
-            //First item that algorithm gets is 0, to prevent result being zero, using ternary operator
-            double result = numbers.AggregateCustom(n => (double)n, (result, num) => result == 0 ? num : result * num);
+            // Arrange
+            var table = new NewCustomHashTable<int, int>(10);
+            table.Add(1, 30);
+            table.Add(2, 10);
+            table.Add(3, 20);
 
-            Assert.Equal(5 * 10 * 15 * 20 * 25, result);
+            // Act
+            var result = table.OrderByCustom(pair => pair.Value).ToList();
+
+            // Assert
+            Assert.Equal(3, result.Count);
+            Assert.Equal(10, result[0].Value); // 10
+            Assert.Equal(20, result[1].Value); // 20
+            Assert.Equal(30, result[2].Value); // 30
         }
 
-        //Test for OrderByCustom (Descending = false)
         [Fact]
-        public void OrderByCustom_SortAscending()
+        public void OrderByCustom_ShouldSortDescendingWhenSpecified()
         {
-            var result = numbers.OrderByCustom(n => n).ToList();
+            // Arrange
+            var table = new NewCustomHashTable<int, int>(10);
+            table.Add(1, 30);
+            table.Add(2, 10);
+            table.Add(3, 20);
 
-            Assert.Equal(new List<int> { 5, 10, 15, 20, 25 }, result);
-        }
+            // Act
+            var result = table.OrderByCustom(pair => pair.Value, descending: true).ToList();
 
-        //Test for OrderByCustom (Descending = true)
-        [Fact]
-        public void OrderByCustom_SortDescending()
-        {
-            var result = numbers.OrderByCustom(n => n, true).ToList();
-
-            Assert.Equal(new List<int> { 25, 20, 15, 10, 5 }, result);
+            // Assert
+            Assert.Equal(3, result.Count);
+            Assert.Equal(30, result[0].Value); // 30
+            Assert.Equal(20, result[1].Value); // 20
+            Assert.Equal(10, result[2].Value); // 10
         }
     }
 }

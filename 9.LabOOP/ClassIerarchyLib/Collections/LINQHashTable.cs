@@ -8,7 +8,7 @@ namespace ClassIerarchyLib
 {
     public static class LINQHashTable
     {
-        public static IEnumerable<T> WhereCustom<T>(this IEnumerable<T> collection, Func<T, bool> condition)
+        public static IEnumerable<KeyValuePair<TKey, TVal>> WhereCustom<TKey, TVal>(this NewCustomHashTable<TKey, TVal> collection, Func<KeyValuePair<TKey, TVal>, bool> condition)
         {
             foreach (var item in collection)
             {
@@ -18,7 +18,7 @@ namespace ClassIerarchyLib
                 }
             }
         }
-        public static double AggregateCustom<T>(this IEnumerable<T> collection, Func<T, double> selector, Func<double, double, double> operation) 
+        public static double AggregateCustom<TKey, TVal>(this NewCustomHashTable<TKey, TVal> collection, Func<KeyValuePair<TKey, TVal>, double> selector, Func<double, double, double> operation) 
         {
             double result = 0;
             foreach (var item in collection) 
@@ -27,7 +27,7 @@ namespace ClassIerarchyLib
             }
             return result;
         }
-        public static IEnumerable<T> OrderByCustom<T, Tkey>(this IEnumerable<T> collection, Func<T, Tkey> keySelector, bool descending = false) 
+        public static IEnumerable<KeyValuePair<TKey, TVal>> OrderByCustom<TKey, TVal, TKeySort>(this NewCustomHashTable<TKey, TVal> collection, Func<KeyValuePair<TKey, TVal>, TKeySort> keySelector, bool descending = false)
         {
             return descending ? collection.OrderByDescending(keySelector) : collection.OrderBy(keySelector);
         }

@@ -42,11 +42,11 @@ namespace ClassIerarchyLib
         //Event process-methods
         private void HandleCollectionCountChanged(NewCustomHashTable<TKey, TVal>? sender, CollectionHandlerEventArgs<TVal> args) 
         {
-            Console.WriteLine($"Collection: {collection_name} method {args.method_name} called");
+            //Console.WriteLine($"Collection: {collection_name} method {args.method_name} called");
         }
         private void HandleCollectionRefChanged(NewCustomHashTable<TKey, TVal>? sender, CollectionHandlerEventArgs<TVal> args)
         {
-            Console.WriteLine($"Collection: {collection_name} method {args.method_name} called");
+            //Console.WriteLine($"Collection: {collection_name} method {args.method_name} called");
         }
         //Constructor
         public NewCustomHashTable(int capacity) : base(capacity) 
