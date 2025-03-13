@@ -1,5 +1,6 @@
 ﻿using ClassIerarchyLib;
 using System;
+using System.Diagnostics;
 
 Queue<List<Person>> factoryQueue = new Queue<List<Person>>();
 
@@ -87,6 +88,23 @@ var join_by_name_with_extension = factoryQueue
     .SelectMany(workshop => workshop)
     .Join(names_for_join, person => person.Name, name => name, (person, name) => new { Name = name, Residence = person.Residence });
 
+//Measuring time of no-extension and extension methods
+Stopwatch timer_no_extension = new();
+Stopwatch timer_extension = new();
+var query1 = from workshop in factoryQueue
+             from person in workshop
+             where person is Employee && ((Employee)person).Experience > 10
+             select person;
+var query2 = factoryQueue.
+    SelectMany(workshop => workshop).
+    Where(person => person is  Employee emp && emp.Experience > 10);
+
+timer_no_extension.Start();
+query1.Count();
+timer_no_extension.Stop();
+timer_extension.Start();
+query2.Count();
+timer_extension.Stop();
 //CUSTOM LINQ METHODS
 NewCustomHashTable<string, Person> customTable = new(100);
 for (int i = 0; i < 100; i++) 
@@ -98,7 +116,6 @@ for (int i = 0; i < 100; i++)
 var filter_by_age = customTable.WhereCustom(pair => pair.Value.Age > 30);
 double totalSalary = customTable.AggregateCustom(pair => pair.Value.Age, (sum, x) => sum + x);
 var filter_by_ascending_age = customTable.OrderByCustom(pair => pair.Value.Age);
-
 
 
 //Results
@@ -203,3 +220,7 @@ foreach (var pair in filter_by_ascending_age)
     Console.WriteLine($"{pair.Key}: {pair.Value.Name}, Age: {pair.Value.Age}");
 }
 Console.WriteLine(new string('-', 40));
+
+Console.WriteLine("Elapsed ticks ( 1 - no_extension | 2 - extension):");
+Console.WriteLine($"Elapsed ticks: {timer_no_extension.Elapsed.Ticks}");
+Console.WriteLine($"Elapsed ticks: {timer_extension.Elapsed.Ticks}");

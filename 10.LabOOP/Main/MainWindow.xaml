@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Main"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Window.Resources>
 
-    </Grid>
+    </Window.Resources>
 </Window>
