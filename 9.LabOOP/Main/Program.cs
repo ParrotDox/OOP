@@ -91,19 +91,30 @@ var join_by_name_with_extension = factoryQueue
 //Measuring time of no-extension and extension methods
 Stopwatch timer_no_extension = new();
 Stopwatch timer_extension = new();
-var query1 = from workshop in factoryQueue
-             from person in workshop
-             where person is Employee && ((Employee)person).Experience > 10
-             select person;
+
+List<Person> tempList = factoryQueue.SelectMany(workshop => workshop).ToList();
+int n = tempList.Count();
+
 var query2 = factoryQueue.
     SelectMany(workshop => workshop).
-    Where(person => person is  Employee emp && emp.Experience > 10);
+    Where(person => person.Age > 20);
 
 timer_no_extension.Start();
-query1.Count();
+for (int i = 0; i < n; ++i) 
+{
+    Person person = tempList[i];
+    if(person.Age > 20) 
+    {
+        
+    }
+}
 timer_no_extension.Stop();
+
 timer_extension.Start();
-query2.Count();
+foreach (var item in query2) 
+{
+    
+}
 timer_extension.Stop();
 //CUSTOM LINQ METHODS
 NewCustomHashTable<string, Person> customTable = new(100);
