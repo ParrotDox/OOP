@@ -3,11 +3,9 @@ B:\GIT\OOP\10.LabOOP\Main\bin\Debug\net8.0-windows\Main.deps.json
 B:\GIT\OOP\10.LabOOP\Main\bin\Debug\net8.0-windows\Main.runtimeconfig.json
 B:\GIT\OOP\10.LabOOP\Main\bin\Debug\net8.0-windows\Main.dll
 B:\GIT\OOP\10.LabOOP\Main\bin\Debug\net8.0-windows\Main.pdb
-B:\GIT\OOP\10.LabOOP\Main\obj\Debug\net8.0-windows\MainWindow.g.cs
 B:\GIT\OOP\10.LabOOP\Main\obj\Debug\net8.0-windows\App.g.cs
 B:\GIT\OOP\10.LabOOP\Main\obj\Debug\net8.0-windows\Main_MarkupCompile.cache
 B:\GIT\OOP\10.LabOOP\Main\obj\Debug\net8.0-windows\Main_MarkupCompile.lref
-B:\GIT\OOP\10.LabOOP\Main\obj\Debug\net8.0-windows\MainWindow.baml
 B:\GIT\OOP\10.LabOOP\Main\obj\Debug\net8.0-windows\Main.g.resources
 B:\GIT\OOP\10.LabOOP\Main\obj\Debug\net8.0-windows\Main.GeneratedMSBuildEditorConfig.editorconfig
 B:\GIT\OOP\10.LabOOP\Main\obj\Debug\net8.0-windows\Main.AssemblyInfoInputs.cache
@@ -19,3 +17,5 @@ B:\GIT\OOP\10.LabOOP\Main\obj\Debug\net8.0-windows\refint\Main.dll
 B:\GIT\OOP\10.LabOOP\Main\obj\Debug\net8.0-windows\Main.pdb
 B:\GIT\OOP\10.LabOOP\Main\obj\Debug\net8.0-windows\Main.genruntimeconfig.cache
 B:\GIT\OOP\10.LabOOP\Main\obj\Debug\net8.0-windows\ref\Main.dll
+B:\GIT\OOP\10.LabOOP\Main\obj\Debug\net8.0-windows\View\MainWindow.g.cs
+B:\GIT\OOP\10.LabOOP\Main\obj\Debug\net8.0-windows\View\MainWindow.baml
