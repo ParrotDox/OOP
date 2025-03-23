@@ -1,0 +1,104 @@
+﻿<Window x:Class="Main.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Main"
+        mc:Ignorable="d"
+        Title="Threads" MinHeight="450" Height="450" MaxHeight="450" Width="620" MinWidth="620">
+    <Window.Resources>
+        <Style x:Key="ButtonChooseThreadStl">
+            <Setter Property="ItemsControl.FontSize" Value="16"/>
+            <Setter Property="ItemsControl.FontFamily" Value="Cascadia Code"/>
+            <Setter Property="ItemsControl.Margin" Value="5 0 5 0"/>
+            <Setter Property="ItemsControl.Width" Value="130"/>
+            <Setter Property="ItemsControl.MinWidth" Value="80"/>
+            <Setter Property="ItemsControl.Height" Value="30"/>
+        </Style>
+        <Style x:Key="ButtonChooseThreadPriorityStl">
+            <Setter Property="ItemsControl.FontSize" Value="16"/>
+            <Setter Property="ItemsControl.FontFamily" Value="Cascadia Code"/>
+            <Setter Property="ItemsControl.Margin" Value="5 2 5 2"/>
+            <!--<Setter Property="ItemsControl.MinWidth" Value="50"/>
+            <Setter Property="ItemsControl.Width" Value="150"/>-->
+            <Setter Property="ItemsControl.Height" Value="25"/>
+        </Style>
+        <Style x:Key="ButtonStartStopThreadStl" BasedOn="{StaticResource ButtonChooseThreadStl}">
+            <Setter Property="ItemsControl.Height" Value="60"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Calibri"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Calibri"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+            <Setter Property="Margin" Value="10 0 0 0"/>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="280"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition MinWidth="280"/>
+        </Grid.ColumnDefinitions>
+        
+        <Label Grid.Row="0" Grid.Column="0" Content="Choose thread"/>
+        <Label Grid.Row="0" Grid.Column="2" Content="File output"/>
+        <Label Grid.Row="2" Grid.Column="0" Content="Choose priority"/>
+        <Label Grid.Row="4" Grid.Column="0" Content="Start/Stop threads"/>
+        <Label Grid.Row="4" Grid.Column="2" Content="Thread priority state"/>
+        <!--Панель с выбором потока-->
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" Height="40" HorizontalAlignment="Center">
+                <Button Content="WriteThread" Style="{StaticResource ButtonChooseThreadStl}"
+                        Command="{Binding threadViewModel.ChooseThreadCommand}" CommandParameter="WriteThread"/>
+                <Button Content="ReadThread" Style="{StaticResource ButtonChooseThreadStl}"
+                        Command="{Binding threadViewModel.ChooseThreadCommand}" CommandParameter="ReadThread"/>
+            </StackPanel>
+            <TextBlock Text="{Binding threadViewModel.TextBlockInfoChosenThread}"/>
+        </StackPanel>
+        <!--Панель с выбором приоритета-->
+        <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch">
+            <Button Content="Lowest" Style="{StaticResource ButtonChooseThreadPriorityStl}"
+                    Command="{Binding threadViewModel.ChangeThreadPriorityCommand}" CommandParameter="Lowest"
+                    IsEnabled="{Binding threadViewModel.TextBlockInfoChosenThreadPressed}"/>
+            <Button Content="BelowNormal" Style="{StaticResource ButtonChooseThreadPriorityStl}"
+                    Command="{Binding threadViewModel.ChangeThreadPriorityCommand}" CommandParameter="BelowNormal"
+                    IsEnabled="{Binding threadViewModel.TextBlockInfoChosenThreadPressed}"/>
+            <Button Content="Normal" Style="{StaticResource ButtonChooseThreadPriorityStl}"
+                    Command="{Binding threadViewModel.ChangeThreadPriorityCommand}" CommandParameter="Normal"
+                    IsEnabled="{Binding threadViewModel.TextBlockInfoChosenThreadPressed}"/>
+            <Button Content="AboveNormal" Style="{StaticResource ButtonChooseThreadPriorityStl}"
+                    Command="{Binding threadViewModel.ChangeThreadPriorityCommand}" CommandParameter="AboveNormal"
+                    IsEnabled="{Binding threadViewModel.TextBlockInfoChosenThreadPressed}"/>
+            <Button Content="Highest" Style="{StaticResource ButtonChooseThreadPriorityStl}"
+                    Command="{Binding threadViewModel.ChangeThreadPriorityCommand}" CommandParameter="Highest"
+                    IsEnabled="{Binding threadViewModel.TextBlockInfoChosenThreadPressed}"/>
+        </StackPanel>
+        <!--Панель с запуском/приостановкой потоков-->
+        <StackPanel Grid.Row="5" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <Button Content="Start" Style="{StaticResource ButtonStartStopThreadStl}"/>
+            <Button Content="Stop" Style="{StaticResource ButtonStartStopThreadStl}"/>
+        </StackPanel>
+
+        <!--Сплиттер сетки-->
+        <GridSplitter Grid.Column="1" Grid.RowSpan="6" HorizontalAlignment="Center" Width="3"/>
+        <!--Вывод текстового содержимого файла-->
+        <TextBox Grid.Row="1" Grid.Column="2" Grid.RowSpan="3" Text="todo" TextWrapping="Wrap"/>
+        <StackPanel Grid.Row="5" Grid.Column="2">
+            <TextBlock  Text="{Binding threadViewModel.TextBlockInfoWriterPriority}"/>
+            <TextBlock  Text="{Binding threadViewModel.TextBlockInfoReaderPriority}"/>
+        </StackPanel>
+    </Grid>
+</Window>

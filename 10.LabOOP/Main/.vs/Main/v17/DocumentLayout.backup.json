@@ -3,83 +3,118 @@
   "WorkspaceRootPath": "B:\\GIT\\OOP\\10.LabOOP\\Main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\model\\filer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:model\\filer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\viewmodel\\threadviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:viewmodel\\threadviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\model\\threadcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:model\\threadcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 836,
-          "SelectedChildIndex": 0,
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "B:\\GIT\\OOP\\10.LabOOP\\Main\\MainWindow.xaml",
-              "RelativeToolTip": "MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-12T13:41:28.698Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\App.xaml.cs",
-              "RelativeDocumentMoniker": "App.xaml.cs",
-              "ToolTip": "B:\\GIT\\OOP\\10.LabOOP\\Main\\App.xaml.cs",
-              "RelativeToolTip": "App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T13:14:01.167Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "App.xaml",
-              "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\App.xaml",
-              "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "B:\\GIT\\OOP\\10.LabOOP\\Main\\App.xaml",
-              "RelativeToolTip": "App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-12T13:14:00.45Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\View\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "View\\MainWindow.xaml",
+              "ToolTip": "B:\\GIT\\OOP\\10.LabOOP\\Main\\View\\MainWindow.xaml",
+              "RelativeToolTip": "View\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-23T12:38:59.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "B:\\GIT\\OOP\\10.LabOOP\\Main\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAiAAAAAAAAAA==",
+              "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\View\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "View\\MainWindow.xaml.cs",
+              "ToolTip": "B:\\GIT\\OOP\\10.LabOOP\\Main\\View\\MainWindow.xaml.cs",
+              "RelativeToolTip": "View\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T16:41:12.752Z",
+              "WhenOpened": "2025-03-22T18:19:36.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ThreadViewModel.cs",
+              "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\ViewModel\\ThreadViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\ThreadViewModel.cs",
+              "ToolTip": "B:\\GIT\\OOP\\10.LabOOP\\Main\\ViewModel\\ThreadViewModel.cs",
+              "RelativeToolTip": "ViewModel\\ThreadViewModel.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwE0AAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T16:59:00.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\Commands\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "Commands\\RelayCommand.cs",
+              "ToolTip": "B:\\GIT\\OOP\\10.LabOOP\\Main\\Commands\\RelayCommand.cs",
+              "RelativeToolTip": "Commands\\RelayCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T17:56:27.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Filer.cs",
+              "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\Model\\Filer.cs",
+              "RelativeDocumentMoniker": "Model\\Filer.cs",
+              "ToolTip": "B:\\GIT\\OOP\\10.LabOOP\\Main\\Model\\Filer.cs",
+              "RelativeToolTip": "Model\\Filer.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAQwDYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T13:50:55.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ThreadContainer.cs",
+              "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\Model\\ThreadContainer.cs",
+              "RelativeDocumentMoniker": "Model\\ThreadContainer.cs",
+              "ToolTip": "B:\\GIT\\OOP\\10.LabOOP\\Main\\Model\\ThreadContainer.cs",
+              "RelativeToolTip": "Model\\ThreadContainer.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T11:12:40.986Z",
               "EditorCaption": ""
             }
           ]
