@@ -54,6 +54,7 @@ namespace Main
         //Commands
         public ICommand ChooseThreadCommand { get; set; }
         public ICommand ChangeThreadPriorityCommand { get; set; }
+        public ICommand StartOrStopThreadCommand { get; set; }
         public ThreadViewModel()
         {
             filer = new Filer();
@@ -118,6 +119,43 @@ namespace Main
             if (CurrentThread.Name == "Reader")
             {
                 TextBlockInfoReaderPriority = CurrentThread.Name + $" Thread: {parameter}";
+            }
+        }
+        //ICommand StartThreadCommand
+        private bool CanExecuteStartOrStopThreadCommand(object? parameter) 
+        {
+            return true;
+        }
+        private void ExecuteStartOrStopThreadCommand(object? parameter) 
+        {
+            string action = parameter as string;
+            if(action == "start") 
+            {
+                if (filer.Threads.Writer.ThreadState == ThreadState.Unstarted)
+                {
+                    filer.Threads.Writer.Start();
+                }
+                if (filer.Threads.Reader.ThreadState == ThreadState.Unstarted)
+                {
+                    filer.Threads.Reader.Start();
+                }
+
+                if (filer.Threads.Writer.ThreadState == ThreadState.Stopped)
+                {
+                    filer.Threads.Writer.Start();
+                }
+                if (filer.Threads.Reader.ThreadState == ThreadState.Stopped)
+                {
+                    filer.Threads.Reader.Start();
+                }
+            }
+            if(action == "stop") 
+            {
+                if(filer.Threads.Writer.ThreadState == ThreadState.Running) 
+                {
+                    //TODO
+                    filer.Threads.Writer.
+                }
             }
         }
     }
