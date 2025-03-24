@@ -101,7 +101,8 @@ namespace Main
         }
         private void ExecuteChangeThreadPriorityCommand(object? parameter) 
         {
-            switch (parameter)
+            string param = parameter as string;
+            switch (param)
             {
                 case ("Lowest"): { CurrentThread.Priority = ThreadPriority.Lowest; break; }
                 case ("BelowNormal"): { CurrentThread.Priority = ThreadPriority.BelowNormal; break; }
