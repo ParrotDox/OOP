@@ -133,22 +133,50 @@ namespace Main
         private void ExecuteStartOrStopThreadCommand(object? parameter) 
         {
             string action = parameter as string;
-            if(action == "start") 
+            if(action == "Start") 
             {
-                StartThreads();
+                if(filer.Threads.Writer.IsAlive || 
+                    filer.Threads.Reader.IsAlive) 
+                {
+                    MessageBox.Show("Threads already working!", "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else 
+                {
+                    RunThreads();
+                }
             }
-            if(action == "stop") 
+            if(action == "Stop") 
             {
-                StopThreads();
+                if(filer.Threads.Writer.ThreadState == ThreadState.Unstarted ||
+                    filer.Threads.Reader.ThreadState == ThreadState.Unstarted) 
+                {
+                    MessageBox.Show("Threads already stopped!", "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else 
+                {
+                    StopThreads();
+                    if (filer.Threads.Writer.IsAlive)
+                    {
+                        filer.Threads.Writer.Join(5000);
+                    }
+                    if (filer.Threads.Reader.IsAlive)
+                    {
+                        filer.Threads.Reader.Join(5000);
+                    }
+                }
             }
         }
-        private void StartThreads() 
-        {
-            
-        }
+
         private void StopThreads() 
         {
-            
+            filer.Threads.stopThreads = true;
+            filer.InitNewThreadContainer();
+        }
+        private void RunThreads() 
+        {
+            filer.Threads.stopThreads = false;
+            filer.Threads.Reader.Start();
+            filer.Threads.Writer.Start();
         }
     }
 }

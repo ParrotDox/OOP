@@ -88,14 +88,16 @@
         </StackPanel>
         <!--Панель с запуском/приостановкой потоков-->
         <StackPanel Grid.Row="5" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
-            <Button Content="Start" Style="{StaticResource ButtonStartStopThreadStl}"/>
-            <Button Content="Stop" Style="{StaticResource ButtonStartStopThreadStl}"/>
+            <Button Content="Start" Style="{StaticResource ButtonStartStopThreadStl}"
+                    Command="{Binding threadViewModel.StartOrStopThreadCommand}" CommandParameter="Start"/>
+            <Button Content="Stop" Style="{StaticResource ButtonStartStopThreadStl}"
+                    Command="{Binding threadViewModel.StartOrStopThreadCommand}" CommandParameter="Stop"/>
         </StackPanel>
 
         <!--Сплиттер сетки-->
         <GridSplitter Grid.Column="1" Grid.RowSpan="6" HorizontalAlignment="Center" Width="3"/>
         <!--Вывод текстового содержимого файла-->
-        <TextBox Grid.Row="1" Grid.Column="2" Grid.RowSpan="3" Text="todo" TextWrapping="Wrap"/>
+        <TextBox Grid.Row="1" Grid.Column="2" Grid.RowSpan="3" Text="{Binding threadViewModel.filer.file, Mode=OneWay}" TextWrapping="Wrap"/>
         <StackPanel Grid.Row="5" Grid.Column="2">
             <TextBlock  Text="{Binding threadViewModel.TextBlockInfoWriterPriority}"/>
             <TextBlock  Text="{Binding threadViewModel.TextBlockInfoReaderPriority}"/>
