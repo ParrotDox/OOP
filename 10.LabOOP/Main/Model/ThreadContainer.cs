@@ -13,6 +13,7 @@ namespace Main
         public Mutex locker = new();
         Thread? _writer;
         Thread? _reader;
+        public volatile bool stopThreads = false; 
         public Thread? Writer 
         {  
             get { if (_writer != null) return _writer; else return null; }

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
 using System.IO;
 
 namespace Main
@@ -11,14 +10,14 @@ namespace Main
     //Class is intended to contain ThreadContainer with methods to manipulate file
     class Filer
     {
-        private string _path = "../Files/Info.json";
+        private string _path = @"B:\GIT\OOP\10.LabOOP\Main\Files";
         private string? _file;
-        public string File 
+        public string file 
         {
             get 
             {
                 if (_file == null)
-                    return "File is empty";
+                    return null;
                 return _file;
             }
         }
@@ -30,29 +29,55 @@ namespace Main
         }
         public Filer()
         {
-            GetJsonFile(); //TODO
             Threads = new ThreadContainer(AddRandomInfo, ReadInfo);
+            GetFile();
+            ReadInfo();
         }
 
         private void AddRandomInfo() 
         {
             Random rnd = new Random();
             string garbage = rnd.Next(0, 300).ToString();
-            using (FileStream stream = new FileStream(_path, FileMode.Append, FileAccess.Write))
+            while (!Threads.stopThreads) 
             {
-                JsonSerializer.Serialize<string>(stream, garbage);
+                Threads.locker.WaitOne();
+                using (StreamWriter streamWriter = File.AppendText(_path))
+                { 
+                    streamWriter.WriteLine(garbage);
+                }
+                Threads.locker.ReleaseMutex();
             }
         }
         private void ReadInfo() 
         {
-            using (FileStream stream = new FileStream(_path, FileMode.Open, FileAccess.Read))
+            while (!Threads.stopThreads)
             {
-                _file = JsonSerializer.Deserialize<string>(stream);
+                Threads.locker.WaitOne();
+                string data = "";
+                using (StreamReader streamReader = File.OpenText(_path)) 
+                {
+                    while (streamReader.ReadLine() != null) 
+                    {
+                        data += streamReader.ReadLine();
+                    }
+                    
+                }
+                _file = data;
+                Threads.locker.ReleaseMutex();
             }
         }
-        private void GetJsonFile() 
+        //ACCESS DENIED TO DO!!!
+        private void GetFile() 
         {
-            //TO DO
+            while (!Threads.stopThreads) 
+            {
+                Threads.locker.WaitOne();
+                using(StreamWriter streamWriter = File.CreateText(_path)) 
+                {
+                    streamWriter.WriteLine("New file created\n");
+                }
+            }
+            Threads.locker.ReleaseMutex();
         }
     }
 }

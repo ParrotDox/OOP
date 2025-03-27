@@ -16,8 +16,8 @@ namespace Main
         //XAML binding info
         private string _textBlockInfoChosenThread = "None";
         private bool _isTextBlockInfoChosenThreadPressed = false;
-        private string _textBlockInfoWriterPriority = "Writer thread: Normal";
-        private string _textBlockInfoReaderPriority = "Reader thread: Normal";
+        private string _textBlockInfoWriterPriority;
+        private string _textBlockInfoReaderPriority;
         public string TextBlockInfoChosenThread 
         {
             get { return _textBlockInfoChosenThread; }
@@ -60,6 +60,10 @@ namespace Main
             filer = new Filer();
             ChooseThreadCommand = new RelayCommand(ExecuteChooseThreadCommand, CanExecuteChooseThreadCommand);
             ChangeThreadPriorityCommand = new RelayCommand(ExecuteChangeThreadPriorityCommand, CanExecuteChangeThreadPriorityCommand);
+            StartOrStopThreadCommand = new RelayCommand(ExecuteStartOrStopThreadCommand, CanExecuteStartOrStopThreadCommand);
+
+            TextBlockInfoWriterPriority = $"Writer thread: {filer.Threads.Writer.Priority}";
+            TextBlockInfoReaderPriority = $"Reader thread: {filer.Threads.Reader.Priority}";
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
@@ -114,11 +118,11 @@ namespace Main
 
             if (CurrentThread.Name == "Writer")
             {
-                TextBlockInfoWriterPriority = CurrentThread.Name + $" Thread: {parameter}";
+                TextBlockInfoWriterPriority = CurrentThread.Name + $" Thread: {CurrentThread.Priority}";
             }
             if (CurrentThread.Name == "Reader")
             {
-                TextBlockInfoReaderPriority = CurrentThread.Name + $" Thread: {parameter}";
+                TextBlockInfoReaderPriority = CurrentThread.Name + $" Thread: {CurrentThread.Priority}";
             }
         }
         //ICommand StartThreadCommand
@@ -131,32 +135,20 @@ namespace Main
             string action = parameter as string;
             if(action == "start") 
             {
-                if (filer.Threads.Writer.ThreadState == ThreadState.Unstarted)
-                {
-                    filer.Threads.Writer.Start();
-                }
-                if (filer.Threads.Reader.ThreadState == ThreadState.Unstarted)
-                {
-                    filer.Threads.Reader.Start();
-                }
-
-                if (filer.Threads.Writer.ThreadState == ThreadState.Stopped)
-                {
-                    filer.Threads.Writer.Start();
-                }
-                if (filer.Threads.Reader.ThreadState == ThreadState.Stopped)
-                {
-                    filer.Threads.Reader.Start();
-                }
+                StartThreads();
             }
             if(action == "stop") 
             {
-                if(filer.Threads.Writer.ThreadState == ThreadState.Running) 
-                {
-                    //TODO
-                    filer.Threads.Writer.
-                }
+                StopThreads();
             }
+        }
+        private void StartThreads() 
+        {
+            
+        }
+        private void StopThreads() 
+        {
+            
         }
     }
 }
