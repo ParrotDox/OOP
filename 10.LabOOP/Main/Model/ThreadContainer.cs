@@ -13,7 +13,8 @@ namespace Main
         public Mutex locker = new();
         Thread? _writer;
         Thread? _reader;
-        public volatile bool stopThreads = false; 
+        public volatile bool stopThreads = false;
+        public int timeout;
         public Thread? Writer 
         {  
             get { if (_writer != null) return _writer; else return null; }
@@ -26,6 +27,7 @@ namespace Main
         }
         public ThreadContainer(Action writerAction, Action listenerAction) 
         {
+            timeout = 1000;
             Writer = new Thread(new ThreadStart(writerAction));
             Reader = new Thread(new ThreadStart(listenerAction));
             Writer.Name = "Writer";

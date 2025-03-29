@@ -63,10 +63,11 @@ namespace Main
                 Threads.locker.WaitOne();
                 try
                 {
-                    garbage = rnd.Next(100, 300).GetHashCode().ToString();
+                    garbage = rnd.Next(100, 300).ToString().GetHashCode().ToString();
                     using (StreamWriter streamWriter = File.AppendText(_path))
                     {
-                        streamWriter.WriteLine(garbage);
+                        streamWriter.Write(garbage);
+                        //streamWriter.WriteLine(garbage);
                     }
                 }
                 catch (Exception ex)
@@ -77,7 +78,7 @@ namespace Main
                 {
                     Threads.locker.ReleaseMutex();
                 }
-                Thread.Sleep(1000);
+                Thread.Sleep(Threads.timeout);
             }
         }
         private void ReadInfo() 
@@ -106,7 +107,7 @@ namespace Main
                 {
                     Threads.locker.ReleaseMutex();
                 }
-                Thread.Sleep(500);
+                Thread.Sleep(Threads.timeout);
             }
         }
         private void GetFile() 
@@ -126,6 +127,17 @@ namespace Main
             finally
             {
                 Threads.locker.ReleaseMutex();
+            }
+        }
+        public bool GetState() 
+        {
+            if (Threads.Writer.IsAlive || Threads.Reader.IsAlive) 
+            {
+                return true;
+            }
+            else 
+            {
+                return false;
             }
         }
     }

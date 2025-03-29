@@ -13,6 +13,8 @@ namespace Main
 {
     class ThreadViewModel : INotifyPropertyChanged
     {
+        //Window properties
+        public Func<bool> IsRunning { get; set; }
         //XAML binding info
         private string _textBlockInfoChosenThread = "None";
         private bool _isTextBlockInfoChosenThreadPressed = false;
@@ -64,6 +66,8 @@ namespace Main
 
             TextBlockInfoWriterPriority = $"Writer thread: {filer.Threads.Writer.Priority}";
             TextBlockInfoReaderPriority = $"Reader thread: {filer.Threads.Reader.Priority}";
+
+            IsRunning = filer.GetState;
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
@@ -82,21 +86,28 @@ namespace Main
         }
         private void ExecuteChooseThreadCommand(object? parameter) 
         {
-            string? action = parameter as string;
-            if(action != null) 
+            string? param = parameter as string;
+            if(param != null) 
             {
-                if (action == "WriteThread")
+                if (param == "WriteThread")
                 {
                     TextBlockInfoChosenThread = "Chosen thread: Write thread";
                     CurrentThread = filer.Threads.Writer;
                 }     
-                if (action == "ReadThread") 
+                if (param == "ReadThread") 
                 {
                     TextBlockInfoChosenThread = "Chosen thread: Read thread";
                     CurrentThread = filer.Threads.Reader; 
                 }
+
                 TextBlockInfoChosenThreadPressed = true;
                 ((RelayCommand)ChangeThreadPriorityCommand).RaiseCanExecuteChanged();
+
+                if (param == "Reset")
+                {
+                    TextBlockInfoChosenThread = "Chosen thread: Write thread";
+                    CurrentThread = filer.Threads.Writer;
+                }
             }
         }
         //ICommand ChangePriorityCommand
@@ -116,13 +127,26 @@ namespace Main
                 case ("Highest"): { CurrentThread.Priority = ThreadPriority.Highest; break; }
             }
 
-            if (CurrentThread.Name == "Writer")
+            
+            //This is for reset in code
+            if(param == "Reset") 
             {
+                filer.Threads.Writer.Priority = ThreadPriority.Normal;
+                filer.Threads.Reader.Priority = ThreadPriority.Normal;
                 TextBlockInfoWriterPriority = CurrentThread.Name + $" Thread: {CurrentThread.Priority}";
-            }
-            if (CurrentThread.Name == "Reader")
-            {
                 TextBlockInfoReaderPriority = CurrentThread.Name + $" Thread: {CurrentThread.Priority}";
+            }
+            //This is for normal setting
+            else 
+            {
+                if (CurrentThread.Name == "Writer")
+                {
+                    TextBlockInfoWriterPriority = CurrentThread.Name + $" Thread: {CurrentThread.Priority}";
+                }
+                if (CurrentThread.Name == "Reader")
+                {
+                    TextBlockInfoReaderPriority = CurrentThread.Name + $" Thread: {CurrentThread.Priority}";
+                }
             }
         }
         //ICommand StartThreadCommand
@@ -154,23 +178,28 @@ namespace Main
                 }
                 else 
                 {
-                    StopThreads();
+                    filer.Threads.stopThreads = true;
                     if (filer.Threads.Writer.IsAlive)
                     {
-                        filer.Threads.Writer.Join(5000);
+                        filer.Threads.Writer.Join();
+                        filer.Threads.Writer.Interrupt();
                     }
                     if (filer.Threads.Reader.IsAlive)
                     {
-                        filer.Threads.Reader.Join(5000);
+                        filer.Threads.Reader.Join();
+                        filer.Threads.Reader.Interrupt();
                     }
+                    InitNewThreads();
                 }
             }
         }
 
-        private void StopThreads() 
+        private void InitNewThreads() 
         {
-            filer.Threads.stopThreads = true;
             filer.InitNewThreadContainer();
+            CurrentThread = filer.Threads.Writer;
+            ExecuteChooseThreadCommand("Reset");
+            ExecuteChangeThreadPriorityCommand("Reset");
         }
         private void RunThreads() 
         {

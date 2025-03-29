@@ -16,11 +16,18 @@ namespace Main
     /// </summary>
     public partial class MainWindow : Window
     {
+        MainViewModel mVmlnk;
         public MainWindow()
         {
             InitializeComponent();
             MainViewModel mVm = new MainViewModel();
             this.DataContext = mVm;
+            mVmlnk = mVm;
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            mVmlnk.WindowClosing(sender, e);
         }
     }
 }
