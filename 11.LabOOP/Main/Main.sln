@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main", "Main.csproj", "{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassIerarchyLib", "..\ClassIerarchyLib\ClassIerarchyLib.csproj", "{B714315A-F1C0-408D-A80A-835B1F6E2220}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B714315A-F1C0-408D-A80A-835B1F6E2220}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B714315A-F1C0-408D-A80A-835B1F6E2220}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B714315A-F1C0-408D-A80A-835B1F6E2220}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B714315A-F1C0-408D-A80A-835B1F6E2220}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
