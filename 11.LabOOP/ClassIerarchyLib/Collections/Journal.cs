@@ -7,53 +7,39 @@ using System.Threading.Tasks;
 namespace ClassIerarchyLib
 {
     [Serializable]
-    public class Journal<TVal>
+    public class Journal
     {
-        private List<JournalEntry<TVal>> _entries;
-        public List<JournalEntry<TVal>> Entries { get { return _entries; } set { _entries = value; } }
+        private List<JournalEntry> _entries;
+        public List<JournalEntry> Entries { get { return _entries; } set { _entries = value; } }
         public Journal() 
         {
-            _entries = new List<JournalEntry<TVal>>();
+            _entries = new List<JournalEntry>();
         }
-        public void AddEntry(JournalEntry<TVal> entry) 
+        public void AddEntry(JournalEntry entry) 
         {
             _entries.Add(entry);
         }
-        public void PrintEntries() 
-        {
-            foreach(JournalEntry<TVal> entry in _entries) 
-            {
-                Console.WriteLine(entry.ToString());
-            }
-        }
     }
     [Serializable]
-    public class JournalEntry<TVal>
+    public class JournalEntry
     {
-        public string collection_name {  get; set; }
-        public string method_name { get; set; }
-        public TVal? item_link { get; set; }
+        public string CollectionName {  get; set; }
+        public string MethodName { get; set; }
+        public string SampleKey { get; set; }
         public JournalEntry()
         {
-            collection_name = "";
-            method_name = "";
+            CollectionName = "";
+            MethodName = "";
         }
-        public JournalEntry(string collection, string method, TVal sample)
+        public JournalEntry(string collection, string method, string sampleKey)
         {
-            collection_name = collection;
-            method_name = method;
-            item_link = sample;
+            CollectionName = collection;
+            MethodName = method;
+            SampleKey = sampleKey;
         }
         public override string ToString()
         {
-            string information = "";
-            information += $"collection_name:{collection_name}\n";
-            information += $"method_name:{method_name}\n";
-            if (item_link != null)
-                information += $"item-link->type:{item_link.GetType().FullName} |-> value:{item_link}\n";
-            else
-                information += $"item-link->type:null |-> value:null\n";
-            return information;
+            return $"{CollectionName},{MethodName},{SampleKey}";
         }
     }
 }

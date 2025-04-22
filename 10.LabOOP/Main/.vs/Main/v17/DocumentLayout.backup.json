@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:viewmodel\\threadviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,16 +31,8 @@
       "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\model\\threadcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:model\\threadcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,44 +50,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "App.xaml",
               "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
               "ToolTip": "B:\\GIT\\OOP\\10.LabOOP\\Main\\App.xaml",
               "RelativeToolTip": "App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-18T15:08:40.809Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T15:08:40.809Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\View\\MainWindow.xaml",
               "RelativeDocumentMoniker": "View\\MainWindow.xaml",
               "ToolTip": "B:\\GIT\\OOP\\10.LabOOP\\Main\\View\\MainWindow.xaml",
               "RelativeToolTip": "View\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-23T12:38:59.537Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-23T12:38:59.537Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\View\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "View\\MainWindow.xaml.cs",
               "ToolTip": "B:\\GIT\\OOP\\10.LabOOP\\Main\\View\\MainWindow.xaml.cs",
               "RelativeToolTip": "View\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T18:19:36.179Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T18:19:36.179Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MainViewModel.cs",
               "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\ViewModel\\MainViewModel.cs",
               "RelativeDocumentMoniker": "ViewModel\\MainViewModel.cs",
@@ -95,8 +92,7 @@
               "RelativeToolTip": "ViewModel\\MainViewModel.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAACQAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T11:59:01.934Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-29T11:59:01.934Z"
             },
             {
               "$type": "Document",
@@ -106,14 +102,14 @@
               "RelativeDocumentMoniker": "ViewModel\\ThreadViewModel.cs",
               "ToolTip": "B:\\GIT\\OOP\\10.LabOOP\\Main\\ViewModel\\ThreadViewModel.cs",
               "RelativeToolTip": "ViewModel\\ThreadViewModel.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwEUAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAArwGcAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-22T16:59:00.743Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Filer.cs",
               "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\Model\\Filer.cs",
               "RelativeDocumentMoniker": "Model\\Filer.cs",
@@ -121,12 +117,11 @@
               "RelativeToolTip": "Model\\Filer.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAQwIMAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T13:50:55.41Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T13:50:55.41Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ThreadContainer.cs",
               "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\Model\\ThreadContainer.cs",
               "RelativeDocumentMoniker": "Model\\ThreadContainer.cs",
@@ -134,18 +129,17 @@
               "RelativeToolTip": "Model\\ThreadContainer.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAIwB0AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T11:12:40.986Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T11:12:40.986Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "RelayCommand.cs",
               "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\Commands\\RelayCommand.cs",
               "RelativeDocumentMoniker": "Commands\\RelayCommand.cs",
               "ToolTip": "B:\\GIT\\OOP\\10.LabOOP\\Main\\Commands\\RelayCommand.cs",
               "RelativeToolTip": "Commands\\RelayCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-22T17:56:27.917Z",
               "EditorCaption": ""

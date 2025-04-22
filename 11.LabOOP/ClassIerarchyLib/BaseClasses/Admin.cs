@@ -97,5 +97,9 @@ namespace ClassIerarchyLib
         {
             return new Admin(this.Name, this.Age, this.Residence, this.Id, this.Experience, this.Salary, this.HeadOffice, new Link(link.Data, link.Notes));
         }
+        public override string ToString()
+        {
+            return base.ToString() + $",{HeadOffice}";
+        }
     }
 }

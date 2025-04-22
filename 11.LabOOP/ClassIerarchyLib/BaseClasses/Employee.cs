@@ -205,5 +205,9 @@ namespace ClassIerarchyLib
         {
             return HashCode.Combine(base.GetHashCode(), Experience, Salary, Id);
         }
+        public override string ToString()
+        {
+            return base.ToString()+$",{Experience},{Salary}";
+        }
     }
 }

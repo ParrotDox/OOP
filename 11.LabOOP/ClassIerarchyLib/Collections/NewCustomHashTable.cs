@@ -52,6 +52,7 @@ namespace ClassIerarchyLib
         //Constructor
         public NewCustomHashTable() : base()
         {
+            CollectionName = "Default";
             CollectionCountChanged += HandleCollectionCountChanged;
             CollectionRefChanged += HandleCollectionRefChanged;
         }

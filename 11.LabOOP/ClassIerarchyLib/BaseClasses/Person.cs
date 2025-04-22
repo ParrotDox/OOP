@@ -57,8 +57,9 @@ namespace ClassIerarchyLib
     [Serializable]
     public class Person : IInit,  IComparable<Person>, ICloneable
     {
-        protected static List<int> key_storage = new List<int>();
-        protected int key;
+        protected static List<string> key_storage = new List<string>();
+        protected string key;
+        public string Key { get { return key; } set { key = value; } }
         public static string[] random_names = new string[] { "Jacky", "Johny", "Marigold", "Elizabeth", "Horo", "Danil", "Nikita", "Egor", "Sergey", "Vlad", "Andrew", "Maksim", "Oleg", "Anna", "Maddie" };
         public static string[] random_residences = new string[] { "Visim", "Krohalevka", "Serebryanskiy_Proezd", "Tsum", "Yralskaya", "Sadoviy", "Ivanovskaya", "Takayama_Street", "Night_Street", "Waterfall_street" };
         private string _name;
@@ -114,7 +115,7 @@ namespace ClassIerarchyLib
 
         public Person() 
         {
-            key = -1;
+            key = "none";
             Name = "Undefined";
             Age = 16;
             Residence = "Undefined";
@@ -281,17 +282,17 @@ namespace ClassIerarchyLib
             copy.link = this.link;
             return copy;
         }
-        //Переопределение метода ToString для 11 лаб.
+        //Переопределение метода ToString для 16 лаб.
         public override string ToString()
         {
-            return $"{key}";
+            return $"{Name},{Age},{Residence}";
         }
-        private int genKey()
+        private string genKey()
         {
-            int key = 0;
+            string key = "";
             while (key_storage.Contains(key))
             {
-                ++key;
+                key = Guid.NewGuid().ToString();
             }
             return key;
         }

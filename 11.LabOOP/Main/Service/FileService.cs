@@ -15,6 +15,20 @@ namespace Main.Service
 {
     public class FileService
     {
+        public class XMLpair 
+        {
+            public string Key;
+            public Person Value;
+            public XMLpair()
+            {
+                
+            }
+            public XMLpair(string key, Person val)
+            {
+                Key = key;
+                Value = val;
+            }
+        }
         private string? _filePathCollection;
         private string? _filePathJournal;
         private CollectionContainer? _container;
@@ -28,71 +42,129 @@ namespace Main.Service
         public bool FileOpen() 
         {
             OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "Text files(*.txt)|*.txt";
-            if(dialog.ShowDialog() == false) 
+            dialog.Filter = "Binary files(*.bin)|*.bin|XML files(*.xml)|*.xml|Json files(*.js)|*.js";
+
+            if (dialog.ShowDialog() == false) 
             {
                 return false;
             }
-            //else
-            _filePathCollection = dialog.FileName;
-            string[] postfixes = {"Binary", "XML", "JS"};
-            string? postfixType = "";
-            bool hasPostfix = postfixes.Any(postfix => 
+
+            string collectionPath = dialog.FileName;
+            string? directory = Path.GetDirectoryName(collectionPath);
+            string? filenameCollection = Path.GetFileNameWithoutExtension(collectionPath);
+            string? extension = Path.GetExtension(collectionPath);
+            string? journalPath = Path.Combine(directory,$"{filenameCollection}Journal{extension}");
+            _filePathCollection = collectionPath;
+            _filePathJournal = journalPath;
+
+            switch (extension)
             {
-                bool flag = _filePathCollection.Contains(postfix);
-                postfixType = flag ? postfix : null;
-                return flag; 
-            });
-            if (!hasPostfix)
-            {
-                return false;
-            }
-            //else
-            switch (postfixType) 
-            {
-                case "Binary":
+                case ".bin":
                     {
-                        //Read info about collection
-                        using (FileStream stream = new(_filePathCollection, FileMode.Open))
+                        using(FileStream stream = new(collectionPath, FileMode.Open)) 
                         {
-                            BinaryFormatter formatter = new BinaryFormatter();
-                            _container.Persons = (NewCustomHashTable<string, Person>)formatter.Deserialize(stream);
+                            BinaryReader reader = new BinaryReader(stream);
+                            _container.Persons = new(100);
+                            while (stream.Position < stream.Length) 
+                            {
+                                string personString = reader.ReadString();
+                                var data = personString.Split(',');
+                                if (data.Length == 4) 
+                                {
+                                    Person person = new();
+                                    person.Key = data[0];
+                                    person.Name = data[1];
+                                    person.Age = int.Parse(data[2]);
+                                    person.Residence = data[3];
+                                    _container.Persons.Add(data[0], person);
+                                }
+                                if (data.Length == 6)
+                                {
+                                    Employee person = new();
+                                    person.Key = data[0];
+                                    person.Name = data[1];
+                                    person.Age = int.Parse(data[2]);
+                                    person.Residence = data[3];
+                                    person.Experience = int.Parse(data[4]);
+                                    person.Salary = int.Parse(data[5]);
+                                    _container.Persons.Add(data[0], person);
+                                }
+                                if (data.Length == 7)
+                                {
+                                    Admin person = new();
+                                    person.Key = data[0];
+                                    person.Name = data[1];
+                                    person.Age = int.Parse(data[2]);
+                                    person.Residence = data[3];
+                                    person.Experience = int.Parse(data[4]);
+                                    person.Salary = int.Parse(data[5]);
+                                    person.HeadOffice = data[6];
+                                    _container.Persons.Add(data[0], person);
+                                }
+                                if (data.Length == 8)
+                                {
+                                    Engineer person = new();
+                                    person.Key = data[0];
+                                    person.Name = data[1];
+                                    person.Age = int.Parse(data[2]);
+                                    person.Residence = data[3];
+                                    person.Experience = int.Parse(data[4]);
+                                    person.Salary = int.Parse(data[5]);
+                                    person.Department = data[6];
+                                    _container.Persons.Add(data[0], person);
+                                }
+                            }
                         }
-                        //Get the journal path
-                        _filePathJournal = dialog.FileName.Replace("Binary", "Journal");
-                        //Read info about journal
-                        using (FileStream stream = new(_filePathJournal, FileMode.Open))
+                        using(FileStream stream = new(journalPath, FileMode.Open)) 
                         {
-                            BinaryFormatter formatter = new BinaryFormatter();
-                            _container.Journal = (Journal<Person>)formatter.Deserialize(stream);
+                            BinaryReader reader = new BinaryReader(stream);
+                            Journal journal = new();
+                            while (stream.Position < stream.Length) 
+                            {
+                                string personString = reader.ReadString();
+                                var data = personString.Split(',');
+                                JournalEntry unit = new(data[0], data[1], data[2]);
+                                journal.AddEntry(unit);
+                            }
+                            _container.Journal = journal;
                         }
                         return true;
                     }
-                case "XML": 
+                case ".xml": 
                     {
-                        using (FileStream stream = new(_filePathCollection, FileMode.Open))
+                        using (FileStream stream = new(collectionPath, FileMode.Open))
                         {
-                            XmlSerializer formatter = new XmlSerializer(typeof(NewCustomHashTable<string, Person>));
-                            _container.Persons = (NewCustomHashTable<string, Person>)formatter.Deserialize(stream);
+                            XmlSerializer deserializer = new XmlSerializer(typeof(List<XMLpair>));
+                            var list = (List<XMLpair>)deserializer.Deserialize(stream);
+                            _container.Persons = new(100);
+                            //Move all pairs into custom collection
+                            foreach(var pair in list) 
+                            {
+                                _container.Persons.Add(pair.Key, pair.Value);
+                            }
                         }
-                        _filePathJournal = dialog.FileName.Replace("XML", "Journal");
-                        using (FileStream stream = new(_filePathJournal, FileMode.Open))
+                        using (FileStream stream = new(journalPath, FileMode.Open))
                         {
-                            XmlSerializer formatter = new XmlSerializer(typeof(Journal<Person>));
-                            _container.Journal = (Journal<Person>)formatter.Deserialize(stream);
+                            XmlSerializer deserializer = new(typeof(Journal));
+                            _container.Journal = (Journal)deserializer.Deserialize(stream);
                         }
                         return true;
                     }
-                case "JS": 
+                case ".js": 
                     {
-                        using (FileStream stream = new(_filePathCollection, FileMode.Open))
+                        using (FileStream stream = new(collectionPath, FileMode.Open))
                         {
-                            _container.Persons = JsonSerializer.Deserialize<NewCustomHashTable<string, Person>>(stream);
+                            var list = JsonSerializer.Deserialize<List<KeyValuePair<string, Person>>>(stream);
+                            _container.Persons = new(100);
+                            //Move all pairs into custom collection
+                            foreach (var pair in list)
+                            {
+                                _container.Persons.Add(pair.Key, pair.Value);
+                            }
                         }
-                        _filePathJournal = dialog.FileName.Replace("JS", "Journal");
-                        using (FileStream stream = new(_filePathJournal, FileMode.Open))
+                        using (FileStream stream = new(journalPath, FileMode.Open))
                         {
-                            _container.Journal = JsonSerializer.Deserialize<Journal<Person>>(stream);
+                            _container.Journal = JsonSerializer.Deserialize<Journal>(stream);
                         }
                         return true;
                     }
@@ -105,71 +177,83 @@ namespace Main.Service
         public bool FileSave() 
         {
             SaveFileDialog dialog = new SaveFileDialog();
-            dialog.Filter = "Text files(*.txt)|*.txt|XML files(*.xml)|*.xml|Json files(*.js)|*.js";
+            dialog.Filter = "Binary files(*.bin)|*.bin|XML files(*.xml)|*.xml|Json files(*.js)|*.js";
+
             if (dialog.ShowDialog() == false)
             {
                 return false;
             }
-            //else
-            _filePathCollection = dialog.FileName;
-            string[] postfixes = { "Binary", "XML", "JS" };
-            string? postfixType = "";
-            bool hasPostfix = postfixes.Any(postfix =>
+
+            string collectionPath = dialog.FileName;
+            string? directory = Path.GetDirectoryName(collectionPath);
+            string? filenameCollection = Path.GetFileNameWithoutExtension(collectionPath);
+            string? extension = Path.GetExtension(collectionPath);
+            string? journalPath = Path.Combine(directory, $"{filenameCollection}Journal{extension}");
+            _filePathCollection = collectionPath;
+            _filePathJournal = journalPath;
+
+            //Name collection before saving
+            _container.Persons.CollectionName = collectionPath;
+            switch (extension)
             {
-                bool flag = _filePathCollection.Contains(postfix);
-                postfixType = flag ? postfix : null;
-                return flag;
-            });
-            if (!hasPostfix)
-            {
-                return false;
-            }
-            //else
-            switch (postfixType)
-            {
-                case "Binary":
+                case ".bin":
                     {
-                        //Save info about collection
-                        using (FileStream stream = new(_filePathCollection, FileMode.Create))
+                        using (FileStream stream = new(collectionPath, FileMode.Create))
                         {
-                            BinaryFormatter formatter = new BinaryFormatter();
-                            formatter.Serialize(stream, _container.Persons);
+                            BinaryWriter writer = new BinaryWriter(stream);
+                            foreach(var pair in _container.Persons) 
+                            {
+                                string pairData = $"{pair.Key},{pair.Value.ToString()}";
+                                writer.Write(pairData);
+                            }
                         }
-                        //Get the journal path
-                        _filePathJournal = dialog.FileName.Replace("Binary", "Journal");
-                        //Save info about journal
-                        using (FileStream stream = new(_filePathJournal, FileMode.Create))
+                        using (FileStream stream = new(journalPath, FileMode.Create))
                         {
-                            BinaryFormatter formatter = new BinaryFormatter();
-                            formatter.Serialize(stream, _container.Journal);
+                            BinaryWriter writer = new BinaryWriter(stream);
+                            foreach (var entry in _container.Journal.Entries)
+                            {
+                                string pairData = $"{entry.ToString()}";
+                                writer.Write(pairData);
+                            }
                         }
                         return true;
                     }
-                case "XML":
+                case ".xml":
                     {
-                        using (FileStream stream = new(_filePathCollection, FileMode.Create))
+                        using (FileStream stream = new(collectionPath, FileMode.Create))
                         {
-                            XmlSerializer formatter = new XmlSerializer(typeof(NewCustomHashTable<string, Person>));
-                            formatter.Serialize(stream, _container.Persons);
+                            XmlSerializer serializer = new(typeof(List<XMLpair>));
+                            List<XMLpair> list = new();
+                            //Pack custom collection into a list
+                            foreach (var pair in _container.Persons)
+                            {
+                                XMLpair unit = new(pair.Key, pair.Value);
+                                list.Add(unit);
+                            }
+                            serializer.Serialize(stream, list);
                         }
-                        _filePathJournal = dialog.FileName.Replace("XML", "Journal");
-                        using (FileStream stream = new(_filePathJournal, FileMode.Create))
+                        using (FileStream stream = new(journalPath, FileMode.Create))
                         {
-                            XmlSerializer formatter = new XmlSerializer(typeof(Journal<Person>));
-                            formatter.Serialize(stream, _container.Journal);
+                            XmlSerializer serializer = new(typeof(Journal));
+                            serializer.Serialize(stream, _container.Journal);
                         }
                         return true;
                     }
-                case "JS":
+                case ".js":
                     {
-                        using (FileStream stream = new(_filePathCollection, FileMode.Create))
+                        using (FileStream stream = new(collectionPath, FileMode.Create))
                         {
-                            JsonSerializer.Serialize<NewCustomHashTable<string, Person>>(stream, _container.Persons);
+                            List<KeyValuePair<string, Person>> list = new();
+                            //Pack custom collection into a list
+                            foreach (var pair in _container.Persons)
+                            {
+                                list.Add(pair);
+                            }
+                            JsonSerializer.Serialize<List<KeyValuePair<string, Person>>>(stream, list);
                         }
-                        _filePathJournal = dialog.FileName.Replace("JS", "Journal");
-                        using (FileStream stream = new(_filePathJournal, FileMode.Create))
+                        using (FileStream stream = new(journalPath, FileMode.Create))
                         {
-                            JsonSerializer.Serialize<Journal<Person>>(stream, _container.Journal);
+                            JsonSerializer.Serialize<Journal>(stream, _container.Journal);
                         }
                         return true;
                     }

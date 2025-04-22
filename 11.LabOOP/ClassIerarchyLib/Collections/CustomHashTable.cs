@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace ClassIerarchyLib
 {
-    [Serializable]
     public class HashPoint<TKey, TVal>
     {
         public TKey Key { get; set; }
@@ -145,12 +144,11 @@ namespace ClassIerarchyLib
         //Constructors
         public CustomHashTable()
         {
-            this.Size = 10;
-            Table = new HashPoint<TKey, TVal>[10];
+
         }
-        public CustomHashTable(int capacity) 
+        public CustomHashTable(int size) 
         {
-            this.Size = capacity;
+            this.Size = size;
             Table = new HashPoint<TKey, TVal>[Size];
         }
 

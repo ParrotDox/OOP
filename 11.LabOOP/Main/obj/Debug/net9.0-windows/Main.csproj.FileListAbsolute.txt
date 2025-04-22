@@ -23,3 +23,4 @@ B:\GIT\OOP\11.LabOOP\Main\bin\Debug\net9.0-windows\ClassIerarchyLib.dll
 B:\GIT\OOP\11.LabOOP\Main\bin\Debug\net9.0-windows\ClassIerarchyLib.pdb
 B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\Main.csproj.AssemblyReference.cache
 B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\Main.csproj.Up2Date
+B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\GeneratedInternalTypeHelper.g.cs

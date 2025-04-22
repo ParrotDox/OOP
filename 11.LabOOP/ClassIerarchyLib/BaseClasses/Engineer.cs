@@ -104,5 +104,9 @@ namespace ClassIerarchyLib
         {
             return new Engineer(this.Name, this.Age, this.Residence, this.Id, this.Experience, this.Salary, this.Department, new Link(link.Data, link.Notes));
         }
+        public override string ToString()
+        {
+            return base.ToString() + $",{Department},IamEngi";
+        }
     }
 }

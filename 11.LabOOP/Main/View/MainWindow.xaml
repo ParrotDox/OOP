@@ -4,6 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Main"
+        xmlns:ViewModel="clr-namespace:Main.ViewModel"
+        xmlns:ClassLib="clr-namespace:ClassIerarchyLib;assembly=ClassIerarchyLib"
         mc:Ignorable="d"
         Title="Collection App" Height="500" Width="700">
     <Window.Resources>
@@ -16,6 +18,9 @@
             <Setter Property="FontSize" Value="16"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
         </Style>
+        <DataTemplate DataType="">
+            
+        </DataTemplate>
     </Window.Resources>
     <Grid>
         <!--2-->
@@ -49,8 +54,8 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <Button Grid.Row="0" Content="Choose collection"/>
-            <Button Grid.Row="1" Content="Create auto colleciton"/>
+            <Button Grid.Row="0" Content="Choose collection" Command="{Binding LoadCollection}"/>
+            <Button Grid.Row="1" Content="Create auto colleciton" Command="{Binding CreateAuto}"/>
             <Button Grid.Row="2" Content="Add unit"/>
             <Button Grid.Row="3" Content="Change unit"/>
             <Button Grid.Row="4" Content="Delete unit"/>
@@ -60,11 +65,11 @@
         <!--Row: 3 | Column: 0 LABELS-->
         <Label Grid.Row="3" Grid.Column="0" Content="Journal"/>
         <!--Row: 4 | Column: 0 JOURNAL LISTBOX-->
-        <ListBox Grid.Row="4" Grid.Column="0" Margin="5">
+        <ListBox Grid.Row="4" Grid.Column="0" Margin="5" ItemsSource="{Binding Journal}">
             
         </ListBox>
         <!--Row: 2 | Column: 1 COLLECTION LISTBOX-->
-        <ListBox Grid.Row="2" Grid.Column="1" Grid.RowSpan="3" Margin="5">
+        <ListBox Grid.Row="2" Grid.Column="1" Grid.RowSpan="3" Margin="5" ItemsSource="{Binding Collection}">
             
         </ListBox>
     </Grid>
