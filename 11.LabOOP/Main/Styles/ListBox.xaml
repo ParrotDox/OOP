@@ -1,0 +1,56 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ViewModel="clr-namespace:Main.ViewModel"
+                    xmlns:ClassLib="clr-namespace:ClassIerarchyLib;assembly=ClassIerarchyLib">
+
+    <DataTemplate DataType="{x:Type ClassLib:Person}">
+        <StackPanel>
+            <TextBox Text="{Binding Key}" FontWeight="Bold" IsReadOnly="True"/>
+            <TextBlock Text="{Binding Name}"/>
+            <TextBlock Text="{Binding Age}"/>
+            <TextBlock Text="{Binding Residence}"/>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type ClassLib:Employee}">
+        <StackPanel>
+            <TextBox Text="{Binding Key}" FontWeight="Bold" IsReadOnly="True"/>
+            <TextBlock Text="{Binding Name}"/>
+            <TextBlock Text="{Binding Age}"/>
+            <TextBlock Text="{Binding Residence}"/>
+            <TextBlock Text="{Binding Salary}"/>
+            <TextBlock Text="{Binding Experience}"/>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type ClassLib:Engineer}">
+        <StackPanel>
+            <TextBox Text="{Binding Key}" FontWeight="Bold" IsReadOnly="True"/>
+            <TextBlock Text="{Binding Name}"/>
+            <TextBlock Text="{Binding Age}"/>
+            <TextBlock Text="{Binding Residence}"/>
+            <TextBlock Text="{Binding Salary}"/>
+            <TextBlock Text="{Binding Experience}"/>
+            <TextBlock Text="{Binding Department}"/>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type ClassLib:Admin}">
+        <StackPanel>
+            <TextBox Text="{Binding Key}" FontWeight="Bold" IsReadOnly="True"/>
+            <TextBlock Text="{Binding Name}"/>
+            <TextBlock Text="{Binding Age}"/>
+            <TextBlock Text="{Binding Residence}"/>
+            <TextBlock Text="{Binding Salary}"/>
+            <TextBlock Text="{Binding Experience}"/>
+            <TextBlock Text="{Binding HeadOffice}"/>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type ClassLib:JournalEntry}">
+        <StackPanel>
+            <TextBox Text="{Binding SampleKey}" FontWeight="Bold" IsReadOnly="True"/>
+            <TextBlock Text="{Binding MethodName}"/>
+        </StackPanel>
+    </DataTemplate>
+</ResourceDictionary>

@@ -2,21 +2,20 @@
 using System;
 using System.Security.AccessControl;
 using System.Security.Policy;
+using System.Text.Json.Serialization;
 using System.Xml.Linq;
+using System.Xml.Serialization;
 
 //[Классы профессий в компании]
 namespace ClassIerarchyLib
 {
-    //Класс Link предназначен для демонстрации поверхностного и глубокого копирования, он используется в Person классе!
     [Serializable]
     public class Link : IInit
     {
         //Zondbi list
         public List<string> random_list = new List<string> { "Wa wobbo wabba wabba wabby wobbo wabba wa", "Wobba wobby wabba-wabba wabby wo-wo wabba wa", "Bra..., a a a ins" };
-        private string _notes = "";
-        public string Notes {  get { return _notes; } set { _notes = value; } }
-        private string _data = "";
-        public string Data { get { return _data; } set { _data = value; } }
+        public string Notes { get; set; }
+        public string Data { get; set; }
         public Link() 
         {
             Notes = "None";
@@ -50,124 +49,46 @@ namespace ClassIerarchyLib
         }
         
     }
-    //Древо наследования:
-    /* Person --- Employee ---|-- Engineer
-     *                        |-- Admin
-     */
+
+    [JsonDerivedType(typeof(Person))]
+    [JsonDerivedType(typeof(Employee))]
+    [JsonDerivedType(typeof(Engineer))]
+    [JsonDerivedType(typeof(Admin))]
+
+    [XmlInclude(typeof(Person))]
+    [XmlInclude(typeof(Employee))]
+    [XmlInclude(typeof(Engineer))]
+    [XmlInclude(typeof(Admin))]
+
     [Serializable]
     public class Person : IInit,  IComparable<Person>, ICloneable
     {
         protected static List<string> key_storage = new List<string>();
-        protected string key;
-        public string Key { get { return key; } set { key = value; } }
         public static string[] random_names = new string[] { "Jacky", "Johny", "Marigold", "Elizabeth", "Horo", "Danil", "Nikita", "Egor", "Sergey", "Vlad", "Andrew", "Maksim", "Oleg", "Anna", "Maddie" };
         public static string[] random_residences = new string[] { "Visim", "Krohalevka", "Serebryanskiy_Proezd", "Tsum", "Yralskaya", "Sadoviy", "Ivanovskaya", "Takayama_Street", "Night_Street", "Waterfall_street" };
-        private string _name;
-        public string Name 
-        {
-            get
-            {
-                return _name;
-            }
-            set
-            {
-                if (value.Length == 0)
-                {
-                    throw new ArgumentException("Name field is empty!");
-                }
-                _name = value;
-            }
-        }
-        private int _age;
-        public int Age 
-        {
-            get 
-            {
-                return _age;
-            }
-            set 
-            {
-                if (value < 16 || value > 100) 
-                {
-                    throw new ArgumentException("Age must be from 16 and 100");
-                }
-                _age = value;
-            }
-        }
-        private string _residence;
-        public string Residence 
-        {
-            get
-            {
-                return _residence;
-            }
-            set
-            {
-                if (value.Length == 0)
-                {
-                    throw new ArgumentException("Residence field is empty!");
-                }
-                _residence = value;
-            }
-        }
-        //Поле предназначено для демонстрации поверхностного и глубокого копирования
+        public string Key { get; set; }
+        public string Name { get; set; }
+        public int Age { get;set; }
+        public string Residence { get; set; }
         public Link? link;
 
         public Person() 
         {
-            key = "none";
+            Key = "None";
             Name = "Undefined";
-            Age = 16;
+            Age = 0;
             Residence = "Undefined";
             link = new Link("0", "None");
         }
-        public Person(string name, int age, string residence) 
-        {
-            key = genKey();
-            key_storage.Add(key);
-            Name = name;
-            Age = age;
-            Residence = residence;
-            link = new Link(age.ToString(), name + " lives in " + residence);
-        }
-        public Person(string name, int age, string residence, Link link_sample)
-        {
-            key = genKey();
-            key_storage.Add(key);
-            Name = name;
-            Age = age;
-            Residence = residence;
-            link = link_sample;
-        }
-        //Этот метод копирования проводит копирование только ЗНАЧИМЫХ полей, ссылочное поле не затронуто, создается по-умолчанию новый экзепляр Link через базовый конструктор
         public Person(Person copy_sample)
         {
-            this.key = genKey();
-            key_storage.Add(key);
+            this.Key = genKey();
+            key_storage.Add(Key);
             this.Name = copy_sample.Name;
             this.Age = copy_sample.Age;
             this.Residence = copy_sample.Residence;
             this.link = new Link();
         }
-        public virtual void Show() 
-        {
-            Console.WriteLine($"Name: {Name}");
-            Console.WriteLine($"Age: {Age}");
-            Console.WriteLine($"Residence: {Residence}");
-            Console.WriteLine($"Notes: {link.Notes}");
-            Console.WriteLine($"Data: {link.Data}");
-        }
-        public virtual string GetInfo() 
-        {
-            string msg = "";
-            msg += $"Name: {Name}\n";
-            msg += $"Age: {Age}\n";
-            msg += $"Residence: {Residence}\n";
-            msg += $"Notes: {link.Notes}\n";
-            msg += $"Data: {link.Data}\n";
-            return msg;
-        }
-        //Реализация Init из кастомного IInit
         public virtual void Init() 
         {
             bool nameFlag, ageFlag, residenceFlag;
@@ -211,17 +132,24 @@ namespace ClassIerarchyLib
                 goto inputMark;
             }
         }
-        //Реализация Init из кастомного IInit
         public virtual void RandomInit() 
         {
             Random rnd = new Random();
-            key = genKey();
-            key_storage.Add(key);
+            Key = genKey();
+            key_storage.Add(Key);
             Name = random_names[rnd.Next(0, random_names.Length)];
             Age = rnd.Next(16, 61);
             Residence = random_residences[rnd.Next(0, random_residences.Length)];
         }
-        //Сравнивает 2 объекта по содержимому, но не по ключу (Хотя ключ есть в Хэш-коде)
+        public virtual void RandomInit(string keySample)
+        {
+            Random rnd = new Random();
+            Key = keySample;
+            key_storage.Add(Key);
+            Name = random_names[rnd.Next(0, random_names.Length)];
+            Age = rnd.Next(16, 61);
+            Residence = random_residences[rnd.Next(0, random_residences.Length)];
+        }
         public override bool Equals(object obj) 
         {
             if (obj is not Person)
@@ -238,8 +166,6 @@ namespace ClassIerarchyLib
             }
             else { return false; }
         }
-        //Реализация метода CompareTo из IComparable
-        //Сравнение идет по полю Age
         public int CompareTo(Person obj) 
         {
             //Полный вариант логики CompareTo
@@ -252,8 +178,6 @@ namespace ClassIerarchyLib
             //Краткий вариант CompareTo
             return this.Age.CompareTo(obj.Age);
         }
-        //Реализация метода из ICloneable, глубокое копирование
-        //Заметка: клонируются уникальные поля!
         public virtual object Clone() 
         {
             Person copy = new Person();
@@ -263,17 +187,15 @@ namespace ClassIerarchyLib
             copy.link = new Link(this.link.Data, this.link.Notes);
             //key поле является уникальным, но в контексте 11 лаб.
             //требуется найти объект по значению, а не по ссылке
-            copy.key = this.key;
+            copy.Key = this.Key;
             //copy.key = genKey();
             //keyStorage.Add(key);
             return copy;
         }
-        //Метод поверхностного копирования
-        //Заметка: клонируются уникальные поля!
         public virtual object ShallowCopy() 
         {
             Person copy = new Person();
-            copy.key = this.key;
+            copy.Key = this.Key;
             //copy.key = genKey();
             //keyStorage.Add(key);
             copy.Name = this.Name;
@@ -282,28 +204,25 @@ namespace ClassIerarchyLib
             copy.link = this.link;
             return copy;
         }
-        //Переопределение метода ToString для 16 лаб.
         public override string ToString()
         {
-            return $"{Name},{Age},{Residence}";
+            return $"{Key},{Name},{Age},{Residence},";
         }
         private string genKey()
         {
-            string key = "";
+            string key = Guid.NewGuid().ToString();
             while (key_storage.Contains(key))
             {
                 key = Guid.NewGuid().ToString();
             }
             return key;
         }
-        //Переопределение GetHashCode для формирования хэш-кода по значениям полей
         public override int GetHashCode()
         {
-            return HashCode.Combine(_name, _age, _residence, key);
+            return HashCode.Combine(Name, Age, Residence, Key);
         }
     }
-    //Реализация метода Compare из IComparer по полю _age
-    //Не знаю почему, но только если будет указано явно пространство System, то тогда данная сортировка сработает для ArrayList
+
     public class SortObjects : System.Collections.IComparer
     {
         public int Compare(object? x, object? y) 
@@ -327,7 +246,6 @@ namespace ClassIerarchyLib
             return x.Age.CompareTo(y.Age);
         }
     }
-    //Реализация метода Compare из IComparer по полю Name
     public class SortByName : IComparer<Person>
     {
         public int Compare(Person x, Person y)

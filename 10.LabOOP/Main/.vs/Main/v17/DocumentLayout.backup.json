@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "B:\\GIT\\OOP\\10.LabOOP\\Main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\viewmodel\\threadviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:viewmodel\\threadviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,12 +15,16 @@
       "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\model\\filer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:model\\filer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\viewmodel\\threadviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:viewmodel\\threadviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\model\\filer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|solutionrelative:model\\filer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BE8641D8-8C2C-492B-84D6-7D5426AA8711}|Main.csproj|b:\\git\\oop\\10.laboop\\main\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -57,34 +57,37 @@
               "ToolTip": "B:\\GIT\\OOP\\10.LabOOP\\Main\\App.xaml",
               "RelativeToolTip": "App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-18T15:08:40.809Z"
+              "WhenOpened": "2025-04-18T15:08:40.809Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\View\\MainWindow.xaml",
               "RelativeDocumentMoniker": "View\\MainWindow.xaml",
               "ToolTip": "B:\\GIT\\OOP\\10.LabOOP\\Main\\View\\MainWindow.xaml",
               "RelativeToolTip": "View\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-23T12:38:59.537Z"
+              "WhenOpened": "2025-03-23T12:38:59.537Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\View\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "View\\MainWindow.xaml.cs",
               "ToolTip": "B:\\GIT\\OOP\\10.LabOOP\\Main\\View\\MainWindow.xaml.cs",
               "RelativeToolTip": "View\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T18:19:36.179Z"
+              "WhenOpened": "2025-03-22T18:19:36.179Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MainViewModel.cs",
               "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\ViewModel\\MainViewModel.cs",
               "RelativeDocumentMoniker": "ViewModel\\MainViewModel.cs",
@@ -92,24 +95,25 @@
               "RelativeToolTip": "ViewModel\\MainViewModel.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAACQAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T11:59:01.934Z"
+              "WhenOpened": "2025-03-29T11:59:01.934Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "ThreadViewModel.cs",
               "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\ViewModel\\ThreadViewModel.cs",
               "RelativeDocumentMoniker": "ViewModel\\ThreadViewModel.cs",
               "ToolTip": "B:\\GIT\\OOP\\10.LabOOP\\Main\\ViewModel\\ThreadViewModel.cs",
               "RelativeToolTip": "ViewModel\\ThreadViewModel.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAArwGcAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwGcAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-22T16:59:00.743Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Filer.cs",
               "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\Model\\Filer.cs",
               "RelativeDocumentMoniker": "Model\\Filer.cs",
@@ -133,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "RelayCommand.cs",
               "DocumentMoniker": "B:\\GIT\\OOP\\10.LabOOP\\Main\\Commands\\RelayCommand.cs",
               "RelativeDocumentMoniker": "Commands\\RelayCommand.cs",
@@ -141,8 +145,7 @@
               "RelativeToolTip": "Commands\\RelayCommand.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T17:56:27.917Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T17:56:27.917Z"
             }
           ]
         }

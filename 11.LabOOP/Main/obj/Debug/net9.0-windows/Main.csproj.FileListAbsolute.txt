@@ -23,4 +23,11 @@ B:\GIT\OOP\11.LabOOP\Main\bin\Debug\net9.0-windows\ClassIerarchyLib.dll
 B:\GIT\OOP\11.LabOOP\Main\bin\Debug\net9.0-windows\ClassIerarchyLib.pdb
 B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\Main.csproj.AssemblyReference.cache
 B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\Main.csproj.Up2Date
+B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\Styles\Button.baml
+B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\Styles\Label.baml
+B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\Styles\ListBox.baml
+B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\App.baml
 B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\GeneratedInternalTypeHelper.g.cs
+B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\View\AddUnitWindow.g.cs
+B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\View\AddUnitWindow.baml
+B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\Styles\AddUnit.baml

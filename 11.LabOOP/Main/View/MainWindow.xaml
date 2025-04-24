@@ -7,20 +7,9 @@
         xmlns:ViewModel="clr-namespace:Main.ViewModel"
         xmlns:ClassLib="clr-namespace:ClassIerarchyLib;assembly=ClassIerarchyLib"
         mc:Ignorable="d"
-        Title="Collection App" Height="500" Width="700">
+        Title="Collection App" Height="600" Width="700">
     <Window.Resources>
-        <Style TargetType="Button">
-            <Setter Property="Margin" Value="0 5 0 5"/>
-            <Setter Property="FontSize" Value="12"/>
-            <Setter Property="BorderThickness" Value="0"/>
-        </Style>
-        <Style TargetType="Label">
-            <Setter Property="FontSize" Value="16"/>
-            <Setter Property="FontWeight" Value="SemiBold"/>
-        </Style>
-        <DataTemplate DataType="">
-            
-        </DataTemplate>
+
     </Window.Resources>
     <Grid>
         <!--2-->
@@ -32,13 +21,14 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="0.5*"/>
             <RowDefinition Height="0.5*"/>
-            <RowDefinition Height="5*"/>
+            <RowDefinition Height="4.5*"/>
             <RowDefinition Height="0.5*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <!--Row:0 | Column 0-1 HEADER/TOOLBAR-->
         <ToolBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
-            
+            <Button Content="Save" Command="{Binding SaveFileCommand}"/>
+            <Button Content="Load" Command="{Binding LoadFileCommand}"/>
         </ToolBar>
         <!--Row: 1 | Column: 0-1 LABELS-->
         <Label Grid.Row="1" Grid.Column="0" Content="Options"/>
@@ -52,25 +42,29 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <Button Grid.Row="0" Content="Choose collection" Command="{Binding LoadCollection}"/>
-            <Button Grid.Row="1" Content="Create auto colleciton" Command="{Binding CreateAuto}"/>
+            <Button Grid.Row="0" Content="Create empty collection" Command="{Binding CreateEmptyCollectionCommand}"/>
+            <Button Grid.Row="1" Content="Create auto colleciton" Command="{Binding CreateAutoCollectionCommand}"/>
             <Button Grid.Row="2" Content="Add unit"/>
             <Button Grid.Row="3" Content="Change unit"/>
             <Button Grid.Row="4" Content="Delete unit"/>
             <Button Grid.Row="5" Content="Find unit(s) by"/>
-            <Button Grid.Row="6" Content="Check journal"/>
+            <Button Grid.Row="6" Content="LINQ"/>
         </Grid>
         <!--Row: 3 | Column: 0 LABELS-->
         <Label Grid.Row="3" Grid.Column="0" Content="Journal"/>
         <!--Row: 4 | Column: 0 JOURNAL LISTBOX-->
-        <ListBox Grid.Row="4" Grid.Column="0" Margin="5" ItemsSource="{Binding Journal}">
-            
+        <ListBox Grid.Row="4"
+                 Grid.Column="0"
+                 Margin="5"
+                 ItemsSource="{Binding Journal}">
         </ListBox>
         <!--Row: 2 | Column: 1 COLLECTION LISTBOX-->
-        <ListBox Grid.Row="2" Grid.Column="1" Grid.RowSpan="3" Margin="5" ItemsSource="{Binding Collection}">
-            
+        <ListBox Grid.Row="2"
+                 Grid.Column="1"
+                 Grid.RowSpan="3"
+                 Margin="5"
+                 ItemsSource="{Binding Collection}">
         </ListBox>
     </Grid>
 </Window>

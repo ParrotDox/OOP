@@ -1,4 +1,5 @@
 ﻿using ClassIerarchyLib;
+using Main.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,32 +10,40 @@ namespace Main.Model
 {
     public class CollectionContainer
     {
-        private NewCustomHashTable<string, Person>? persons;
-        private Journal? journal;
-        public NewCustomHashTable<string, Person>? Persons { get { return persons; } set { persons = value; } }
-        public Journal? Journal { get { return journal; } set { journal = value; } }
+        public NewCustomHashTable<string, Person> Collection { get; set; }
+        public Journal? Journal { get; set; }
+        //Ctor for new collection creation
         public CollectionContainer()
         {
-            Persons = null;
-            Journal = null;
+            Collection = new(100);
+            Journal = new Journal();
+            Collection.CollectionCountChanged += (sender, args) =>
+            { Journal.AddEntry(new JournalEntry(args.collection_name, args.method_name, ((Person)(args.item_link)).Key)); };
+            Collection.CollectionRefChanged += (sender, args) =>
+            { Journal.AddEntry(new JournalEntry(args.collection_name, args.method_name, ((Person)(args.item_link)).Key)); };
         }
         public CollectionContainer(int size)
         {
-            Persons = new NewCustomHashTable<string, Person>(size);
+            Collection = new NewCustomHashTable<string, Person>(size);
             Journal = new Journal();
-            Persons.CollectionCountChanged += (sender, args) =>
+            Collection.CollectionCountChanged += (sender, args) =>
             { Journal.AddEntry(new JournalEntry(args.collection_name, args.method_name, ((Person)(args.item_link)).Key)); };
-            Persons.CollectionRefChanged += (sender, args) =>
+            Collection.CollectionRefChanged += (sender, args) =>
             { Journal.AddEntry(new JournalEntry(args.collection_name, args.method_name, ((Person)(args.item_link)).Key)); };
         }
-        public CollectionContainer(NewCustomHashTable<string, Person> personsSample, Journal journalSample)
+        //Ctor for file open
+        public CollectionContainer(NewCustomHashTable<string, Person> collection, Journal journal)
         {
-            Persons = personsSample;
-            Journal = journalSample;
-            Persons.CollectionCountChanged += (sender, args) =>
+            this.Collection = collection;
+            Journal = journal;
+            this.Collection.CollectionCountChanged += (sender, args) =>
             { Journal.AddEntry(new JournalEntry(args.collection_name, args.method_name, ((Person)(args.item_link)).Key)); };
-            Persons.CollectionRefChanged += (sender, args) =>
+            this.Collection.CollectionRefChanged += (sender, args) =>
             { Journal.AddEntry(new JournalEntry(args.collection_name, args.method_name, ((Person)(args.item_link)).Key)); };
+        }
+        public void AddUnit(string key, Person unit) 
+        {
+            Collection.Add(key, unit);
         }
     }
 }

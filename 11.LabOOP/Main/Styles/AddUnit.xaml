@@ -1,0 +1,68 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ViewModel="clr-namespace:Main.ViewModel">
+    <DataTemplate DataType="{x:Type ViewModel:PersonInput}">
+        <StackPanel>
+            <Label Content="Key"/>
+            <TextBox Text="{Binding Key, Mode=TwoWay}"/>
+            <Label Content="Name"/>
+            <TextBox Text="{Binding Name, Mode=TwoWay}"/>
+            <Label Content="Age"/>
+            <TextBox Text="{Binding Age, Mode=TwoWay}"/>
+            <Label Content="Residence"/>
+            <TextBox Text="{Binding Residence, Mode=TwoWay}"/>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type ViewModel:EmployeeInput}">
+        <StackPanel>
+            <Label Content="Key"/>
+            <TextBox Text="{Binding Key, Mode=TwoWay}"/>
+            <Label Content="Name"/>
+            <TextBox Text="{Binding Name, Mode=TwoWay}"/>
+            <Label Content="Age"/>
+            <TextBox Text="{Binding Age, Mode=TwoWay}"/>
+            <Label Content="Residence"/>
+            <TextBox Text="{Binding Residence, Mode=TwoWay}"/>
+            <Label Content="Experience"/>
+            <TextBox Text="{Binding Experience, Mode=TwoWay}"/>
+            <Label Content="Salary"/>
+            <TextBox Text="{Binding Salary, Mode=TwoWay}"/>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type ViewModel:EngineerInput}">
+        <StackPanel>
+            <Label Content="Key"/>
+            <TextBox Text="{Binding Key, Mode=TwoWay}"/>
+            <Label Content="Name"/>
+            <TextBox Text="{Binding Name, Mode=TwoWay}"/>
+            <Label Content="Age"/>
+            <TextBox Text="{Binding Age, Mode=TwoWay}"/>
+            <Label Content="Residence"/>
+            <TextBox Text="{Binding Residence, Mode=TwoWay}"/>
+            <Label Content="Experience"/>
+            <TextBox Text="{Binding Experience, Mode=TwoWay}"/>
+            <Label Content="Salary"/>
+            <TextBox Text="{Binding Salary, Mode=TwoWay}"/>
+            <Label Content="Department"/>
+            <TextBox Text="{Binding Department, Mode=TwoWay}"/>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type ViewModel:AdminInput}">
+        <StackPanel>
+            <Label Content="Key"/>
+            <TextBox Text="{Binding Key, Mode=TwoWay}"/>
+            <Label Content="Name"/>
+            <TextBox Text="{Binding Name, Mode=TwoWay}"/>
+            <Label Content="Age"/>
+            <TextBox Text="{Binding Age, Mode=TwoWay}"/>
+            <Label Content="Residence"/>
+            <TextBox Text="{Binding Residence, Mode=TwoWay}"/>
+            <Label Content="Experience"/>
+            <TextBox Text="{Binding Experience, Mode=TwoWay}"/>
+            <Label Content="Salary"/>
+            <TextBox Text="{Binding Salary, Mode=TwoWay}"/>
+            <Label Content="HeadOffice"/>
+            <TextBox Text="{Binding HeadOffice, Mode=TwoWay}"/>
+        </StackPanel>
+    </DataTemplate>
+</ResourceDictionary>

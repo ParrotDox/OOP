@@ -10,125 +10,215 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows;
+using System.Collections.Specialized;
+using Main.View;
+using System.ComponentModel;
 
 namespace Main.ViewModel
 {
-    //Classes for observable collections (Used to dynamic UI update)
-    public class CollectionItem
-    {
-        public string Key { get; set; }
-        public Person Value { get; set; }
-        public CollectionItem(string key, Person value)
-        {
-            Key = key;
-            Value = value;
-        }
-    }
-    public class JournalItem
-    {
-        public string CollectionName { get; set; }
-        public string MethodName { get; set; }
-        string SampleKey { get; set; }
-        public JournalItem(string collectionName, string methodName, string sampleKey)
-        {
-            CollectionName = collectionName;
-            MethodName = methodName;
-            SampleKey = sampleKey;
-        }
-    }
     public class MainWindowVM
     {
         //Observable Collections for UI ListBoxes
-        private ObservableCollection<CollectionItem> _collection;
-        private ObservableCollection<JournalItem> _journal;
-        public ObservableCollection<CollectionItem> Collection { get { return _collection; } set { _collection = value; } }
-        public ObservableCollection<JournalItem> Journal { get { return _journal; } set { _journal = value; } }
-        //File module
-        private FileService fileService;
+        public static ObservableCollection<Person> Collection { get; set; }
+        public static ObservableCollection<JournalEntry> Journal { get; set; }
+        public CollectionContainer? Container { get; set; }
+
         //ICommands
-        public ICommand CreateAuto {  get; set; }
-        public ICommand LoadCollection { get; set; }
+        public ICommand SaveFileCommand { get; set; }
+        public ICommand LoadFileCommand { get; set; }
+        public ICommand CreateEmptyCollectionCommand { get; set; }
+        public ICommand CreateAutoCollectionCommand { get; set; }
         public MainWindowVM()
         {
-            _collection = new ObservableCollection<CollectionItem>();
-            _journal = new ObservableCollection<JournalItem>();
-            fileService = new FileService();
-            CreateAuto = new RelayCommand(CreateAutoCollection, CanCreateAutoCollection);
-            LoadCollection = new RelayCommand(LoadCollectionFromFile, CanLoadCollectionFromFile);
+            Collection = new ObservableCollection<Person>();
+            Journal = new ObservableCollection<JournalEntry>();
+            Container = null;
+
+            SaveFileCommand = new RelayCommand(SaveIntoFile, CanSaveIntoFile);
+            LoadFileCommand = new RelayCommand(LoadFile, CanLoadFile);
+            CreateEmptyCollectionCommand = new RelayCommand(CreateEmptyCollection, CanCreateEmptyCollection);
+            CreateAutoCollectionCommand = new RelayCommand(CreateAutoCollection, CanCreateAutoCollection);
         }
-        //Get collection and journal data from Service to ObservableCollections
-        public void ProcessFileServiceData() 
+        //Save
+        public void SaveIntoFile(object? param) 
         {
-            //Clear Observable collections to contain new data
-            _collection.Clear();
-            _journal.Clear();
-
-            //Get collection and journal links
-            NewCustomHashTable<string, Person> collectionLink = fileService.Container.Persons;
-            Journal journalLink = fileService.Container.Journal;
-
-            //Shallow copy all data from collections to observable collections
-            foreach(KeyValuePair<string, Person> pair in collectionLink) 
+            if (Container != null) 
             {
-                CollectionItem unit = new(pair.Key, pair.Value);
-                _collection.Add(unit);
+                FileService.SaveIntoFile(Container.Collection, Container.Journal);
             }
-            foreach (JournalEntry entry in journalLink.Entries) 
+            else 
             {
-                JournalItem unit = new(entry.CollectionName, entry.MethodName, entry.SampleKey);
-                _journal.Add(unit);
+                MessageBox.Show("Container is null.\nNothing to save");
             }
         }
-        //Create auto collection sized by 10
-        public void CreateAutoCollection(object? param) 
-        {
-            //Create empty collection sized by 10 and empty journal
-            NewCustomHashTable<string, Person> collection = new(10);
-            Journal journal = new();
-
-            //Create container and subscibe journal method to collection events
-            CollectionContainer container = new(collection, journal);
-
-            //Fill Collection with 10 random persons
-            for (int i = 0; i < 10; i++)
-            {
-                string key = Guid.NewGuid().ToString(); //Rnd key
-                Person person = new Person();
-                person.RandomInit();
-                collection.Add(key, person);
-            }
-
-            //Connect container to fileService
-            fileService.Container = container;
-
-            //Ask user to save container as a file
-            if (!fileService.FileSave()) 
-            {
-                fileService.Container = null;
-                MessageBox.Show("Creation has been interrupted!", "Alert", MessageBoxButton.OK);
-                return; 
-            }
-
-            //Process container data and depict it at UI
-            ProcessFileServiceData();
-        }
-        public bool CanCreateAutoCollection(object? param) 
+        public bool CanSaveIntoFile(object? param)
         {
             return true;
         }
-        //Load collection from the file
-        public void LoadCollectionFromFile(object? param) 
+        //Load
+        public void LoadFile(object? param)
         {
-            if (!fileService.FileOpen()) 
+            if (Container != null)
             {
-                MessageBox.Show("Creation has been interrupted!", "Alert", MessageBoxButton.OK);
+                MessageBoxResult option = MessageBox.Show("Container isn't empty.\nDo you want to erase all unsaved data?", "Warning", MessageBoxButton.YesNo);
+                if (option == MessageBoxResult.Yes)
+                {
+                    CollectionContainer? gotResult = CreateFileBasedContainer();
+                    if (gotResult != null) 
+                    {
+                        Container = gotResult;
+                        UpdateData();
+                    }
+                    return;
+                }
+                else 
+                {
+                    return;
+                }
+            }
+            else
+            {
+                CollectionContainer? gotResult = CreateFileBasedContainer();
+                if (gotResult != null)
+                {
+                    Container = gotResult;
+                    UpdateData();
+                }
                 return;
             }
-            ProcessFileServiceData();
         }
-        public bool CanLoadCollectionFromFile(object? param) 
+        public bool CanLoadFile(object? param)
         {
             return true;
+        }
+        //CreateEmptyCollection
+        public void CreateEmptyCollection(object? param)
+        {
+            if (Container == null)
+            {
+                Container = new CollectionContainer();
+                Container.Collection.CollectionName = "Empty Collection";
+                UpdateData();
+            }
+            else
+            {
+                MessageBoxResult option = MessageBox.Show("Container isn't empty.\nDo you want to erase all unsaved data?", "Warning", MessageBoxButton.YesNo);
+                if (option == MessageBoxResult.Yes)
+                {
+                    Container = null;
+                    CreateEmptyCollection(param);
+                }
+                else { return; }
+            }
+        }
+        public bool CanCreateEmptyCollection(object? param)
+        {
+            return true;
+        }
+        //CreateAutoCollection
+        public void CreateAutoCollection(object? param)
+        {
+            if(Container == null) 
+            {
+                Container = new CollectionContainer();
+                Container.Collection.CollectionName = "Random Collection";
+                for (int i = 0; i < 10; i++) 
+                {
+                    Person randomPerson = ReturnRandomPerson();
+                    Container.AddUnit(randomPerson.Key, randomPerson);
+                }
+                UpdateData();
+            }
+            else 
+            {
+                MessageBoxResult option = MessageBox.Show("Container isn't empty.\nDo you want to erase all unsaved data?", "Warning",MessageBoxButton.YesNo);
+                if (option == MessageBoxResult.Yes) 
+                {
+                    Container = null;
+                    CreateAutoCollection(param);
+                }
+                else { return; }
+            }
+        }
+        public bool CanCreateAutoCollection(object? param)
+        {
+            return true;
+        }
+
+        private Person ReturnRandomPerson() 
+        {
+            Random rnd = new Random();
+            Person blank;
+            switch (rnd.Next(0, 4))
+            {
+                case 0:
+                    {
+                        blank = new Person();
+                        blank.RandomInit();
+                        break;
+                    }
+                case 1:
+                    {
+                        blank = new Employee();
+                        blank.RandomInit();
+                        break;
+                    }
+                case 2:
+                    {
+                        blank = new Engineer();
+                        blank.RandomInit();
+                        break;
+                    }
+                case 3:
+                    {
+                        blank = new Admin();
+                        blank.RandomInit();
+                        break;
+                    }
+                default: 
+                    {
+                        blank = new Person();
+                        blank.RandomInit();
+                        break;
+                    }
+            }
+            return blank;
+        }
+        //Used to add equal data to every collection and container. Takes data from the APP!
+        private void UpdateData() 
+        {
+            if (Container == null) 
+            {
+                MessageBox.Show("Can't update data: container is null");
+                return;
+            }
+            else 
+            {
+                Collection.Clear();
+                Journal.Clear();
+                foreach (KeyValuePair<string, Person> pair in Container.Collection)
+                {
+                    Collection.Add(pair.Value);
+                }
+                foreach (JournalEntry entry in Container.Journal.Entries)
+                {
+                    Journal.Add(entry);
+                }
+            }
+        }
+        //Used to create container based on file data
+        private CollectionContainer? CreateFileBasedContainer() 
+        {
+            NewCustomHashTable<string, Person>? collection = new();
+            Journal? journal = new();
+            FileService.LoadFile(out collection, out journal);
+            if(collection == null || journal == null) 
+            {
+                MessageBox.Show("Failed to create collection container.\nLoadFile returned null");
+                return null;
+            }
+            CollectionContainer container = new(collection, journal);
+            return container;
         }
     }
 }

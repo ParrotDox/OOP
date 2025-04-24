@@ -10,50 +10,10 @@ namespace ClassIerarchyLib
     public class Engineer : Employee
     {
         public static List<string> rndDepartments = new List<string> { "Department_of_aqua_technologies", "Department_of_food_production", "Department_of_space_production" };
-        Random rnd = new Random();
-        private string _department;
-        public string Department
-        {
-            get
-            {
-                return _department;
-            }
-            set
-            {
-                if (value.Length == 0)
-                {
-                    throw new ArgumentException("Department field is empty!");
-                }
-                _department = value;
-            }
-        }
-
+        public string Department { get;set; }
         public Engineer() : base()
         {
-            _department = "Undefined";
-        }
-        public Engineer(string name, int age, string residence, int id, int experience, int salary, string department ) : base(name, age, residence, id, experience, salary)
-        {
-            _department = department;
-        }
-        public Engineer(string name, int age, string residence, int id, int experience, int salary, string department, Link link_sample) : base(name, age, residence, id, experience, salary, link_sample)
-        {
-            _department = department;
-        }
-        public Engineer(Engineer copy_sample) : base(copy_sample)
-        {
-            this._department = copy_sample._department;
-        }
-        public override void Show()
-        {
-            base.Show();
-            Console.WriteLine($"Department: {Department}");
-        }
-        public override string GetInfo()
-        {
-            string msg = base.GetInfo();
-            msg += $"Department: {Department}\n";
-            return msg;
+            Department = "Undefined";
         }
         public override void Init()
         {
@@ -83,7 +43,7 @@ namespace ClassIerarchyLib
         public override void RandomInit()
         {
             base.RandomInit();
-
+            Random rnd = new Random();
             Department = rndDepartments[rnd.Next(0, rndDepartments.Count)];
         }
         public override bool Equals(object obj)
@@ -100,13 +60,9 @@ namespace ClassIerarchyLib
             }
             else { return false; }
         }
-        public override object Clone()
-        {
-            return new Engineer(this.Name, this.Age, this.Residence, this.Id, this.Experience, this.Salary, this.Department, new Link(link.Data, link.Notes));
-        }
         public override string ToString()
         {
-            return base.ToString() + $",{Department},IamEngi";
+            return base.ToString() + $"{Department},IamEngi";
         }
     }
 }

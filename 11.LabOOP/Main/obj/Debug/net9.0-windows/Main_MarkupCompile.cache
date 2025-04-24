@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP
 B:\GIT\OOP\11.LabOOP\Main\App.xaml
-1-487866684
+6528825109
 
-8-1668049411
+10-1662353241
 202-96283643
-View\MainWindow.xaml;
+Styles\AddUnit.xaml;Styles\Button.xaml;Styles\Label.xaml;Styles\ListBox.xaml;View\AddUnitWindow.xaml;View\MainWindow.xaml;
 
 False
 

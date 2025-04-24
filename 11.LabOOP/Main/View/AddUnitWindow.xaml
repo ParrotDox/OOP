@@ -1,0 +1,27 @@
+﻿<Window x:Class="Main.View.AddUnitWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Main.View"
+        mc:Ignorable="d"
+        Title="AddUnitWindow" MinHeight="400" Width="400">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <ComboBox Grid.Row="0" x:Name="UserChoice" SelectionChanged="UserChoice_SelectionChanged">
+            <TextBlock Text="Person"/>
+            <TextBlock Text="Employee"/>
+            <TextBlock Text="Engineer"/>
+            <TextBlock Text="Admin"/>
+        </ComboBox>
+        <ContentControl Grid.Row="1" Content="{Binding Input, Mode=TwoWay}"/>
+        <Button Grid.Row="2" Width="150"
+                x:Name="ButtonAddUnit"
+                Content="Add unit to collection" 
+                Command="{Binding AddUnit}" Click="ButtonAddUnit_Click"/>
+    </Grid>
+</Window>

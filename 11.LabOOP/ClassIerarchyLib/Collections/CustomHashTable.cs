@@ -4,30 +4,18 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace ClassIerarchyLib
 {
+    [Serializable]
     public class HashPoint<TKey, TVal>
     {
         public TKey Key { get; set; }
         public TVal Value { get; set; }
-        private HashPoint<TKey, TVal> _link_to_next;
-        public HashPoint<TKey, TVal> Link_to_next
-        {
-            get { return _link_to_next; }
-            set
-            {
-                if (value is HashPoint<TKey, TVal> || value is null)
-                {
-                    _link_to_next = value;
-                }
-                else
-                {
-                    throw new ArgumentException("set _link_to_next: Wrong data type");
-                }
-            }
-        }
+        public HashPoint<TKey, TVal> Link_to_next { get; set; }
 
         //Constructors
         public HashPoint(TKey key, TVal sample) 
@@ -43,21 +31,18 @@ namespace ClassIerarchyLib
             return temp;
         }
     }
+
+    [JsonDerivedType(typeof(CustomHashTable<string,Person>))]
+    [JsonDerivedType(typeof(NewCustomHashTable<string, Person>))]
+
+    [XmlInclude(typeof(CustomHashTable<string, Person>))]
+    [XmlInclude(typeof(NewCustomHashTable<string, Person>))]
+
     [Serializable]
     public class CustomHashTable<TKey, TVal> : IDictionary<TKey, TVal>
     {
         public HashPoint<TKey, TVal>[] Table { get; set; }
-        private int _size;
-        public int Size 
-        {
-            set 
-            {
-                if (value < 0)
-                    throw new ArgumentException("Set _size: size is under zero!");
-                _size = value;
-            }
-            get { return _size; }
-        }
+        public int Size { get; set; }
         public virtual TVal this[TKey key] 
         {
             get 
@@ -128,7 +113,7 @@ namespace ClassIerarchyLib
                 return count;
             }
         }
-        private bool _is_read_only;
+        private bool _is_read_only = false;
         public bool IsReadOnly
         {
             get
@@ -144,7 +129,7 @@ namespace ClassIerarchyLib
         //Constructors
         public CustomHashTable()
         {
-
+            Table = new HashPoint<TKey, TVal>[100];
         }
         public CustomHashTable(int size) 
         {

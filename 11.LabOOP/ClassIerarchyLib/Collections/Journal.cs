@@ -30,12 +30,13 @@ namespace ClassIerarchyLib
         {
             CollectionName = "";
             MethodName = "";
+            SampleKey = "";
         }
-        public JournalEntry(string collection, string method, string sampleKey)
+        public JournalEntry(string collection, string method, string key)
         {
             CollectionName = collection;
             MethodName = method;
-            SampleKey = sampleKey;
+            SampleKey = key;
         }
         public override string ToString()
         {
