@@ -5,13 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Main.View"
         mc:Ignorable="d"
-        Title="ResultLINQWindow" Height="350" Width="300">
+        Background="#F2F5F8"
+        Title="ResultLINQWindow" Height="350" Width="440">
     <Grid Margin="5">
         <Grid.RowDefinitions>
             <RowDefinition Height="40px"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Content="QueryResult" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <ListBox Grid.Row="1" ItemsSource="{Binding Query}" HorizontalContentAlignment="Center"/>
+        <ListBox Grid.Row="1" ItemsSource="{Binding Query}" HorizontalContentAlignment="Center"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
     </Grid>
 </Window>

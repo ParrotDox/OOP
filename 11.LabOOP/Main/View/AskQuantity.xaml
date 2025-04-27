@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Main.View"
         mc:Ignorable="d"
-        Title="AskQuantity" Height="150" Width="250">
+        Background="#F2F5F8"
+        Title="AskQuantity" Height="200" Width="350">
     <Grid>
         <StackPanel HorizontalAlignment="Center">
             <Label Content="How many elements to add?"/>
             <TextBox Text="{Binding Input}"/>
-            <Button x:Name="ConfirmButton" Width="100" Height="30" Content="Confirm" Click="ConfirmButton_Click"/>
+            <Button x:Name="ConfirmButton" Width="100" Content="Confirm" Click="ConfirmButton_Click" Margin="0 25 0 0"/>
         </StackPanel>
     </Grid>
 </Window>

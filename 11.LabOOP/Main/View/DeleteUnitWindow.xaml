@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Main.View"
         mc:Ignorable="d"
         SizeToContent="Height"
+        Background="#F2F5F8"
         Title="DeleteUnitWindow" MinHeight="300" Width="400">
     <Grid Margin="5">
         <Grid.RowDefinitions>

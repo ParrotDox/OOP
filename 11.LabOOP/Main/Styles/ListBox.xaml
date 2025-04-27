@@ -4,53 +4,222 @@
                     xmlns:ClassLib="clr-namespace:ClassIerarchyLib;assembly=ClassIerarchyLib">
 
     <DataTemplate DataType="{x:Type ClassLib:Person}">
-        <StackPanel>
-            <TextBox Text="{Binding Key}" FontWeight="Bold" IsReadOnly="True"/>
-            <TextBlock Text="{Binding Name}"/>
-            <TextBlock Text="{Binding Age}"/>
-            <TextBlock Text="{Binding Residence}"/>
-        </StackPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Row="0" Text="{Binding Key, StringFormat='{}Key: {0}'}" FontWeight="Bold" IsReadOnly="True"
+                     Background="#324A5F"
+                     BorderBrush="#324A5F"
+                     Foreground="#FAFFFD"
+                     Padding="5 5 0 5"
+                     Height="35"/>
+            <TextBlock Grid.Row="1" Text="{Binding Name, StringFormat='{}Name: {0}'}" FontSize="14"
+                     Background="#ADE5FF"
+                     Foreground="#342E37"
+                     Padding="10 5 0 5"
+                     FontFamily="Arial Rounded MT Bold"/>
+            <TextBlock Grid.Row="2" Text="{Binding Age, StringFormat='{}Age: {0}'}" FontSize="14"
+                     Background="#ADE5FF"
+                     Foreground="#342E37"
+                     Padding="10 5 0 5"
+                     FontFamily="Arial Rounded MT Bold"/>
+            <TextBlock Grid.Row="3" Text="{Binding Residence, StringFormat='{}Residence: {0}'}" FontSize="14"
+                     Background="#ADE5FF"
+                     Foreground="#342E37"
+                     Padding="10 5 0 5"
+                     FontFamily="Arial Rounded MT Bold"/>
+        </Grid>
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type ClassLib:Employee}">
-        <StackPanel>
-            <TextBox Text="{Binding Key}" FontWeight="Bold" IsReadOnly="True"/>
-            <TextBlock Text="{Binding Name}"/>
-            <TextBlock Text="{Binding Age}"/>
-            <TextBlock Text="{Binding Residence}"/>
-            <TextBlock Text="{Binding Salary}"/>
-            <TextBlock Text="{Binding Experience}"/>
-        </StackPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Row="0" Text="{Binding Key, StringFormat='{}Key: {0}'}" FontWeight="Bold" IsReadOnly="True"
+                     Background="#324A5F"
+                     BorderBrush="#324A5F"
+                     Foreground="#FAFFFD"
+                     Padding="5 5 0 5"
+                     Height="35"/>
+            <TextBlock Grid.Row="1" Text="{Binding Name, StringFormat='{}Name: {0}'}" FontSize="14"
+                     Background="#ADE5FF"
+                     Foreground="#342E37"
+                     Padding="10 5 0 5"
+                     FontFamily="Arial Rounded MT Bold"/>
+            <TextBlock Grid.Row="2" Text="{Binding Age, StringFormat='{}Age: {0}'}" FontSize="14"
+                     Background="#ADE5FF"
+                     Foreground="#342E37"
+                     Padding="10 5 0 5"
+                     FontFamily="Arial Rounded MT Bold"/>
+            <TextBlock Grid.Row="3" Text="{Binding Residence, StringFormat='{}Residence: {0}'}" FontSize="14"
+                     Background="#ADE5FF"
+                     Foreground="#342E37"
+                     Padding="10 5 0 5"
+                     FontFamily="Arial Rounded MT Bold"/>
+            <TextBlock Grid.Row="4" Text="{Binding Salary, StringFormat='{}Salary: {0}'}" FontSize="14"
+                     Background="#ADE5FF"
+                     Foreground="#342E37"
+                     Padding="10 5 0 5"
+                     FontFamily="Arial Rounded MT Bold"/>
+            <TextBlock Grid.Row="5" Text="{Binding Experience, StringFormat='{}Experience: {0}'}" FontSize="14"
+                     Background="#ADE5FF"
+                     Foreground="#342E37"
+                     Padding="10 5 0 5"
+                     FontFamily="Arial Rounded MT Bold"/>
+        </Grid>
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type ClassLib:Engineer}">
-        <StackPanel>
-            <TextBox Text="{Binding Key}" FontWeight="Bold" IsReadOnly="True"/>
-            <TextBlock Text="{Binding Name}"/>
-            <TextBlock Text="{Binding Age}"/>
-            <TextBlock Text="{Binding Residence}"/>
-            <TextBlock Text="{Binding Salary}"/>
-            <TextBlock Text="{Binding Experience}"/>
-            <TextBlock Text="{Binding Department}"/>
-        </StackPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Row="0" Text="{Binding Key, StringFormat='{}Key: {0}'}" FontWeight="Bold" IsReadOnly="True"
+                     Background="#324A5F"
+                     BorderBrush="#324A5F"
+                     Foreground="#FAFFFD"
+                     Padding="5 5 0 5"
+                     Height="35"/>
+            <TextBlock Grid.Row="1" Text="{Binding Name, StringFormat='{}Name: {0}'}" FontSize="14"
+                     Background="#ADE5FF"
+                     Foreground="#342E37"
+                     Padding="10 5 0 5"
+                     FontFamily="Arial Rounded MT Bold"/>
+            <TextBlock Grid.Row="2" Text="{Binding Age, StringFormat='{}Age: {0}'}" FontSize="14"
+                     Background="#ADE5FF"
+                     Foreground="#342E37"
+                     Padding="10 5 0 5"
+                     FontFamily="Arial Rounded MT Bold"/>
+            <TextBlock Grid.Row="3" Text="{Binding Residence, StringFormat='{}Residence: {0}'}" FontSize="14"
+                     Background="#ADE5FF"
+                     Foreground="#342E37"
+                     Padding="10 5 0 5"
+                     FontFamily="Arial Rounded MT Bold"/>
+            <TextBlock Grid.Row="4" Text="{Binding Salary, StringFormat='{}Salary: {0}'}" FontSize="14"
+                     Background="#ADE5FF"
+                     Foreground="#342E37"
+                     Padding="10 5 0 5"
+                     FontFamily="Arial Rounded MT Bold"/>
+            <TextBlock Grid.Row="5" Text="{Binding Experience, StringFormat='{}Experience: {0}'}" FontSize="14"
+                     Background="#ADE5FF"
+                     Foreground="#342E37"
+                     Padding="10 5 0 5"
+                     FontFamily="Arial Rounded MT Bold"/>
+            <TextBlock Grid.Row="6" Text="{Binding Department, StringFormat='{}Department: {0}'}" FontSize="14"
+                     Background="#ADE5FF"
+                     Foreground="#342E37"
+                     Padding="10 5 0 5"
+                     FontFamily="Arial Rounded MT Bold"/>
+        </Grid>
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type ClassLib:Admin}">
-        <StackPanel>
-            <TextBox Text="{Binding Key}" FontWeight="Bold" IsReadOnly="True"/>
-            <TextBlock Text="{Binding Name}"/>
-            <TextBlock Text="{Binding Age}"/>
-            <TextBlock Text="{Binding Residence}"/>
-            <TextBlock Text="{Binding Salary}"/>
-            <TextBlock Text="{Binding Experience}"/>
-            <TextBlock Text="{Binding HeadOffice}"/>
-        </StackPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Row="0" Text="{Binding Key, StringFormat='{}Key: {0}'}" FontWeight="Bold" IsReadOnly="True"
+                     Background="#324A5F"
+                     BorderBrush="#324A5F"
+                     Foreground="#FAFFFD"
+                     Padding="5 5 0 5"
+                     Height="35"/>
+            <TextBlock Grid.Row="1" Text="{Binding Name, StringFormat='{}Name: {0}'}" FontSize="14"
+                     Background="#ADE5FF"
+                     Foreground="#342E37"
+                     Padding="10 5 0 5"
+                     FontFamily="Arial Rounded MT Bold"/>
+            <TextBlock Grid.Row="2" Text="{Binding Age, StringFormat='{}Age: {0}'}" FontSize="14"
+                     Background="#ADE5FF"
+                     Foreground="#342E37"
+                     Padding="10 5 0 5"
+                     FontFamily="Arial Rounded MT Bold"/>
+            <TextBlock Grid.Row="3" Text="{Binding Residence, StringFormat='{}Residence: {0}'}" FontSize="14"
+                     Background="#ADE5FF"
+                     Foreground="#342E37"
+                     Padding="10 5 0 5"
+                     FontFamily="Arial Rounded MT Bold"/>
+            <TextBlock Grid.Row="4" Text="{Binding Salary, StringFormat='{}Salary: {0}'}" FontSize="14"
+                     Background="#ADE5FF"
+                     Foreground="#342E37"
+                     Padding="10 5 0 5"
+                     FontFamily="Arial Rounded MT Bold"/>
+            <TextBlock Grid.Row="5" Text="{Binding Experience, StringFormat='{}Experience: {0}'}" FontSize="14"
+                     Background="#ADE5FF"
+                     Foreground="#342E37"
+                     Padding="10 5 0 5"
+                     FontFamily="Arial Rounded MT Bold"/>
+            <TextBlock Grid.Row="6" Text="{Binding HeadOffice, StringFormat='{}Head office: {0}'}" FontSize="14"
+                     Background="#ADE5FF"
+                     Foreground="#342E37"
+                     Padding="10 5 0 5"
+                     FontFamily="Arial Rounded MT Bold"/>
+        </Grid>
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type ClassLib:JournalEntry}">
-        <StackPanel>
-            <TextBox Text="{Binding SampleKey}" FontWeight="Bold" IsReadOnly="True"/>
-            <TextBlock Text="{Binding MethodName}"/>
-        </StackPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="380"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Row="0" Text="{Binding SampleKey, StringFormat='{}Sample key: {0}'}"
+                     FontWeight="Bold"
+                     IsReadOnly="True"
+                     FontSize="14"
+                     Background="#324A5F"
+                     BorderBrush="#324A5F"
+                     Foreground="#FAFFFD"
+                     Padding="5 5 0 5"
+                     Height="35"/>
+            <TextBlock Grid.Row="1" Text="{Binding MethodName, StringFormat='{}Method name: {0}'}"
+                     FontSize="14"
+                     Background="#ADE5FF"
+                     Foreground="#342E37"
+                     FontFamily="Arial Rounded MT Bold"
+                     Padding="10 5 0 5"
+                     Margin="0 0 0 5"/>
+        </Grid>
     </DataTemplate>
 </ResourceDictionary>

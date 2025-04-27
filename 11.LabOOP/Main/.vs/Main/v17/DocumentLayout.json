@@ -3,56 +3,56 @@
   "WorkspaceRootPath": "B:\\GIT\\OOP\\11.LabOOP\\Main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\view\\linqwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:view\\linqwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\styles\\listbox.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:styles\\listbox.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\view\\linqwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:view\\linqwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\viewmodel\\linqwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:viewmodel\\linqwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\view\\resultlinqwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:view\\resultlinqwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\view\\resultlinqwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:view\\resultlinqwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\viewmodel\\resultlinqwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:viewmodel\\resultlinqwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\viewmodel\\mainwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:viewmodel\\mainwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\styles\\button.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:styles\\button.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\view\\addunitwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:view\\addunitwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\viewmodel\\changewindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:viewmodel\\changewindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\styles\\deleteunit.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:styles\\deleteunit.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\view\\askquantity.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:view\\askquantity.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\view\\changeunitwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:view\\changeunitwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\view\\deleteunitwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:view\\deleteunitwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\view\\linqwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:view\\linqwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\view\\resultlinqwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:view\\resultlinqwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\styles\\addunit.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:styles\\addunit.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\styles\\textbox.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:styles\\textbox.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\styles\\label.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:styles\\label.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,183 +62,171 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MainWindowVM.cs",
-              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\ViewModel\\MainWindowVM.cs",
-              "RelativeDocumentMoniker": "ViewModel\\MainWindowVM.cs",
-              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\ViewModel\\MainWindowVM.cs",
-              "RelativeToolTip": "ViewModel\\MainWindowVM.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAiwLwAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T07:47:33.73Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "View\\MainWindow.xaml",
-              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\MainWindow.xaml",
-              "RelativeToolTip": "View\\MainWindow.xaml",
+              "DocumentIndex": 1,
+              "Title": "Button.xaml",
+              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\Styles\\Button.xaml",
+              "RelativeDocumentMoniker": "Styles\\Button.xaml",
+              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\Styles\\Button.xaml",
+              "RelativeToolTip": "Styles\\Button.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-24T07:19:30.273Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "View\\MainWindow.xaml.cs",
-              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\MainWindow.xaml.cs",
-              "RelativeToolTip": "View\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T07:42:49.552Z",
+              "WhenOpened": "2025-04-27T13:58:53.543Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LINQWindow.xaml",
-              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\LINQWindow.xaml",
-              "RelativeDocumentMoniker": "View\\LINQWindow.xaml",
-              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\LINQWindow.xaml",
-              "RelativeToolTip": "View\\LINQWindow.xaml",
+              "Title": "ListBox.xaml",
+              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\Styles\\ListBox.xaml",
+              "RelativeDocumentMoniker": "Styles\\ListBox.xaml",
+              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\Styles\\ListBox.xaml",
+              "RelativeToolTip": "Styles\\ListBox.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-27T08:06:54.104Z",
+              "WhenOpened": "2025-04-27T14:26:43.907Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LINQWindowVM.cs",
-              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\ViewModel\\LINQWindowVM.cs",
-              "RelativeDocumentMoniker": "ViewModel\\LINQWindowVM.cs",
-              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\ViewModel\\LINQWindowVM.cs",
-              "RelativeToolTip": "ViewModel\\LINQWindowVM.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAhwFcAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T08:36:34.365Z",
+              "DocumentIndex": 8,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "View\\MainWindow.xaml",
+              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\MainWindow.xaml",
+              "RelativeToolTip": "View\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-27T14:02:29.045Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LINQWindow.xaml.cs",
-              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\LINQWindow.xaml.cs",
-              "RelativeDocumentMoniker": "View\\LINQWindow.xaml.cs",
-              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\LINQWindow.xaml.cs",
-              "RelativeToolTip": "View\\LINQWindow.xaml.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T08:38:36.835Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "ResultLINQWindow.xaml",
               "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\ResultLINQWindow.xaml",
               "RelativeDocumentMoniker": "View\\ResultLINQWindow.xaml",
               "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\ResultLINQWindow.xaml",
               "RelativeToolTip": "View\\ResultLINQWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-27T10:57:23.449Z",
+              "WhenOpened": "2025-04-27T14:01:00.317Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ResultLINQWindowVM.cs",
-              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\ViewModel\\ResultLINQWindowVM.cs",
-              "RelativeDocumentMoniker": "ViewModel\\ResultLINQWindowVM.cs",
-              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\ViewModel\\ResultLINQWindowVM.cs",
-              "RelativeToolTip": "ViewModel\\ResultLINQWindowVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T11:01:28.727Z",
-              "IsPinned": true,
+              "Title": "DeleteUnitWindow.xaml",
+              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\DeleteUnitWindow.xaml",
+              "RelativeDocumentMoniker": "View\\DeleteUnitWindow.xaml",
+              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\DeleteUnitWindow.xaml",
+              "RelativeToolTip": "View\\DeleteUnitWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-27T15:16:59.892Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ResultLINQWindow.xaml.cs",
-              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\ResultLINQWindow.xaml.cs",
-              "RelativeDocumentMoniker": "View\\ResultLINQWindow.xaml.cs",
-              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\ResultLINQWindow.xaml.cs",
-              "RelativeToolTip": "View\\ResultLINQWindow.xaml.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAiwB4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T11:05:12.225Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AddUnitWindow.xaml",
-              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\AddUnitWindow.xaml",
-              "RelativeDocumentMoniker": "View\\AddUnitWindow.xaml",
-              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\AddUnitWindow.xaml",
-              "RelativeToolTip": "View\\AddUnitWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-27T09:31:49.448Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ChangeWindowVM.cs",
-              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\ViewModel\\ChangeWindowVM.cs",
-              "RelativeDocumentMoniker": "ViewModel\\ChangeWindowVM.cs",
-              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\ViewModel\\ChangeWindowVM.cs",
-              "RelativeToolTip": "ViewModel\\ChangeWindowVM.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAADQAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T09:18:24.941Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "ChangeUnitWindow.xaml",
               "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\ChangeUnitWindow.xaml",
               "RelativeDocumentMoniker": "View\\ChangeUnitWindow.xaml",
               "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\ChangeUnitWindow.xaml",
               "RelativeToolTip": "View\\ChangeUnitWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-27T09:18:20.761Z",
+              "WhenOpened": "2025-04-27T15:13:09.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AskQuantity.xaml",
+              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\AskQuantity.xaml",
+              "RelativeDocumentMoniker": "View\\AskQuantity.xaml",
+              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\AskQuantity.xaml",
+              "RelativeToolTip": "View\\AskQuantity.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-27T14:53:49.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AddUnit.xaml",
+              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\Styles\\AddUnit.xaml",
+              "RelativeDocumentMoniker": "Styles\\AddUnit.xaml",
+              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\Styles\\AddUnit.xaml",
+              "RelativeToolTip": "Styles\\AddUnit.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-27T14:14:52.073Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "DeleteUnit.xaml",
-              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\Styles\\DeleteUnit.xaml",
-              "RelativeDocumentMoniker": "Styles\\DeleteUnit.xaml",
-              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\Styles\\DeleteUnit.xaml",
-              "RelativeToolTip": "Styles\\DeleteUnit.xaml",
+              "Title": "App.xaml",
+              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\App.xaml",
+              "RelativeToolTip": "App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-27T08:31:47.001Z",
+              "WhenOpened": "2025-04-27T14:12:12.627Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TextBox.xaml",
+              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\Styles\\TextBox.xaml",
+              "RelativeDocumentMoniker": "Styles\\TextBox.xaml",
+              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\Styles\\TextBox.xaml",
+              "RelativeToolTip": "Styles\\TextBox.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-27T14:02:45.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddUnitWindow.xaml",
+              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\AddUnitWindow.xaml",
+              "RelativeDocumentMoniker": "View\\AddUnitWindow.xaml",
+              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\AddUnitWindow.xaml",
+              "RelativeToolTip": "View\\AddUnitWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-27T14:02:09.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LINQWindow.xaml",
+              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\LINQWindow.xaml",
+              "RelativeDocumentMoniker": "View\\LINQWindow.xaml",
+              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\LINQWindow.xaml",
+              "RelativeToolTip": "View\\LINQWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-27T14:00:45.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Label.xaml",
+              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\Styles\\Label.xaml",
+              "RelativeDocumentMoniker": "Styles\\Label.xaml",
+              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\Styles\\Label.xaml",
+              "RelativeToolTip": "Styles\\Label.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-27T13:58:00.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

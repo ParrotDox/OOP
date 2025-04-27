@@ -6,15 +6,16 @@
         xmlns:local="clr-namespace:Main"
         xmlns:ClassLib="clr-namespace:ClassIerarchyLib;assembly=ClassIerarchyLib"
         mc:Ignorable="d"
-        Title="Collection App" Height="700" Width="700">
+        Background="#F2F5F8"
+        Title="Collection App" Height="750" Width="860">
     <Window.Resources>
 
     </Window.Resources>
     <Grid>
         <!--2-->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="420"/>
+            <ColumnDefinition Width="440"/>
         </Grid.ColumnDefinitions>
         <!--11-->
         <Grid.RowDefinitions>
@@ -25,13 +26,13 @@
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <!--Row:0 | Column 0-1 HEADER/TOOLBAR-->
-        <ToolBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
-            <Button Content="Save" Command="{Binding SaveFileCommand}"/>
-            <Button Content="Load" Command="{Binding LoadFileCommand}"/>
+        <ToolBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#F2F5F8">
+            <Button Content="Save" Command="{Binding SaveFileCommand}" FontSize="16" FontFamily="Arial Rounded" Margin="0 0 5 0"/>
+            <Button Content="Load" Command="{Binding LoadFileCommand}" FontSize="16" FontFamily="Arial Rounded" Margin="0 0 5 0"/>
         </ToolBar>
         <!--Row: 1 | Column: 0-1 LABELS-->
-        <Label Grid.Row="1" Grid.Column="0" Content="Options"/>
-        <Label Grid.Row="1" Grid.Column="1" Content="Collection"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="Options" Padding="10 0 0 0"/>
+        <Label Grid.Row="1" Grid.Column="1" Content="Collection" Padding="10 0 0 0"/>
         <!--Row: 2 | Column: 0 BUTTONS-->
         <Grid Grid.Row="2" Grid.Column="0" Margin="10">
             <Grid.RowDefinitions>
@@ -50,19 +51,21 @@
             <Button Grid.Row="5" Content="Query" Command="{Binding UseLINQCommand}"/>
         </Grid>
         <!--Row: 3 | Column: 0 LABELS-->
-        <Label Grid.Row="3" Grid.Column="0" Content="Journal"/>
+        <Label Grid.Row="3" Grid.Column="0" Content="Journal" Padding="10 0 0 0"/>
         <!--Row: 4 | Column: 0 JOURNAL LISTBOX-->
         <ListBox Grid.Row="4"
                  Grid.Column="0"
                  Margin="5"
-                 ItemsSource="{Binding Journal}">
+                 ItemsSource="{Binding Journal}"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled">
         </ListBox>
         <!--Row: 2 | Column: 1 COLLECTION LISTBOX-->
         <ListBox Grid.Row="2"
                  Grid.Column="1"
                  Grid.RowSpan="3"
                  Margin="5"
-                 ItemsSource="{Binding Collection}">
+                 ItemsSource="{Binding Collection}"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled">
         </ListBox>
     </Grid>
 </Window>
