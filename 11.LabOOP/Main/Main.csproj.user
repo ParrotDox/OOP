@@ -10,9 +10,30 @@
     <Compile Update="View\AddUnitWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\AskQuantity.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ChangeUnitWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\DeleteUnitWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\LINQWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ResultLINQWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Styles\AddUnit.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\DeleteUnit.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\TextBox.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\Label.xaml">
@@ -27,7 +48,22 @@
     <Page Update="View\AddUnitWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\AskQuantity.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ChangeUnitWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\DeleteUnitWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\LINQWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ResultLINQWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

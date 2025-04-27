@@ -3,36 +3,56 @@
   "WorkspaceRootPath": "B:\\GIT\\OOP\\11.LabOOP\\Main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\service\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:service\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\view\\linqwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:view\\linqwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\viewmodel\\mainwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:viewmodel\\mainwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\view\\linqwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:view\\linqwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B714315A-F1C0-408D-A80A-835B1F6E2220}|..\\ClassIerarchyLib\\ClassIerarchyLib.csproj|b:\\git\\oop\\11.laboop\\classierarchylib\\baseclasses\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\viewmodel\\linqwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:viewmodel\\linqwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\model\\collectioncontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:model\\collectioncontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\view\\resultlinqwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:view\\resultlinqwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B714315A-F1C0-408D-A80A-835B1F6E2220}|..\\ClassIerarchyLib\\ClassIerarchyLib.csproj|b:\\git\\oop\\11.laboop\\classierarchylib\\baseclasses\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\view\\resultlinqwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:view\\resultlinqwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B714315A-F1C0-408D-A80A-835B1F6E2220}|..\\ClassIerarchyLib\\ClassIerarchyLib.csproj|b:\\git\\oop\\11.laboop\\classierarchylib\\collections\\journal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B714315A-F1C0-408D-A80A-835B1F6E2220}|..\\ClassIerarchyLib\\ClassIerarchyLib.csproj|b:\\git\\oop\\11.laboop\\classierarchylib\\collections\\customhashtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\viewmodel\\resultlinqwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:viewmodel\\resultlinqwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\styles\\listbox.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:styles\\listbox.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\viewmodel\\mainwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:viewmodel\\mainwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\view\\addunitwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:view\\addunitwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\viewmodel\\changewindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:viewmodel\\changewindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\styles\\deleteunit.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:styles\\deleteunit.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|b:\\git\\oop\\11.laboop\\main\\view\\changeunitwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6C6DEEA1-0873-4FF7-A408-F2560FE6D957}|Main.csproj|solutionrelative:view\\changeunitwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,31 +62,17 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FileService.cs",
-              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\Service\\FileService.cs",
-              "RelativeDocumentMoniker": "Service\\FileService.cs",
-              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\Service\\FileService.cs",
-              "RelativeToolTip": "Service\\FileService.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAowHoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T12:23:31.211Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "MainWindowVM.cs",
               "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\ViewModel\\MainWindowVM.cs",
               "RelativeDocumentMoniker": "ViewModel\\MainWindowVM.cs",
               "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\ViewModel\\MainWindowVM.cs",
               "RelativeToolTip": "ViewModel\\MainWindowVM.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAArwDoAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAiwLwAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-24T07:47:33.73Z",
               "IsPinned": true,
@@ -74,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\MainWindow.xaml",
               "RelativeDocumentMoniker": "View\\MainWindow.xaml",
@@ -87,28 +93,97 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ListBox.xaml",
-              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\Styles\\ListBox.xaml",
-              "RelativeDocumentMoniker": "Styles\\ListBox.xaml",
-              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\Styles\\ListBox.xaml",
-              "RelativeToolTip": "Styles\\ListBox.xaml",
+              "DocumentIndex": 7,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "View\\MainWindow.xaml.cs",
+              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\MainWindow.xaml.cs",
+              "RelativeToolTip": "View\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T07:42:49.552Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LINQWindow.xaml",
+              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\LINQWindow.xaml",
+              "RelativeDocumentMoniker": "View\\LINQWindow.xaml",
+              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\LINQWindow.xaml",
+              "RelativeToolTip": "View\\LINQWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-24T16:45:34.423Z",
+              "WhenOpened": "2025-04-27T08:06:54.104Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LINQWindowVM.cs",
+              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\ViewModel\\LINQWindowVM.cs",
+              "RelativeDocumentMoniker": "ViewModel\\LINQWindowVM.cs",
+              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\ViewModel\\LINQWindowVM.cs",
+              "RelativeToolTip": "ViewModel\\LINQWindowVM.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAhwFcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T08:36:34.365Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LINQWindow.xaml.cs",
+              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\LINQWindow.xaml.cs",
+              "RelativeDocumentMoniker": "View\\LINQWindow.xaml.cs",
+              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\LINQWindow.xaml.cs",
+              "RelativeToolTip": "View\\LINQWindow.xaml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T08:38:36.835Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CollectionContainer.cs",
-              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\Model\\CollectionContainer.cs",
-              "RelativeDocumentMoniker": "Model\\CollectionContainer.cs",
-              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\Model\\CollectionContainer.cs",
-              "RelativeToolTip": "Model\\CollectionContainer.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC0AAAAmAAAAAAAAAA==",
+              "Title": "ResultLINQWindow.xaml",
+              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\ResultLINQWindow.xaml",
+              "RelativeDocumentMoniker": "View\\ResultLINQWindow.xaml",
+              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\ResultLINQWindow.xaml",
+              "RelativeToolTip": "View\\ResultLINQWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-27T10:57:23.449Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ResultLINQWindowVM.cs",
+              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\ViewModel\\ResultLINQWindowVM.cs",
+              "RelativeDocumentMoniker": "ViewModel\\ResultLINQWindowVM.cs",
+              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\ViewModel\\ResultLINQWindowVM.cs",
+              "RelativeToolTip": "ViewModel\\ResultLINQWindowVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T15:44:37.214Z",
+              "WhenOpened": "2025-04-27T11:01:28.727Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ResultLINQWindow.xaml.cs",
+              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\ResultLINQWindow.xaml.cs",
+              "RelativeDocumentMoniker": "View\\ResultLINQWindow.xaml.cs",
+              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\ResultLINQWindow.xaml.cs",
+              "RelativeToolTip": "View\\ResultLINQWindow.xaml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAiwB4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T11:05:12.225Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -118,54 +193,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Person.cs",
-              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\ClassIerarchyLib\\BaseClasses\\Person.cs",
-              "RelativeDocumentMoniker": "..\\ClassIerarchyLib\\BaseClasses\\Person.cs",
-              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\ClassIerarchyLib\\BaseClasses\\Person.cs",
-              "RelativeToolTip": "..\\ClassIerarchyLib\\BaseClasses\\Person.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAApwDgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T18:43:15.29Z",
+              "DocumentIndex": 9,
+              "Title": "AddUnitWindow.xaml",
+              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\AddUnitWindow.xaml",
+              "RelativeDocumentMoniker": "View\\AddUnitWindow.xaml",
+              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\AddUnitWindow.xaml",
+              "RelativeToolTip": "View\\AddUnitWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-27T09:31:49.448Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Admin.cs",
-              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\ClassIerarchyLib\\BaseClasses\\Admin.cs",
-              "RelativeDocumentMoniker": "..\\ClassIerarchyLib\\BaseClasses\\Admin.cs",
-              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\ClassIerarchyLib\\BaseClasses\\Admin.cs",
-              "RelativeToolTip": "..\\ClassIerarchyLib\\BaseClasses\\Admin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "ChangeWindowVM.cs",
+              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\ViewModel\\ChangeWindowVM.cs",
+              "RelativeDocumentMoniker": "ViewModel\\ChangeWindowVM.cs",
+              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\ViewModel\\ChangeWindowVM.cs",
+              "RelativeToolTip": "ViewModel\\ChangeWindowVM.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADQAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T19:28:22.725Z",
+              "WhenOpened": "2025-04-27T09:18:24.941Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CustomHashTable.cs",
-              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\ClassIerarchyLib\\Collections\\CustomHashTable.cs",
-              "RelativeDocumentMoniker": "..\\ClassIerarchyLib\\Collections\\CustomHashTable.cs",
-              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\ClassIerarchyLib\\Collections\\CustomHashTable.cs",
-              "RelativeToolTip": "..\\ClassIerarchyLib\\Collections\\CustomHashTable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFoBAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T18:45:49.666Z",
+              "DocumentIndex": 12,
+              "Title": "ChangeUnitWindow.xaml",
+              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\ChangeUnitWindow.xaml",
+              "RelativeDocumentMoniker": "View\\ChangeUnitWindow.xaml",
+              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\View\\ChangeUnitWindow.xaml",
+              "RelativeToolTip": "View\\ChangeUnitWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-27T09:18:20.761Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Journal.cs",
-              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\ClassIerarchyLib\\Collections\\Journal.cs",
-              "RelativeDocumentMoniker": "..\\ClassIerarchyLib\\Collections\\Journal.cs",
-              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\ClassIerarchyLib\\Collections\\Journal.cs",
-              "RelativeToolTip": "..\\ClassIerarchyLib\\Collections\\Journal.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAvwBAAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T16:59:07.678Z",
+              "DocumentIndex": 11,
+              "Title": "DeleteUnit.xaml",
+              "DocumentMoniker": "B:\\GIT\\OOP\\11.LabOOP\\Main\\Styles\\DeleteUnit.xaml",
+              "RelativeDocumentMoniker": "Styles\\DeleteUnit.xaml",
+              "ToolTip": "B:\\GIT\\OOP\\11.LabOOP\\Main\\Styles\\DeleteUnit.xaml",
+              "RelativeToolTip": "Styles\\DeleteUnit.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-27T08:31:47.001Z",
               "EditorCaption": ""
             }
           ]

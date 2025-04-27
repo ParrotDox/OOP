@@ -31,3 +31,15 @@ B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\GeneratedInternalTypeHelper.g
 B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\View\AddUnitWindow.g.cs
 B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\View\AddUnitWindow.baml
 B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\Styles\AddUnit.baml
+B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\View\ChangeUnitWindow.g.cs
+B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\View\ChangeUnitWindow.baml
+B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\View\DeleteUnitWindow.g.cs
+B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\View\DeleteUnitWindow.baml
+B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\Styles\TextBox.baml
+B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\Styles\DeleteUnit.baml
+B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\View\AskQuantity.g.cs
+B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\View\AskQuantity.baml
+B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\View\LINQWindow.g.cs
+B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\View\LINQWindow.baml
+B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\View\ResultLINQWindow.g.cs
+B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\View\ResultLINQWindow.baml

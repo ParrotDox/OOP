@@ -1,0 +1,23 @@
+﻿<Window x:Class="Main.View.DeleteUnitWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Main.View"
+        mc:Ignorable="d"
+        SizeToContent="Height"
+        Title="DeleteUnitWindow" MinHeight="300" Width="400">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60px"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="50px"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Label Content="Key"/>
+            <TextBox Text="{Binding UserKey, UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+        <ContentControl Grid.Row="1" Content="{Binding Input, Mode=OneWay}"/>
+        <Button x:Name="DeleteUnitButton" Grid.Row="2" Width="150" Content="Delete unit" Click="DeleteUnitButton_Click"/>
+    </Grid>
+</Window>

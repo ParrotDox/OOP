@@ -63,7 +63,8 @@ namespace ClassIerarchyLib
         }
         public override string ToString()
         {
-            return base.ToString() + $"{HeadOffice}";
+            //9 fields
+            return base.ToString() + $",{HeadOffice}";
         }
     }
 }

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP
 B:\GIT\OOP\11.LabOOP\Main\App.xaml
-6528825109
+13495458779
 
-12-1409090370
+231637252598
 202-96283643
-Styles\AddUnit.xaml;Styles\Button.xaml;Styles\Label.xaml;Styles\ListBox.xaml;View\AddUnitWindow.xaml;View\MainWindow.xaml;
+Styles\AddUnit.xaml;Styles\Button.xaml;Styles\DeleteUnit.xaml;Styles\Label.xaml;Styles\ListBox.xaml;Styles\TextBox.xaml;View\AddUnitWindow.xaml;View\AskQuantity.xaml;View\ChangeUnitWindow.xaml;View\DeleteUnitWindow.xaml;View\LINQWindow.xaml;View\MainWindow.xaml;View\ResultLINQWindow.xaml;
 
 True
 

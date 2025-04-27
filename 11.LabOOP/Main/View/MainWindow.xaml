@@ -4,10 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Main"
-        xmlns:ViewModel="clr-namespace:Main.ViewModel"
         xmlns:ClassLib="clr-namespace:ClassIerarchyLib;assembly=ClassIerarchyLib"
         mc:Ignorable="d"
-        Title="Collection App" Height="600" Width="700">
+        Title="Collection App" Height="700" Width="700">
     <Window.Resources>
 
     </Window.Resources>
@@ -45,11 +44,10 @@
             </Grid.RowDefinitions>
             <Button Grid.Row="0" Content="Create empty collection" Command="{Binding CreateEmptyCollectionCommand}"/>
             <Button Grid.Row="1" Content="Create auto colleciton" Command="{Binding CreateAutoCollectionCommand}"/>
-            <Button Grid.Row="2" Content="Add unit"/>
-            <Button Grid.Row="3" Content="Change unit"/>
-            <Button Grid.Row="4" Content="Delete unit"/>
-            <Button Grid.Row="5" Content="Find unit(s) by"/>
-            <Button Grid.Row="6" Content="LINQ"/>
+            <Button Grid.Row="2" Content="Add unit" Command="{Binding AddUnitCommand}"/>
+            <Button Grid.Row="3" Content="Change unit" Command="{Binding ChangeUnitCommand}"/>
+            <Button Grid.Row="4" Content="Delete unit" Command="{Binding DeleteUnitCommand}"/>
+            <Button Grid.Row="5" Content="Query" Command="{Binding UseLINQCommand}"/>
         </Grid>
         <!--Row: 3 | Column: 0 LABELS-->
         <Label Grid.Row="3" Grid.Column="0" Content="Journal"/>

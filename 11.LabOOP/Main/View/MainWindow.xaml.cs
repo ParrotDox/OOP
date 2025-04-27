@@ -19,7 +19,8 @@ namespace Main
     {
         public MainWindow()
         {
-            MainWindowVM viewModel = new MainWindowVM();
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            MainWindowVM viewModel = new MainWindowVM(this);
             this.DataContext = viewModel;
             InitializeComponent();
         }

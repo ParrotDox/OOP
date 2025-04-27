@@ -14,8 +14,8 @@ namespace ClassIerarchyLib
     {
         //Zondbi list
         public List<string> random_list = new List<string> { "Wa wobbo wabba wabba wabby wobbo wabba wa", "Wobba wobby wabba-wabba wabby wo-wo wabba wa", "Bra..., a a a ins" };
-        public string Notes { get; set; }
-        public string Data { get; set; }
+        public string? Notes { get; set; }
+        public string? Data { get; set; }
         public Link() 
         {
             Notes = "None";
@@ -150,7 +150,7 @@ namespace ClassIerarchyLib
             Age = rnd.Next(16, 61);
             Residence = random_residences[rnd.Next(0, random_residences.Length)];
         }
-        public override bool Equals(object obj) 
+        public override bool Equals(object? obj) 
         {
             if (obj is not Person)
             {
@@ -166,7 +166,7 @@ namespace ClassIerarchyLib
             }
             else { return false; }
         }
-        public int CompareTo(Person obj) 
+        public int CompareTo(Person? obj) 
         {
             //Полный вариант логики CompareTo
             //if (obj is null) return 1;
@@ -206,7 +206,8 @@ namespace ClassIerarchyLib
         }
         public override string ToString()
         {
-            return $"{Key},{Name},{Age},{Residence},";
+            //6 fields
+            return $"{Key},{Name},{Age},{Residence},{link.Notes},{link.Data}";
         }
         private string genKey()
         {

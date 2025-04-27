@@ -100,7 +100,8 @@ namespace ClassIerarchyLib
         }
         public override string ToString()
         {
-            return base.ToString()+$"{Experience},{Salary},";
+            //8 fields
+            return base.ToString()+$",{Experience},{Salary}";
         }
     }
 }

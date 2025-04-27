@@ -1,0 +1,17 @@
+﻿<Window x:Class="Main.View.ResultLINQWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Main.View"
+        mc:Ignorable="d"
+        Title="ResultLINQWindow" Height="350" Width="300">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40px"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Content="QueryResult" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <ListBox Grid.Row="1" ItemsSource="{Binding Query}" HorizontalContentAlignment="Center"/>
+    </Grid>
+</Window>

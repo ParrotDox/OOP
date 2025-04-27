@@ -19,7 +19,7 @@ namespace Main.View
     /// </summary>
     public partial class AddUnitWindow : Window
     {
-        AddUnitWindowVM ViewModel {  get; set; }
+        public AddUnitWindowVM ViewModel {  get; set; }
         public AddUnitWindow()
         {
             ViewModel = new AddUnitWindowVM();
@@ -35,7 +35,19 @@ namespace Main.View
 
         private void ButtonAddUnit_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            bool isDataCorrect = ViewModel.CanPackData();
+            if (isDataCorrect) 
+            {
+                ViewModel.PackData();
+                this.DialogResult = true;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Data format is wrong.\nPlease check all fields");
+                return;
+            }
         }
+        
     }
 }

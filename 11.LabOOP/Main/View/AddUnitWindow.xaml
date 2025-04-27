@@ -5,23 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Main.View"
         mc:Ignorable="d"
-        Title="AddUnitWindow" MinHeight="400" Width="400">
+        SizeToContent="Height"
+        Title="Add Unit" MinHeight="300" Width="400">
     <Grid Margin="5">
         <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="6*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="50px"/>
         </Grid.RowDefinitions>
-        <ComboBox Grid.Row="0" x:Name="UserChoice" SelectionChanged="UserChoice_SelectionChanged">
-            <TextBlock Text="Person"/>
-            <TextBlock Text="Employee"/>
-            <TextBlock Text="Engineer"/>
-            <TextBlock Text="Admin"/>
-        </ComboBox>
+        
+        <StackPanel Grid.Row="0">
+            <Label Content="Unit type"/>
+            <ComboBox x:Name="UserChoice" SelectionChanged="UserChoice_SelectionChanged" Margin="0 0 0 5">
+                <TextBlock Text="Person"/>
+                <TextBlock Text="Employee"/>
+                <TextBlock Text="Engineer"/>
+                <TextBlock Text="Admin"/>
+            </ComboBox>
+        </StackPanel>
         <ContentControl Grid.Row="1" Content="{Binding Input, Mode=TwoWay}"/>
         <Button Grid.Row="2" Width="150"
                 x:Name="ButtonAddUnit"
                 Content="Add unit to collection" 
-                Command="{Binding AddUnit}" Click="ButtonAddUnit_Click"/>
+                Click="ButtonAddUnit_Click"/>
     </Grid>
 </Window>

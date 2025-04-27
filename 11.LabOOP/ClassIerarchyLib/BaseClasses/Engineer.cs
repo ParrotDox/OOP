@@ -62,7 +62,8 @@ namespace ClassIerarchyLib
         }
         public override string ToString()
         {
-            return base.ToString() + $"{Department},IamEngi";
+            //10 fields
+            return base.ToString() + $",{Department},IamEngi";
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using ClassIerarchyLib;
-using Main.Command;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,51 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using Main.Model;
+using Main.View;
+using Main.Command;
 
 namespace Main.ViewModel
 {
-    public class PersonInput 
-    {
-        public string Key { get; set; }
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public string Residence { get; set; }
-        public PersonInput()
-        {
-            Key = "None";
-            Name = "None";
-            Age = 0;
-            Residence = "None";
-        }
-    }
-    public class EmployeeInput : PersonInput
-    {
-        public int Experience {  get; set; }
-        public int Salary { get; set; }
-        public EmployeeInput() : base()
-        {
-            Experience = 0;
-            Salary = 0;
-        }
-    }
-    public class EngineerInput : EmployeeInput
-    {
-        public string Department { get; set; }
-        public EngineerInput() : base()
-        {
-            Department = "None";
-        }
-    }
-    public class AdminInput : EmployeeInput
-    {
-        public string HeadOffice { get; set; }
-        public AdminInput() : base()
-        {
-            HeadOffice = "None";
-        }
-    }
     public class AddUnitWindowVM : INotifyPropertyChanged
     {
+        //This property is used in databinding, also for containing info
         private PersonInput? _personInput;
         public PersonInput? Input 
         { 
@@ -67,12 +30,14 @@ namespace Main.ViewModel
                 OnPropertyChanged();
             } 
         }
-        //ICommands
-        public ICommand AddUnit {  get; set; }
+        //This property 'll be used to provide main window with packed info
+        public PersonInput? PackedData;
+        //Counter to understand what type of object is used
+        public int typeIndex = 0;
         public AddUnitWindowVM()
         {
-            Input = new PersonInput();
-            AddUnit = new RelayCommand(AddUnitToCollection, CanAddUnitToCollection);
+            Input = new NullInput();
+            PackedData = null;
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
@@ -84,7 +49,7 @@ namespace Main.ViewModel
             }
         }
 
-        //Changes the input textBoxes at UI, called from code-behind
+        //Changes the input textBoxes at UI using dataTemplates, called from code-behind
         public void ChangeInput(int choice) 
         {
             switch (choice) 
@@ -92,33 +57,166 @@ namespace Main.ViewModel
                 case 0: 
                     {
                         Input = new PersonInput();
+                        typeIndex = 0;
                         break;
                     }
                 case 1:
                     {
                         Input = new EmployeeInput();
+                        typeIndex = 1;
                         break;
                     }
                 case 2:
                     {
                         Input = new EngineerInput();
+                        typeIndex = 2;
                         break;
                     }
                 case 3:
                     {
                         Input = new AdminInput();
+                        typeIndex = 3;
                         break;
                     }
             }
         }
-        //Add unit to collection
-        public void AddUnitToCollection(object? param) 
+        //Get and pack unit for extraction
+        public void PackData()
         {
-            
+            switch (typeIndex) 
+            {
+                case 0: 
+                    {
+                        PersonInput pack = new();
+                        pack.Key = Input.Key;
+                        pack.Name = Input.Name;
+                        pack.Age = Input.Age;
+                        pack.Residence = Input.Residence;
+                        pack.Notes = Input.Notes;
+                        pack.Data = Input.Data;
+                        PackedData = pack;
+                        break;
+                    }
+                case 1:
+                    {
+                        EmployeeInput pack = new ();
+                        pack.Key = Input.Key;
+                        pack.Name = Input.Name;
+                        pack.Age = Input.Age;
+                        pack.Residence = Input.Residence;
+                        pack.Notes = Input.Notes;
+                        pack.Data = Input.Data;
+                        pack.Experience = ((EmployeeInput)Input).Experience;
+                        pack.Salary = ((EmployeeInput)Input).Salary;
+                        PackedData = pack;
+                        break;
+                    }
+                case 2:
+                    {
+                        EngineerInput pack = new();
+                        pack.Key = Input.Key;
+                        pack.Name = Input.Name;
+                        pack.Age = Input.Age;
+                        pack.Residence = Input.Residence;
+                        pack.Notes = Input.Notes;
+                        pack.Data = Input.Data;
+                        pack.Experience = ((EngineerInput)Input).Experience;
+                        pack.Salary = ((EngineerInput)Input).Salary;
+                        pack.Department = ((EngineerInput)Input).Department;
+                        PackedData = pack;
+                        break;
+                    }
+                case 3:
+                    {
+                        AdminInput pack = new();
+                        pack.Key = Input.Key;
+                        pack.Name = Input.Name;
+                        pack.Age = Input.Age;
+                        pack.Residence = Input.Residence;
+                        pack.Notes = Input.Notes;
+                        pack.Data = Input.Data;
+                        pack.Experience = ((AdminInput)Input).Experience;
+                        pack.Salary = ((AdminInput)Input).Salary;
+                        pack.HeadOffice = ((AdminInput)Input).HeadOffice;
+                        PackedData = pack;
+                        break;
+                    }
+            }
         }
-        public bool CanAddUnitToCollection(object? param) 
+        public bool CanPackData()
         {
-            return true;
+            switch (typeIndex)
+            {
+                case 0:
+                    {
+                        bool isKeyCorrect = Input.Key.Length > 0 ? true : false;
+                        bool isNameCorrect = Input.Name.Length > 0 ? true : false;
+                        bool isAgeCorrect = Input.Age.Length > 0 && int.TryParse(Input.Age, out _) && int.Parse(Input.Age) > 0 ? true : false;
+                        bool isResidenceCorrect = Input.Residence.Length > 0 ? true : false;
+
+                        return isKeyCorrect && isNameCorrect && isAgeCorrect && isResidenceCorrect;
+                    }
+                case 1:
+                    {
+                        bool isKeyCorrect = Input.Key.Length > 0 ? true : false;
+                        bool isNameCorrect = Input.Name.Length > 0 ? true : false;
+                        bool isAgeCorrect = Input.Age.Length > 0 && int.TryParse(Input.Age, out _) && int.Parse(Input.Age) > 0 ? true : false;
+                        bool isResidenceCorrect = Input.Residence.Length > 0 ? true : false;
+
+                        EmployeeInput extendedUnit = (EmployeeInput)Input;
+                        bool isExperienceCorrect = extendedUnit.Experience.Length > 0 &&
+                            int.TryParse(extendedUnit.Experience, out _) &&
+                            int.Parse(extendedUnit.Experience) > 0 ? true : false;
+
+                        bool isSalaryCorrect = extendedUnit.Salary.Length > 0 &&
+                            int.TryParse(extendedUnit.Salary, out _) &&
+                            int.Parse(extendedUnit.Salary) > 0 ? true : false;
+
+                        return isKeyCorrect && isNameCorrect && isAgeCorrect && isResidenceCorrect && isExperienceCorrect && isSalaryCorrect;
+                    }
+                case 2:
+                    {
+                        bool isKeyCorrect = Input.Key.Length > 0 ? true : false;
+                        bool isNameCorrect = Input.Name.Length > 0 ? true : false;
+                        bool isAgeCorrect = Input.Age.Length > 0 && int.TryParse(Input.Age, out _) && int.Parse(Input.Age) > 0 ? true : false;
+                        bool isResidenceCorrect = Input.Residence.Length > 0 ? true : false;
+
+                        EngineerInput extendedUnit = (EngineerInput)Input;
+                        bool isExperienceCorrect = extendedUnit.Experience.Length > 0 &&
+                            int.TryParse(extendedUnit.Experience, out _) &&
+                            int.Parse(extendedUnit.Experience) > 0 ? true : false;
+
+                        bool isSalaryCorrect = extendedUnit.Salary.Length > 0 &&
+                            int.TryParse(extendedUnit.Salary, out _) &&
+                            int.Parse(extendedUnit.Salary) > 0 ? true : false;
+
+                        bool isDepartmentCorrect = extendedUnit.Department.Length > 0 ? true : false;
+
+                        return isKeyCorrect && isNameCorrect && isAgeCorrect && isResidenceCorrect && isExperienceCorrect && isSalaryCorrect && isDepartmentCorrect;
+                    }
+                case 3:
+                    {
+                        bool isKeyCorrect = Input.Key.Length > 0 ? true : false;
+                        bool isNameCorrect = Input.Name.Length > 0 ? true : false;
+                        bool isAgeCorrect = Input.Age.Length > 0 && int.TryParse(Input.Age, out _) && int.Parse(Input.Age) > 0 ? true : false;
+                        bool isResidenceCorrect = Input.Residence.Length > 0 ? true : false;
+
+                        AdminInput extendedUnit = (AdminInput)Input;
+                        bool isExperienceCorrect = extendedUnit.Experience.Length > 0 &&
+                            int.TryParse(extendedUnit.Experience, out _) &&
+                            int.Parse(extendedUnit.Experience) > 0 ? true : false;
+
+                        bool isSalaryCorrect = extendedUnit.Salary.Length > 0 &&
+                            int.TryParse(extendedUnit.Salary, out _) &&
+                            int.Parse(extendedUnit.Salary) > 0 ? true : false;
+
+                        bool isHeadOfficeCorrect = extendedUnit.HeadOffice.Length > 0 ? true : false;
+
+                        return isKeyCorrect && isNameCorrect && isAgeCorrect && isResidenceCorrect && isExperienceCorrect && isSalaryCorrect && isHeadOfficeCorrect;
+                    }
+            }
+            MessageBox.Show("Can't check type of input to return\nboolean result");
+            return false;
         }
     }
 }
