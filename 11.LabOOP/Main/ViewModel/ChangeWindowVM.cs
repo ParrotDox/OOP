@@ -164,19 +164,50 @@ namespace Main.ViewModel
                 {
                     case Admin: 
                         {
-                            return new AdminInput();
+                            AdminInput unit = new();
+                            unit.Key = person.Key;
+                            unit.Name = person.Name;
+                            unit.Age = person.Age.ToString();
+                            unit.Residence = person.Residence;
+                            Admin extendedUnit = (Admin)person;
+                            unit.Experience = extendedUnit.Experience.ToString();
+                            unit.Salary = extendedUnit.Salary.ToString();
+                            unit.HeadOffice = extendedUnit.HeadOffice;
+                            return unit;
                         }
                     case Engineer:
                         {
-                            return new EngineerInput();
+                            EngineerInput unit = new();
+                            unit.Key = person.Key;
+                            unit.Name = person.Name;
+                            unit.Age = person.Age.ToString();
+                            unit.Residence = person.Residence;
+                            Engineer extendedUnit = (Engineer)person;
+                            unit.Experience = extendedUnit.Experience.ToString();
+                            unit.Salary = extendedUnit.Salary.ToString();
+                            unit.Department = extendedUnit.Department;
+                            return unit;
                         }
                     case Employee:
                         {
-                            return new EmployeeInput();
+                            EmployeeInput unit = new();
+                            unit.Key = person.Key;
+                            unit.Name = person.Name;
+                            unit.Age = person.Age.ToString();
+                            unit.Residence = person.Residence;
+                            Employee extendedUnit = (Employee)person;
+                            unit.Experience = extendedUnit.Experience.ToString();
+                            unit.Salary = extendedUnit.Salary.ToString();
+                            return unit;
                         }
                     case Person:
                         {
-                            return new PersonInput();
+                            PersonInput unit = new();
+                            unit.Key = person.Key;
+                            unit.Name = person.Name;
+                            unit.Age = person.Age.ToString();
+                            unit.Residence = person.Residence;
+                            return unit;
                         }
                     default: 
                         {

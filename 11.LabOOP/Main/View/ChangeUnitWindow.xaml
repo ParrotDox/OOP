@@ -15,7 +15,7 @@
             <RowDefinition Height="65px"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0">
-            <Label Content="Key"/>
+            <Label Content="Input key"/>
             <TextBox Text="{Binding UserKey, UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
         <ContentControl Grid.Row="1" Content="{Binding Input, Mode=TwoWay}"/>

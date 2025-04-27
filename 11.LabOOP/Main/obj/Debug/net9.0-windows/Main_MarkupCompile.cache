@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-B:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\
+C:\GIT\OOP\11.LabOOP\Main\obj\Debug\net9.0-windows\
 Main
 none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP
-B:\GIT\OOP\11.LabOOP\Main\App.xaml
+C:\GIT\OOP\11.LabOOP\Main\App.xaml
 13495458779
 
 211383989727
-202-96283643
+2011634894915
 Styles\AddUnit.xaml;Styles\Button.xaml;Styles\DeleteUnit.xaml;Styles\Label.xaml;Styles\ListBox.xaml;Styles\TextBox.xaml;View\AddUnitWindow.xaml;View\AskQuantity.xaml;View\ChangeUnitWindow.xaml;View\DeleteUnitWindow.xaml;View\LINQWindow.xaml;View\MainWindow.xaml;View\ResultLINQWindow.xaml;
 
 False

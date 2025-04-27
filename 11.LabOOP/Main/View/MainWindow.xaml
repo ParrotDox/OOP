@@ -7,7 +7,7 @@
         xmlns:ClassLib="clr-namespace:ClassIerarchyLib;assembly=ClassIerarchyLib"
         mc:Ignorable="d"
         Background="#F2F5F8"
-        Title="Collection App" Height="750" Width="860">
+        Title="Collection App" Height="750" Width="880">
     <Window.Resources>
 
     </Window.Resources>
